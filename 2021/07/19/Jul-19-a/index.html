@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Lemma 1 In a school choice problem $(S,I,\succsim,P,q)$ where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. $\sum_{s \in S}q">
+  <meta name="description" content="Lemma 1 In a school choice problem \((S,I,\succsim,P,q)\) where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. \(\sum_{s \i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Extension of Thm 2.27 in Roth and Sotomayor (1990) to the context of school choice">
 <meta property="og:url" content="http://example.com/2021/07/19/Jul-19-a/index.html">
 <meta property="og:site_name" content="Shiyu&#39;s site">
-<meta property="og:description" content="Lemma 1 In a school choice problem $(S,I,\succsim,P,q)$ where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. $\sum_{s \in S}q">
+<meta property="og:description" content="Lemma 1 In a school choice problem \((S,I,\succsim,P,q)\) where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. \(\sum_{s \i">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-18T16:00:00.000Z">
 <meta property="article:modified_time" content="2021-07-20T03:43:31.615Z">
 <meta property="article:author" content="Jake ZHANG Shiyu">
-<meta property="article:tag" content="Roth-Sotomayor-1990">
 <meta property="article:tag" content="School choice">
+<meta property="article:tag" content="Roth-Sotomayor-1990">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2021/07/19/Jul-19-a/">
@@ -211,18 +211,17 @@
 
       
         <ol>
-<li> <b>Lemma 1</b> In a school choice problem $(S,I,\succsim,P,q)$ where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. $\sum_{s \in S}q_s \geq |I|$ and $i \succsim_s \emptyset$ for $\forall i \in I, \forall s \in S$, there exists at least one school that has not rejected any students under SOSM.<br>
-
-<b>Proof:</b> Suppose all school has rejected some students under SOSM:
-Since SOSM terminates in finite steps, there exists a round $k$, such that there is at least one student rejected in round $k$ and after $k$-th round, no school rejects any students and the algorithm terminates. By our assumption, all students are acceptable, and a school only rejects a student when it runs out of its capacity. This would imply that at round $k$, all schools are full. However, sincere there is a student who has been rejected in round $k$ and not matched, this would contradict with our assumption that the number of students is no less than the total number of seats.
+<li>
+<p><b>Lemma 1</b> In a school choice problem <span class="math inline">\((S,I,\succsim,P,q)\)</span> where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. <span class="math inline">\(\sum_{s \in S}q_s \geq |I|\)</span> and <span class="math inline">\(i \succsim_s \emptyset\)</span> for <span class="math inline">\(\forall i \in I, \forall s \in S\)</span>, there exists at least one school that has not rejected any students under SOSM.<br></p>
+<b>Proof:</b> Suppose all school has rejected some students under SOSM: Since SOSM terminates in finite steps, there exists a round <span class="math inline">\(k\)</span>, such that there is at least one student rejected in round <span class="math inline">\(k\)</span> and after <span class="math inline">\(k\)</span>-th round, no school rejects any students and the algorithm terminates. By our assumption, all students are acceptable, and a school only rejects a student when it runs out of its capacity. This would imply that at round <span class="math inline">\(k\)</span>, all schools are full. However, sincere there is a student who has been rejected in round <span class="math inline">\(k\)</span> and not matched, this would contradict with our assumption that the number of students is no less than the total number of seats.
 </li>
 <br>
-<li> <b>Propositions 2 (Weakly Pareto Optimality of SOSM)</b> When all students are acceptable, there is no matching $\mu$ where all students get a strictly better assignment than his assignment under SOSM, i.e. ther is no $\mu$ such that $\mu(i)\; P_i \; SOSM(i)$,  $\forall i \in I$.<br> 
-
-<b>Proof:</b> Case 1: If $\sum_{s \in S}q_s \leq |I|$, then there are some students unmatched under both $\mu$ and SOSM, so there is someone who is matched under SOSM but become unmatched under $\mu$ or remain unmatched under $\mu$, and hence there exist someone who can't get strictly better assignment. <br>
-Case 2: If $\sum_{s \in S}q_s \leq |I|$, since all student apply to schools in the order of his preference list, we know all student has been rejected at least once, otherwise there is someone who get his top choice and can't get strictly better assignment. We denote $S'$ as the set of school that has rejected students under SOSM. We claim that all students must be assigned at some school $s' \in S'$ under $\mu$, otherwise he is assigned to a school that has not rejected anyone including him under SOSM, which must be no better than his SOSM assignment. However, by <b>Lemma 1</b> we know the total capacity of schools in $S'$ is less than the number of students, i.e. $\sum_{s' \in S'}q_s < |I|$, hence such a matching $\mu$ would not be feasible.
- </li>
+<li>
+<p><b>Propositions 2 (Weakly Pareto Optimality of SOSM)</b> When all students are acceptable, there is no matching <span class="math inline">\(\mu\)</span> where all students get a strictly better assignment than his assignment under SOSM, i.e. ther is no <span class="math inline">\(\mu\)</span> such that <span class="math inline">\(\mu(i)\; P_i \; SOSM(i)\)</span>, <span class="math inline">\(\forall i \in I\)</span>.<br></p>
+<b>Proof:</b> Case 1: If <span class="math inline">\(\sum_{s \in S}q_s \leq |I|\)</span>, then there are some students unmatched under both <span class="math inline">\(\mu\)</span> and SOSM, so there is someone who is matched under SOSM but become unmatched under <span class="math inline">\(\mu\)</span> or remain unmatched under <span class="math inline">\(\mu\)</span>, and hence there exist someone who can't get strictly better assignment. <br> Case 2: If <span class="math inline">\(\sum_{s \in S}q_s \leq |I|\)</span>, since all student apply to schools in the order of his preference list, we know all student has been rejected at least once, otherwise there is someone who get his top choice and can't get strictly better assignment. We denote <span class="math inline">\(S&#39;\)</span> as the set of school that has rejected students under SOSM. We claim that all students must be assigned at some school <span class="math inline">\(s&#39; \in S&#39;\)</span> under <span class="math inline">\(\mu\)</span>, otherwise he is assigned to a school that has not rejected anyone including him under SOSM, which must be no better than his SOSM assignment. However, by <b>Lemma 1</b> we know the total capacity of schools in <span class="math inline">\(S&#39;\)</span> is less than the number of students, i.e. <span class="math inline">\(\sum_{s&#39; \in S&#39;}q_s &lt; |I|\)</span>, hence such a matching <span class="math inline">\(\mu\)</span> would not be feasible.
+</li>
 </ol>
+
     </div>
 
     
@@ -231,8 +230,8 @@ Case 2: If $\sum_{s \in S}q_s \leq |I|$, since all student apply to schools in t
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Roth-Sotomayor-1990/" rel="tag"># Roth-Sotomayor-1990</a>
               <a href="/tags/School-choice/" rel="tag"># School choice</a>
+              <a href="/tags/Roth-Sotomayor-1990/" rel="tag"># Roth-Sotomayor-1990</a>
           </div>
 
         
@@ -240,10 +239,13 @@ Case 2: If $\sum_{s \in S}q_s \leq |I|$, since all student apply to schools in t
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/07/19/Jul-19-b/" rel="next" title="Summary of <i>Expanding ''Choice'' in School Choice </i> by Abdulkadirog˘lu et. al. (2015)">
-      Summary of <i>Expanding ''Choice'' in School Choice </i> by Abdulkadirog˘lu et. al. (2015) <i class="fa fa-chevron-right"></i>
+    <a href="/2021/07/19/Jul-19-b/" rel="prev" title="Summary of <i>Expanding ''Choice'' in School Choice </i> by Abdulkadirog˘lu et. al. (2015)">
+      <i class="fa fa-chevron-left"></i> Summary of <i>Expanding ''Choice'' in School Choice </i> by Abdulkadirog˘lu et. al. (2015)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/07/20/Jul-20-a/" rel="next" title="An example of an algorithm that converge to stable matching from arbitary matching.">
+      An example of an algorithm that converge to stable matching from arbitary matching. <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>

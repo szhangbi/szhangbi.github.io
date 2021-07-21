@@ -164,7 +164,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/07/20/Jul-20-a/" class="post-title-link" itemprop="url">An example of an algorithm that converge to stable matching fromarbitary matching.</a>
+            <a href="/2021/07/20/Jul-20-a/" class="post-title-link" itemprop="url">An example of an algorithm that converge to stable matching from arbitary matching.</a>
         </h2>
 
         <div class="post-meta">
@@ -181,7 +181,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-21 00:56:20" itemprop="dateModified" datetime="2021-07-21T00:56:20+08:00">2021-07-21</time>
+                <time title="Modified: 2021-07-21 13:24:54" itemprop="dateModified" datetime="2021-07-21T13:24:54+08:00">2021-07-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -204,16 +204,182 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>In the paper <i><a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2938326?seq=1#metadata_info_tab_contents"> Random Paths to Stability in Two-Sided Matching</a></i> , Roth and Vande Vate (1990) proposed an algorithm that can recover stability from arbitary matching. The paper is very short and do not provide example of the execution of the algorithm. I provided two examples here:</p>
-<p>Starting from the example used by Knuth (1976) to show existence of cyclic blocking pairs, we have: </p>
+          <style type="text/css">
+<!--
+ .tab { margin-left: 40px; }
+-->
+</style>
+<p>In the paper <i><a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2938326?seq=1#metadata_info_tab_contents"> Random Paths to Stability in Two-Sided Matching</a></i> , Roth and Vande Vate (1990) proposed an algorithm that can recover stability from arbitary matching. The paper is short and do not provide example of the execution of the algorithm. I provided two examples here:</p>
+<h4>
+Notation
+</h4>
+<p><u>Satisfying the blocking pair:</u> For a pair <span class="math inline">\((m&#39;,w&#39;)\)</span> that blocks <span class="math inline">\(\mu\)</span>, we say <span class="math inline">\(\nu\)</span> is obtained by satisfying the blocking pair <span class="math inline">\((m&#39;,w&#39;)\)</span> from <span class="math inline">\(\mu\)</span> if m' and w' are matched at <span class="math inline">\(\nu\)</span>, their original partner <span class="math inline">\(\mu(m&#39;)\)</span> and <span class="math inline">\(\mu(w&#39;)\)</span> each becomes unmatched at <span class="math inline">\(\nu\)</span> while the others are matched to the same mate under <span class="math inline">\(\nu\)</span> as they were at <span class="math inline">\(\mu\)</span>.</p>
+<h4>
+Decscription of the algorithm
+</h4>
+Step 0: Given an arbitary matching <span class="math inline">\(\mu_0\)</span>, if it is not individually rational, we satisfy all the blocking pair formed by individuals to obtain an individual rational matching <span class="math inline">\(\mu_1\)</span><br> Step 1: If there is no blocking pair for <span class="math inline">\(\mu_1\)</span>, then terminate. Otherwise, pick one blocking pair <span class="math inline">\((m1,w1)\)</span> and obatin <span class="math inline">\(\mu_2\)</span> from <span class="math inline">\(\mu_1\)</span> by satisfying <span class="math inline">\((m_1,w_1)\)</span>, and put the two inside the set <span class="math inline">\(A(1)\equiv \{m_1,w_1\}\)</span>.<br> Step k (k&gt;1): If there is no blocking pair for <span class="math inline">\(\mu_k\)</span>, then terminate.
+<div style="margin-left:95px">
+Else, if there some men in <span class="math inline">\(A(k-1)\)</span> forms a blocking pair with a woman <span class="math inline">\(w_k\)</span> outside <span class="math inline">\(A(k-1)\)</span>, we choose the <span class="math inline">\(m_j\)</span> to be the man who is <span class="math inline">\(w_k\)</span>'s most prefered mate in <span class="math inline">\(A(k-1)\)</span>, we obtain <span class="math inline">\(\mu_{k+1}\)</span> from <span class="math inline">\(\mu_k\)</span> by satisfying <span class="math inline">\((m_j,w_k)\)</span> and add <span class="math inline">\(w_k\)</span> to <span class="math inline">\(A(k-1)\)</span> to get <span class="math inline">\(A(k)=A(k-1)\cup\{w_k\}\)</span> and move to next step;
+</div>
+<div style="margin-left:130px">
+Else if there are some women in <span class="math inline">\(A(k-1)\)</span> forms a blocking pair with a man <span class="math inline">\(m_k\)</span> outside <span class="math inline">\(A(k-1)\)</span>, we choose the <span class="math inline">\(w_j\)</span> to be the woman who is <span class="math inline">\(m_k\)</span>'s most prefered mate in <span class="math inline">\(A(k-1)\)</span>, we obtain <span class="math inline">\(\mu_{k+1}\)</span> from <span class="math inline">\(\mu_k\)</span> by satisfying <span class="math inline">\((m_k,w_j)\)</span> and add <span class="math inline">\(m_k\)</span> to <span class="math inline">\(A(k-1)\)</span> to get <span class="math inline">\(A(k)=A(k-1)\cup\{m_k\}\)</span> and move to next step;
+</div>
+<div style="margin-left:160px">
+Else no man or woman in <span class="math inline">\(A(k-1)\)</span> involved in any blocking for <span class="math inline">\(\mu(k-1)\)</span>, and we find a blocking pair <span class="math inline">\((m_k,w_k)\)</span> that none of them is in <span class="math inline">\(A(k-1)\)</span>, we obtain <span class="math inline">\(\mu_{k+1}\)</span> from <span class="math inline">\(\mu_k\)</span> by satisfying <span class="math inline">\((m_k,w_k)\)</span> and add <span class="math inline">\(\{m_k,w_k\}\)</span> to <span class="math inline">\(A(k-1)\)</span> to get <span class="math inline">\(A(k)=A(k-1)\cup\{m_k,w_k\}\)</span> and move to next step.
+</div>
+<h4>
+Example 1
+</h4>
+Starting from the example used by Knuth (1976) to show existence of cyclic blocking pairs, we have:
 <table>
-<tr><td>P(m1) =w2, w1, w3</td> <td>P(m2) =w1, w3, w2</td> <td>P(m3) =w1, w2, w3</td> 
+<tr>
+<td>
+P(m1) =w2, w1, w3
+</td>
+<td>
+P(m2) =w1, w3, w2
+</td>
+<td>
+P(m3) =w1, w2, w3
+</td>
 </tr>
 <tr>
-<td>P(w1) = m1, m3, m2 </td> <td>P(w2) = m3, m1, m2 </td> <td>P(w3) = m1, m3, m2</td>
+<td>
+P(w1) = m1, m3, m2
+</td>
+<td>
+P(w2) = m3, m1, m2
+</td>
+<td>
+P(w3) = m1, m3, m2
+</td>
+</tr>
+</table>
+<p>and the initial matching is <span class="math inline">\(\mu_1=\{(m_1,w_1),(m_2,w_2),(m_3,w_3)\}\)</span></p>
+<p>Step 0: <span class="math inline">\(\mu_1={(w_1,m_1),(w_2,m_2),(w_3,m_3)}\)</span> is individually rational;</p>
+<p>Step 1: The blocking pairs are: <span class="math inline">\(\{(w_2,m_1),(w_2,m_3),(w_3,m_1)\}\)</span>, satisfy <span class="math inline">\((w_2,m_1)\)</span> <span class="math inline">\(\Rightarrow \mu_2 =\{(w_1,w_1),(w_2,m_1),(m_2,m_2),(w_3,m_3)\}\)</span> and <span class="math inline">\(A(1)=\{w_2,m_1\}\)</span>;</p>
+<p>Step 2: The blocking pairs are: <span class="math inline">\(\{(w_1,m_3),(w_1,m_2),(w_2,m_3)\}\)</span>, and <span class="math inline">\(w_2\)</span> is in <span class="math inline">\(A(1)\)</span>, satisfy <span class="math inline">\((w_2,m_3)\)</span> <span class="math inline">\(\Rightarrow \mu_3 =\)</span>$ {(w_1,w_1),(m_1,m_1),(w_2,m_3),(m_2,m_2),(w_3,w_3)} $ and <span class="math inline">\(A(2)=\{m_1,w_2,m_3\}\)</span>;</p>
+<p>Step 3: The blocking pairs are: <span class="math inline">\(\{(w_1,m_3),(w_1,m_2),(w_1,m_1),(w_3,m_1),(w_3,m_2)\}\)</span>, <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> is in <span class="math inline">\(A(2)\)</span> and <span class="math inline">\(m_1\;P_{w_1}\;m_3\)</span> , satisfy <span class="math inline">\((m_1,w_1)\)</span> <span class="math inline">\(\Rightarrow \mu_4 =\)</span><span class="math inline">\(\{(w_1,m_1),(w_2,m_3),(m_2,m_2),(w_3,w_3)\}\)</span> and <span class="math inline">\(A(3)=\{m_1,w_2,m_3,w_1\}\)</span>;</p>
+<p>Step 4: The blocking pairs are: <span class="math inline">\(\{(w_3,m_2)\}\)</span>, satisfy <span class="math inline">\((w_3,m_2)\)</span> <span class="math inline">\(\Rightarrow \mu_5 =\)</span><span class="math inline">\(\{(w_1,m_1),(w_2,m_3),(w_3,m_2)\}\)</span> and <span class="math inline">\(A(3)=\{m_1,w_2,m_3,w_1,w_3,m_2\}\)</span>;</p>
+<p>Step 5: There is no blocking pair and we achieve a stable matching <span class="math inline">\(\mu_5 =\{(w_1,m_1),(w_2,m_3),(w_3,m_2)\}\)</span>, terminate.</p>
+<h4>
+Example 2 (Starting from everyone remains single, every stable matching can be achieved)
+</h4>
+we have:
+<table>
+<tr>
+<td>
+P(m1) =w1, w2, w3, w4
+</td>
+<td>
+P(m2) =w2, w1, w4, w3
+</td>
+<td>
+P(m3) =w3, w4, w1, w2
+</td>
+<td>
+P(m4) =w4, w3, w2, w1
+</td>
+</tr>
+<tr>
+<td>
+P(w1) = m4, m3, m2, m1
+</td>
+<td>
+P(w2) = m3, m4, m1, m2
+</td>
+<td>
+P(w3) = m2, m1, m4, m3
+</td>
+<td>
+P(w4) = m1, m2, m3, m4
+</td>
 </tr>
 </table>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/19/Jul-19-a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jake ZHANG Shiyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiyu's site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/19/Jul-19-a/" class="post-title-link" itemprop="url">Extension of Thm 2.27 in Roth and Sotomayor (1990) to the context of school choice</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-19T00:00:00+08:00">2021-07-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-07-20 11:43:31" itemprop="dateModified" datetime="2021-07-20T11:43:31+08:00">2021-07-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Proofs/" itemprop="url" rel="index"><span itemprop="name">Proofs</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>
+<p><b>Lemma 1</b> In a school choice problem <span class="math inline">\((S,I,\succsim,P,q)\)</span> where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. <span class="math inline">\(\sum_{s \in S}q_s \geq |I|\)</span> and <span class="math inline">\(i \succsim_s \emptyset\)</span> for <span class="math inline">\(\forall i \in I, \forall s \in S\)</span>, there exists at least one school that has not rejected any students under SOSM.<br></p>
+<b>Proof:</b> Suppose all school has rejected some students under SOSM: Since SOSM terminates in finite steps, there exists a round <span class="math inline">\(k\)</span>, such that there is at least one student rejected in round <span class="math inline">\(k\)</span> and after <span class="math inline">\(k\)</span>-th round, no school rejects any students and the algorithm terminates. By our assumption, all students are acceptable, and a school only rejects a student when it runs out of its capacity. This would imply that at round <span class="math inline">\(k\)</span>, all schools are full. However, sincere there is a student who has been rejected in round <span class="math inline">\(k\)</span> and not matched, this would contradict with our assumption that the number of students is no less than the total number of seats.
+</li>
+<br>
+<li>
+<p><b>Propositions 2 (Weakly Pareto Optimality of SOSM)</b> When all students are acceptable, there is no matching <span class="math inline">\(\mu\)</span> where all students get a strictly better assignment than his assignment under SOSM, i.e. ther is no <span class="math inline">\(\mu\)</span> such that <span class="math inline">\(\mu(i)\; P_i \; SOSM(i)\)</span>, <span class="math inline">\(\forall i \in I\)</span>.<br></p>
+<b>Proof:</b> Case 1: If <span class="math inline">\(\sum_{s \in S}q_s \leq |I|\)</span>, then there are some students unmatched under both <span class="math inline">\(\mu\)</span> and SOSM, so there is someone who is matched under SOSM but become unmatched under <span class="math inline">\(\mu\)</span> or remain unmatched under <span class="math inline">\(\mu\)</span>, and hence there exist someone who can't get strictly better assignment. <br> Case 2: If <span class="math inline">\(\sum_{s \in S}q_s \leq |I|\)</span>, since all student apply to schools in the order of his preference list, we know all student has been rejected at least once, otherwise there is someone who get his top choice and can't get strictly better assignment. We denote <span class="math inline">\(S&#39;\)</span> as the set of school that has rejected students under SOSM. We claim that all students must be assigned at some school <span class="math inline">\(s&#39; \in S&#39;\)</span> under <span class="math inline">\(\mu\)</span>, otherwise he is assigned to a school that has not rejected anyone including him under SOSM, which must be no better than his SOSM assignment. However, by <b>Lemma 1</b> we know the total capacity of schools in <span class="math inline">\(S&#39;\)</span> is less than the number of students, i.e. <span class="math inline">\(\sum_{s&#39; \in S&#39;}q_s &lt; |I|\)</span>, hence such a matching <span class="math inline">\(\mu\)</span> would not be feasible.
+</li>
+</ol>
 
       
     </div>
@@ -288,91 +454,7 @@
 
       
           
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/19/Jul-19-a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jake ZHANG Shiyu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shiyu's site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/19/Jul-19-a/" class="post-title-link" itemprop="url">Extension of Thm 2.27 in Roth and Sotomayor (1990) to the context of school choice</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-19T00:00:00+08:00">2021-07-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-20 11:43:31" itemprop="dateModified" datetime="2021-07-20T11:43:31+08:00">2021-07-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Proofs/" itemprop="url" rel="index"><span itemprop="name">Proofs</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li> <b>Lemma 1</b> In a school choice problem $(S,I,\succsim,P,q)$ where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. $\sum_{s \in S}q_s \geq |I|$ and $i \succsim_s \emptyset$ for $\forall i \in I, \forall s \in S$, there exists at least one school that has not rejected any students under SOSM.<br>
-
-<b>Proof:</b> Suppose all school has rejected some students under SOSM:
-Since SOSM terminates in finite steps, there exists a round $k$, such that there is at least one student rejected in round $k$ and after $k$-th round, no school rejects any students and the algorithm terminates. By our assumption, all students are acceptable, and a school only rejects a student when it runs out of its capacity. This would imply that at round $k$, all schools are full. However, sincere there is a student who has been rejected in round $k$ and not matched, this would contradict with our assumption that the number of students is no less than the total number of seats.
-</li>
-<br>
-<li> <b>Propositions 2 (Weakly Pareto Optimality of SOSM)</b> When all students are acceptable, there is no matching $\mu$ where all students get a strictly better assignment than his assignment under SOSM, i.e. ther is no $\mu$ such that $\mu(i)\; P_i \; SOSM(i)$,  $\forall i \in I$.<br> 
-
-<b>Proof:</b> Case 1: If $\sum_{s \in S}q_s \leq |I|$, then there are some students unmatched under both $\mu$ and SOSM, so there is someone who is matched under SOSM but become unmatched under $\mu$ or remain unmatched under $\mu$, and hence there exist someone who can't get strictly better assignment. <br>
-Case 2: If $\sum_{s \in S}q_s \leq |I|$, since all student apply to schools in the order of his preference list, we know all student has been rejected at least once, otherwise there is someone who get his top choice and can't get strictly better assignment. We denote $S'$ as the set of school that has rejected students under SOSM. We claim that all students must be assigned at some school $s' \in S'$ under $\mu$, otherwise he is assigned to a school that has not rejected anyone including him under SOSM, which must be no better than his SOSM assignment. However, by <b>Lemma 1</b> we know the total capacity of schools in $S'$ is less than the number of students, i.e. $\sum_{s' \in S'}q_s < |I|$, hence such a matching $\mu$ would not be feasible.
- </li>
-</ol>
       
     </div>
 
