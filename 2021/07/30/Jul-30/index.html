@@ -225,30 +225,30 @@
         <p>The following are notations introduced by Erdil and Kumano in their paper <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.566.8067">Prioritizing Diversity in School Choice</a> as an attempt to incorperate more complex prority rule in the school choice problem.</p>
 <ul>
 <li>N ： set of students, X : set of schools;</li>
-<li><strong>priority rule</strong> : <span class="math inline">\(\mathcal{C_x}:2^N \rightarrow 2^{2^N}\)</span> s.t. <span class="math inline">\(S&#39; \subseteq S\)</span> for all <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span></li>
-<li><strong>Consistency</strong> :
-<ol type="1">
-<li>If there exists S such that <span class="math inline">\(A \cup B \subseteq S\)</span> with <span class="math inline">\(A \mathcal{C_x}(S)\)</span> and <span class="math inline">\(B \notin \mathcal{C_x}(S)\)</span>, then whenever <span class="math inline">\(A \cup B \subseteq S&#39;\)</span>, we have <span class="math inline">\(B \notin \mathcal{C_x}(S&#39;)\)</span>.</li>
-<li>If there exists S such that <span class="math inline">\(A,B \in \mathcal{C_x}(S)\)</span>, then whenever <span class="math inline">\(A \cup B \subseteq S&#39;\)</span>, we have <span class="math inline">\(A \in \mathcal{C_x}(S&#39;)\)</span> if and only if <span class="math inline">\(B \in \mathcal{C_x}(S&#39;)\)</span>.</li>
-</ol></li>
-<li><strong>Definitely chosen students</strong> : <span class="math inline">\(DC_x(S) = \bigcap_{S&#39; \in \mathcal{C_x}(S)} S&#39; = \{ i \in S |i \in S&#39;\)</span> for all <span class="math inline">\(S&#39; \in \mathcal{C_x}(S) \}\)</span></li>
-<li><strong>Substitutable</strong> A priority structure is substitutable (with ties) if for each <span class="math inline">\(x \in X\)</span>, and for each <span class="math inline">\(S, T \subseteq N\)</span> with <span class="math inline">\(S \subseteq T\)</span>, the following conditions hold:
-<ol type="1">
-<li>for each <span class="math inline">\(T&#39; \in \mathcal{C_x}(T)\)</span>, we have <span class="math inline">\(T&#39; \cap S \subseteq S&#39;\)</span> for some <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span>, and</li>
-<li>for each <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span>, we have <span class="math inline">\(T&#39; \cap S \subseteq S&#39;\)</span> for some <span class="math inline">\(T&#39; \in \mathcal{C_x}(T)\)</span>.</li>
-</ol></li>
-<li><strong>Respects priorities</strong> : Given students’ preferences R, an assignment <span class="math inline">\(\mu\)</span> respects priorities C, if:
-<ol type="1">
-<li>for each <span class="math inline">\(i \in N\)</span>, <span class="math inline">\(\mu(i)R_i i\)</span>, and</li>
-<li>for each <span class="math inline">\(x \in X\)</span>, for every S such that <span class="math inline">\(\mu^{-1}(x) \subseteq S \subseteq \{i \in N | x R_i \mu(i)\}\)</span>, we have <span class="math inline">\(\mu^{-1}(x) \in \mathcal{C_x}(S)\)</span>.</li>
-</ol></li>
-<li><strong>Pairwise stable</strong> :
-<ol type="1">
-<li>for each <span class="math inline">\(i \in N\)</span>, <span class="math inline">\(\mu(i)R_i i\)</span>,</li>
-<li><span class="math inline">\(\mu^{−1}(x) \in \mathcal{C_x}(\mu^{−1}(x))\)</span> for all <span class="math inline">\(x \in X\)</span>,</li>
-<li>there is no <span class="math inline">\((i, x)\in N \times X\)</span> such that <span class="math inline">\(x P_i \mu(i)\)</span> and <span class="math inline">\(i \in DC_x(\mu^{−1}(x) \cup {i})\)</span>.</li>
-</ol></li>
-<li><strong>Acceptant</strong> : A priority structure C is acceptant if for each <span class="math inline">\(x \in X\)</span>, for each <span class="math inline">\(S \subseteq N\)</span>, and for each <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span> we have <span class="math inline">\(|S_0|\)</span> = min{|S|, <span class="math inline">\(q_x\)</span>}.</li>
+<li><strong>priority rule</strong> : $\mathcal{C_x}:2^N \rightarrow 2^{2^N}$ s.t. $S’ \subseteq S$ for all $S’ \in \mathcal{C_x}(S)$</li>
+<li><strong>Consistency</strong> : <ol>
+<li>If there exists S such that $A \cup B \subseteq S$ with $A \mathcal{C_x}(S)$ and $B \notin \mathcal{C_x}(S)$, then whenever $A \cup B \subseteq S’$, we have $B \notin \mathcal{C_x}(S’)$.</li>
+<li>If there exists S such that $A,B \in \mathcal{C_x}(S)$, then whenever $A \cup B \subseteq S’$, we have $A \in \mathcal{C_x}(S’)$ if and only if $B \in \mathcal{C_x}(S’)$.</li>
+</ol>
+</li>
+<li><strong>Definitely chosen students</strong> : $DC_x(S) = \bigcap_{S’ \in \mathcal{C_x}(S)} S’ = \{ i \in S |i \in S’$ for all $S’ \in \mathcal{C_x}(S) \}$</li>
+<li><strong>Substitutable</strong> A priority structure is substitutable (with ties) if for each $x \in X$, and for each $S, T \subseteq N$ with $S \subseteq T$, the following conditions hold: <ol>
+<li>for each $T’ \in  \mathcal{C_x}(T)$, we have $T’ \cap S \subseteq S’$ for some $S’ \in  \mathcal{C_x}(S)$, and</li>
+<li>for each $S’ \in \mathcal{C_x}(S)$, we have $T’ \cap S \subseteq S’$ for some $T’ \in  \mathcal{C_x}(T)$.</li>
+</ol>
+</li>
+<li><strong>Respects priorities</strong> : Given students’  preferences R, an assignment $\mu$ respects priorities C, if: <ol>
+<li>for each $i \in N$, $\mu(i)R_i i$, and</li>
+<li>for each $x \in X$, for every S such that $\mu^{-1}(x) \subseteq S \subseteq \{i \in N | x R_i \mu(i)\}$, we have $\mu^{-1}(x) \in \mathcal{C_x}(S)$.</li>
+</ol>
+</li>
+<li><strong>Pairwise stable</strong> : <ol>
+<li>for each $i \in N$, $\mu(i)R_i i$, </li>
+<li>$\mu^{−1}(x) \in \mathcal{C_x}(\mu^{−1}(x))$ for all $x \in X$,</li>
+<li>there is no $(i, x)\in N \times X$ such that $x P_i \mu(i)$ and $i \in DC_x(\mu^{−1}(x) \cup {i})$.</li>
+</ol>
+</li>
+<li><strong>Acceptant</strong> : A priority structure C is acceptant if for each $x \in X$, for each $S \subseteq N$, and for each $S’ \in \mathcal{C_x}(S)$ we have $|S_0|$ = min{|S|, $q_x$}.</li>
 </ul>
 
     </div>
@@ -398,11 +398,11 @@
 
 
 
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-    <span id="busuanzi_container_site_pv">Pageviews: <span id="busuanzi_value_site_pv"></span></span>
+    <br>
+    <span>Pageviews: <span id="busuanzi_value_site_pv"></span></span>
     <span class="post-meta-divider">|</span>
-    <span id="busuanzi_container_site_uv">Visits: <span id="busuanzi_value_site_uv"></span></span>
+    <span>Visits: <span id="busuanzi_value_site_uv"></span></span>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
         

@@ -216,33 +216,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>This posts servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his paper <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/27867511">School choice with consent</a>. I would cover issues on its original definition, different perspectives of implementation, efficiency, stability, equilibrium and simulation.</p>
-<h4>
-<ol type="1">
-<li>Kesten(2010)'s orginal definition
-</h4></li>
-</ol>
+        <p>This posts servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his paper <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/27867511">School choice with consent</a>. I would cover issues on its original definition, different perspectives of implementation, efficiency, stability, equilibrium and simulation. </p>
+<h4>1. Kesten(2010)'s orginal definition</h4>
+
 <p>Before introduing the algorithm, we would need one key concept brought by Kesten:</p>
-<p>1.1 Definition of <strong>Interruptor:</strong> Suppose there is a student i, who is tentatively accepted by a school s at step t, and later rejected by school s at step t'($ t' &gt; t$), meanwhile, if there is some student j, who is rejected by s at step l, <span class="math inline">\(t \leq l &lt; t&#39;\)</span>, then we call student i an <strong>interruptor</strong> and say that <span class="math inline">\((i,s)\)</span> form an <strong>interrupting pair of step t'</strong>.</p>
+<p>1.1 Definition of <strong>Interruptor:</strong> Suppose there is a student i, who is tentatively accepted by a school s at step t, and later rejected by school s at step t’($ t’ &gt; t$), meanwhile, if there is some student j, who is rejected by s at step l, $t \leq l &lt; t’$, then we call student i an <strong>interruptor</strong> and say that $(i,s)$ form an <strong>interrupting pair of step t’</strong>.</p>
 <p>1.2 Remark: An interruptor can be interpreted as someone who interrupts the favorable settlement among other students without any gain to himself.</p>
 <p>1.3 Remark: If the outcome of SOSM is not efficient, then there must be at least one interrupting pair in the DA process. However, the existence of interrupting pair does not imply efficiency loss.</p>
-<p>The essence of the algorithm is to try to recover the welfare loss casued by the interruptors <strong>in a right sequence</strong>. Due to the constraint efficiency of SOSM<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, we know any Pareto improvement would result in priority violation (of the interruptor), hence, it is imperative that we solicit the consent of students before we make any welfare imrprovement.</p>
+<p>The essence of the algorithm is to try to recover the welfare loss casued by the interruptors <strong>in a right sequence</strong>. Due to the constraint efficiency of SOSM<sup><a href="#fn_1" id="reffn_1">1</a></sup>, we know any Pareto improvement would result in priority violation (of the interruptor), hence, it is imperative that we solicit the consent of students before we make any welfare imrprovement.</p>
 <p>1.4 The Efficiency-adjusted deferred acceptance mechanism <strong>(EADAM)</strong>:</p>
 <p><u>Round 0</u>: Run the DA algorthim.</p>
-<p><u>Round k</u> (<span class="math inline">\(k \geq 1\)</span>): If there are no interrupting pairs or no consenting interruptors, then stops. Otherwise, find the last step of the DA procedure of round <span class="math inline">\(k-1\)</span>, where a consenting interruptor is rejected by the school he forms interrupting pair with. Identify all the interrupting pair with consenting interruptor of that step. For each interrupting pair with consent <span class="math inline">\((i,s)\)</span>, drop school s from i's preference list<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> without changing the relative order of the other remaining schools. Rerun DA with the new preference profile.</p>
-<h4>
-<ol start="2" type="1">
-<li>To be continued...
-</h4></li>
-</ol>
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>Here, we consider all priorities to be strict. Variants of EADAM can be applied to recover welfare loss due to tie-breaking without seeking consent of a student if he is interruptor due to the specific tie-breaking rule. Hopefully we can talk about this variant and extension in the future.<a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>Equivalently, we can sets as unacceptable for i.<a href="#fnref2" class="footnote-back">↩</a></p></li>
-</ol>
-</section>
-
+<p><u>Round k</u> ($k \geq 1$): If there are no interrupting pairs or no consenting interruptors, then stops. Otherwise, find the last step of the DA procedure of round $k-1$, where a consenting interruptor is rejected by the school he forms interrupting pair with. Identify all the interrupting pair with consenting interruptor of that step. For each interrupting pair with consent $(i,s)$, drop school s from i’s preference list<sup><a href="#fn_2" id="reffn_2">2</a></sup> without changing the relative order of the other remaining schools. Rerun DA with the new preference profile.  </p>
+<blockquote id="fn_1">
+<sup>1</sup>. Here, we consider all priorities to be strict. Variants of EADAM can be applied to recover welfare loss due to tie-breaking without seeking consent of a student if he is interruptor due to the specific tie-breaking rule. Hopefully we can talk about this variant and extension in the future.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. Equivalently, we can sets as unacceptable for i.<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<h4>2. To be continued...</h4>
     </div>
 
     
@@ -323,13 +314,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">
-
-Kesten(2010)&#39;s orginal definition
-</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">
-
-To be continued...
-</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1. Kesten(2010)&#39;s orginal definition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2. To be continued...</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -394,11 +379,11 @@ To be continued...
 
 
 
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-    <span id="busuanzi_container_site_pv">Pageviews: <span id="busuanzi_value_site_pv"></span></span>
+    <br>
+    <span>Pageviews: <span id="busuanzi_value_site_pv"></span></span>
     <span class="post-meta-divider">|</span>
-    <span id="busuanzi_container_site_uv">Visits: <span id="busuanzi_value_site_uv"></span></span>
+    <span>Visits: <span id="busuanzi_value_site_uv"></span></span>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
         
