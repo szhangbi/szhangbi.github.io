@@ -113,6 +113,11 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
@@ -155,6 +160,115 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/01/Sept-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jake ZHANG Shiyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiyu's site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/01/Sept-1/" class="post-title-link" itemprop="url">8 Things on EADAM (2)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-09-01 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-01T00:00:00+08:00">2021-09-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-09-16 23:21:03" itemprop="dateModified" datetime="2021-09-16T23:21:03+08:00">2021-09-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4>2. One perspective provided by Tang &amp; Yu (2014)</h4>
+Focusing on each student's incentive to give consent or not in the school choice with consent model we discussed last time, Tang &amp; Yu provided [a new prospective of EADAM](https://doi.org/10.1016/j.jet.2014.10.002). It is reasoned that in order not to disincentivize a student to give consent, we should violate his priorities to allow improvement of others' assignment only when the assignment of this student can not be improved any more, so that his chance of getting into a better school would not be hurted by his consent. To identify which students are not Pareto-improvable given the outcome of DA, we could first identify which schools are under-demanded.
+
+2.1 Definition of **Under-demanded school:** A school s is *under-demanded* at a matching $\mu$ if no student prefers it to his assignment under $\mu$, that is, $\nexists i$, such that $s \succ_{i} \mu(i)$.
+
+The following lemma tells us that students who are matched with under-demanded school in a DA matching are not Pareto-improvable.
+
+2.2 Lemma: At a DA matching, all students who are matched with under-demanded schools are not Pareto-improvable. 
+Proof: Actually, this result also hold for any non-wasteful matching mechanisms, and this is because Pareto-improvements can only take the form of trading when the matching is non-wasteful. The intuition behind is straightforward, that is, no student would be willing to trade his assignment for a under-demanded school. For technical details, please refer to the Appendix A.1 of Tang &amp; Yu's paper. 
+
+2.3 The simplified Efficiency-adjusted deferred acceptance mechanism **(simplified EADAM):**
+
+<u>Round 0</u>: Run the DA algorithm.
+
+<u>Round k</u> ($k \geq 1$): 
+1. Identify all the under-demanded schools at the (k-1)-th round, settle these schools as the final assignment for students who are matched with these schools, remove these schools and the matched students; 
+2. For each removed student i, check whether he gives consent or not. If not, for each school s that is preferred to his matching $\mu(i)$, we modify the priority of s such that any student j who has a lower priority than i is considered as unacceptable for s[^1];
+3. Stop if all schools are removed. Otherwise, re-run DA with the remaining students and schools (with their modified priorities).
+
+2.4 Observation: The algorithm terminates after at most (|S|+1) rounds.
+
+Proof: This is ensured by the existence of under-demanded school at the end of each round, which is guaranteed by the [Weakly Pareto Optimality of DA](http://localhost:4000/2021/07/19/Jul-19-a/)  For technical details, please refer to the Appendix A.3 of Tang &amp; Yu's paper. 
+
+2.5 Observation: For Round r, $r \geq 1$, the outcome of Round r of EADAM weakly Pareto dominates the outcome of Round (r-1) of EADAM. That is, each student received a weakly better assignment after each iteration of the simplified EADAM.
+
+Proof: Please refer to the Appendix A.3 of Tang &amp; Yu's paper. 
+
+Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's EDAM:
+
+2.6 Theorem: For each instance of school choice with consent problem, the simplified EDAM produced the same outcome as the Kesten's EADAM does.  
+
+<h4>3. To be continued...</h4>
+
+<blockquote id="fn_1">
+<sup>1</sup>. Equivalently, we can drop school s from student j’s preference list.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/30/Aug-30/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -178,10 +292,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-08-30 00:00:00 / Modified: 22:19:22" itemprop="dateCreated datePublished" datetime="2021-08-30T00:00:00+08:00">2021-08-30</time>
+              <time title="Created: 2021-08-30 00:00:00" itemprop="dateCreated datePublished" datetime="2021-08-30T00:00:00+08:00">2021-08-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-09-16 23:08:58" itemprop="dateModified" datetime="2021-09-16T23:08:58+08:00">2021-09-16</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -203,24 +323,60 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>This posts servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his paper <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/27867511">School choice with consent</a>. I would cover issues on its original definition, different perspectives of implementation, efficiency, stability, equilibrium and simulation. </p>
-<h4>1. Kesten(2010)'s orginal definition</h4>
+          <p>This posts servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his pioneering paper <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/27867511">School choice with consent</a>. I would cover issues on its original definition, different perspectives of implementation, efficiency, stability, equilibrium and simulation. </p>
+<h4>1. Kesten(2010)'s original definition</h4>
 
-<p>Before introduing the algorithm, we would need one key concept brought by Kesten:</p>
-<p>1.1 Definition of <strong>Interruptor:</strong> Suppose there is a student i, who is tentatively accepted by a school s at step t, and later rejected by school s at step t’($ t’ &gt; t$), meanwhile, if there is some student j, who is rejected by s at step l, $t \leq l &lt; t’$, then we call student i an <strong>interruptor</strong> and say that $(i,s)$ form an <strong>interrupting pair of step t’</strong>.</p>
-<p>1.2 Remark: An interruptor can be interpreted as someone who interrupts the favorable settlement among other students without any gain to himself.</p>
+<p>Before introducing the algorithm, we would need one key concept brought by Kesten:</p>
+<p>1.1 Definition of <strong>Interrupter:</strong> Suppose there is a student i, who is tentatively accepted by a school s at step t, and later rejected by school s at step t’ (t’ &gt; t), meanwhile, if there is some student j, who is rejected by s at step l, $t \leq l &lt; t’$, then we call student i an <strong>interrupter</strong> and say that $(i,s)$ form an <strong>interrupting pair of step t’</strong>.</p>
+<p>1.2 Remark: An interrupter can be interpreted as someone who interrupts the favorable settlement among other students without any gain to himself.</p>
 <p>1.3 Remark: If the outcome of SOSM is not efficient, then there must be at least one interrupting pair in the DA process. However, the existence of interrupting pair does not imply efficiency loss.</p>
-<p>The essence of the algorithm is to try to recover the welfare loss casued by the interruptors <strong>in a right sequence</strong>. Due to the constraint efficiency of SOSM<sup><a href="#fn_1" id="reffn_1">1</a></sup>, we know any Pareto improvement would result in priority violation (of the interruptor), hence, it is imperative that we solicit the consent of students before we make any welfare imrprovement.</p>
-<p>1.4 The Efficiency-adjusted deferred acceptance mechanism <strong>(EADAM)</strong>:</p>
-<p><u>Round 0</u>: Run the DA algorthim.</p>
-<p><u>Round k</u> ($k \geq 1$): If there are no interrupting pairs or no consenting interruptors, then stops. Otherwise, find the last step of the DA procedure of round $k-1$, where a consenting interruptor is rejected by the school he forms interrupting pair with. Identify all the interrupting pair with consenting interruptor of that step. For each interrupting pair with consent $(i,s)$, drop school s from i’s preference list<sup><a href="#fn_2" id="reffn_2">2</a></sup> without changing the relative order of the other remaining schools. Rerun DA with the new preference profile.  </p>
+<p>1.4 Example where interrupting pair may not lead to welfare loss:</p>
+<p>A problem of 4 students, 3 schools with capacities $q_1=q_2=1$, $q_3=2$, priority profile and preference profile are as following:</p>
+<table>
+<tr>
+<td>$\succ_{s_1}$</td> <td>$\succ_{s_2}$</td> <td>$\succ_{s_3}$</td>
+</tr>
+<tr>
+<td>$i_3$</td> <td>$i_4$</td> <td>$s_1$</td>
+</tr>
+<tr>
+<td>$i_1$</td> <td>$i_3$</td> <td>$i_2$</td> 
+</tr>
+<tr>
+<td>$i_2$</td> <td></td> <td></td> 
+</tr>
+</table>
+
+<table>
+<tr>
+<td>$P_{i_1}$</td> <td>$P_{i_2}$</td> <td>$P_{i_3}$</td> <td>$P_{i_4}$</td>
+</tr>
+<tr>
+<td>$s_1$</td> <td>$s_1$</td> <td>$s_2$</td> <td>$\underline{s_2}$</td>
+</tr>
+<tr>
+<td>$\underline{s_3}$</td> <td>$\underline{s_3}$</td> <td>$\underline{s_1}$</td> <td></td>
+</tr>
+</table>
+
+<p>The SOSM outcome is underlined in the preference profile and is efficient, while $(i_1,s_1)$ form an interrupting pair.</p>
+<p>The essence of the algorithm is to try to recover the welfare loss caused by the interrupters <strong>in a right sequence</strong>. Due to the constraint efficiency of SOSM<sup><a href="#fn_1" id="reffn_1">1</a></sup>, we know any Pareto improvement would result in priority violation (of the interrupter), hence, it is imperative that we solicit the consent of students before we make any welfare improvement.</p>
+<p>1.5 The Efficiency-adjusted deferred acceptance mechanism <strong>(EADAM)</strong>:</p>
+<p><u>Round 0</u>: Run the DA algorithm.</p>
+<p><u>Round k</u> ($k \geq 1$): If there are no interrupting pairs or no consenting interrupters, then stops. Otherwise, find the last step of the DA procedure of round $k-1$, where a consenting interrupter is rejected by the school he forms interrupting pair with. Identify all the interrupting pair with consenting interrupter of that step. For each interrupting pair with consent $(i,s)$, drop school s from i’s preference list<sup><a href="#fn_2" id="reffn_2">2</a></sup> without changing the relative order of the other remaining schools. Rerun DA with the new preference profile.  </p>
+<p>1.6 Observation: The algorithm terminates after at most |I| &times; |S| rounds. </p>
+<p>Proof: This is because each student can be identified in an interrupting pair for at most |S| times and each round at least one interrupting pair is neutralized.</p>
+<p>1.7 Observation: For Round r, $r \geq 1$, the outcome of Round r of EADAM weakly Pareto dominates the outcome of Round (r-1) of EADAM. That is, each student received a weakly better assignment after each iteration of the EADAM.</p>
+<p>Proof: Please refer to Appendix C of Kesten’s(2010) paper.</p>
 <blockquote id="fn_1">
-<sup>1</sup>. Here, we consider all priorities to be strict. Variants of EADAM can be applied to recover welfare loss due to tie-breaking without seeking consent of a student if he is interruptor due to the specific tie-breaking rule. Hopefully we can talk about this variant and extension in the future.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+<sup>1</sup>. Here, we consider all priorities to be strict. Variants of EADAM can be applied to recover welfare loss due to tie-breaking without seeking consent of a student if he is interrupter due to the specific tie-breaking rule. Hopefully we can talk about this variant and extension in the future.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
 </blockquote>
 <blockquote id="fn_2">
-<sup>2</sup>. Equivalently, we can sets as unacceptable for i.<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+<sup>2</sup>. Equivalently, we can set s as unacceptable for i.<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
 </blockquote>
 <h4>2. To be continued...</h4>
+
+<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
       
     </div>
 
@@ -359,7 +515,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-31 00:04:33" itemprop="dateModified" datetime="2021-07-31T00:04:33+08:00">2021-07-31</time>
+                <time title="Modified: 2021-09-16 22:36:43" itemprop="dateModified" datetime="2021-09-16T22:36:43+08:00">2021-09-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -382,7 +538,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>The following are notations introduced by Erdil and Kumano in their paper <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.566.8067">Prioritizing Diversity in School Choice</a> as an attempt to incorperate more complex prority rule in the school choice problem.</p>
+          <p>The following are notations introduced by Erdil and Kumano in their paper <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.566.8067">Prioritizing Diversity in School Choice</a> as an attempt to incorporate more complex priority rule in the school choice problem.</p>
 <ul>
 <li>N ： set of students, X : set of schools;</li>
 <li><strong>priority rule</strong> : $\mathcal{C_x}:2^N \rightarrow 2^{2^N}$ s.t. $S’ \subseteq S$ for all $S’ \in \mathcal{C_x}(S)$</li>
@@ -562,7 +718,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-21 13:32:09" itemprop="dateModified" datetime="2021-07-21T13:32:09+08:00">2021-07-21</time>
+                <time title="Modified: 2021-09-16 22:37:32" itemprop="dateModified" datetime="2021-09-16T22:37:32+08:00">2021-09-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -592,9 +748,9 @@
 </style>
 
 
-<p>In the paper <i><a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2938326?seq=1#metadata_info_tab_contents"> Random Paths to Stability in Two-Sided Matching</a></i> , Roth and Vande Vate (1990) proposed an algorithm that can recover stability from arbitary matching. The paper is short and does not contain example of the execution of the algorithm. I provided two examples here:</p>
+<p>In the paper <i><a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2938326?seq=1#metadata_info_tab_contents"> Random Paths to Stability in Two-Sided Matching</a></i> , Roth and Vande Vate (1990) proposed an algorithm that can recover stability from arbitrary matching. The paper is short and does not contain example of the execution of the algorithm. I provided two examples here:</p>
 <p><h4>Notation</h4><br><u>Satisfying the blocking pair:</u> For a pair $(m’,w’)$ that blocks $\mu$, we say $\nu$ is obtained by satisfying the blocking pair $(m’,w’)$ from $\mu$ if m’ and w’ are matched at $\nu$, their original partner $\mu(m’)$ and $\mu(w’)$ each becomes unmatched at $\nu$ while the others are matched to the same mate under $\nu$ as they were at $\mu$. </p>
-<p><h4>Decscription of the algorithm</h4><br>Step 0: Given an arbitary matching $\mu_0$, if it is not individually rational, we satisfy all the blocking pair formed by individuals to obtain an individual rational matching $\mu_1$<br><br>Step 1: If there is no blocking pair for $\mu_1$, then terminate. Otherwise, pick one blocking pair $(m1,w1)$ and obatin $\mu_2$ from $\mu_1$ by satisfying $(m_1,w_1)$, and put the two inside the set $A(1)\equiv \{m_1,w_1\}$.<br><br>Step k (k&gt;1): If there is no blocking pair for $\mu_k$, then terminate. </p>
+<p><h4>Decscription of the algorithm</h4><br>Step 0: Given an arbitrary matching $\mu_0$, if it is not individually rational, we satisfy all the blocking pair formed by individuals to obtain an individual rational matching $\mu_1$<br><br>Step 1: If there is no blocking pair for $\mu_1$, then terminate. Otherwise, pick one blocking pair $(m1,w1)$ and obtain $\mu_2$ from $\mu_1$ by satisfying $(m_1,w_1)$, and put the two inside the set $A(1)\equiv \{m_1,w_1\}$.<br><br>Step k (k&gt;1): If there is no blocking pair for $\mu_k$, then terminate. </p>
 <div style="margin-left:95px">Else, if there some men in $A(k-1)$ forms a blocking pair with a woman $w_k$ outside $A(k-1)$, we choose the $m_j$ to be the man who is $w_k$'s most prefered mate in $A(k-1)$, we obtain $\mu_{k+1}$ from $\mu_k$ by satisfying $(m_j,w_k)$ and add $w_k$ to $A(k-1)$ to get $A(k)=A(k-1)\cup\{w_k\}$ and move to next step;</div>
 <div style="margin-left:130px">Else if there are some women in $A(k-1)$ forms a blocking pair with a man $m_k$ outside $A(k-1)$, we choose the $w_j$ to be the woman who is $m_k$'s most prefered mate in $A(k-1)$, we obtain $\mu_{k+1}$ from $\mu_k$ by satisfying $(m_k,w_j)$ and add $m_k$ to $A(k-1)$ to get $A(k)=A(k-1)\cup\{m_k\}$ and move to next step;</div> 
 
@@ -632,79 +788,6 @@ we have:
 <td>P(w1) = m4, m3, m2, m1</td> <td>P(w2) = m3, m4, m1, m2</td> <td>P(w3) = m2, m1, m4, m3</td> <td>P(w4) = m1, m2, m3, m4</td>
 </tr>
 </table>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/19/Jul-19-b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jake ZHANG Shiyu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shiyu's site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/19/Jul-19-b/" class="post-title-link" itemprop="url">Summary of <i>Expanding ''Choice'' in School Choice </i> by Abdulkadirog˘lu et. al. (2015)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-19T00:00:00+08:00">2021-07-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-20 11:43:10" itemprop="dateModified" datetime="2021-07-20T11:43:10+08:00">2021-07-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
       
     </div>
 
@@ -804,6 +887,79 @@ Case 2: If $\sum_{s \in S}q_s \leq |I|$, since all student apply to schools in t
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/19/Jul-19-b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jake ZHANG Shiyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiyu's site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/19/Jul-19-b/" class="post-title-link" itemprop="url">Summary of <i>Expanding ''Choice'' in School Choice </i> by Abdulkadirog˘lu et. al. (2015)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-19T00:00:00+08:00">2021-07-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-07-20 11:43:10" itemprop="dateModified" datetime="2021-07-20T11:43:10+08:00">2021-07-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
 
@@ -870,7 +1026,7 @@ Case 2: If $\sum_{s \in S}q_s \leq |I|$, since all student apply to schools in t
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -888,6 +1044,14 @@ Case 2: If $\sum_{s \in S}q_s \leq |I|$, since all student apply to schools in t
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/szhangbi/" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;szhangbi&#x2F;" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:szhangbi@connect.ust.hk" title="E-Mail → mailto:szhangbi@connect.ust.hk" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
