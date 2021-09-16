@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-16 23:21:03" itemprop="dateModified" datetime="2021-09-16T23:21:03+08:00">2021-09-16</time>
+                <time title="Modified: 2021-09-16 23:30:29" itemprop="dateModified" datetime="2021-09-16T23:30:29+08:00">2021-09-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -214,43 +214,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4>2. One perspective provided by Tang &amp; Yu (2014)</h4>
-Focusing on each student's incentive to give consent or not in the school choice with consent model we discussed last time, Tang &amp; Yu provided [a new prospective of EADAM](https://doi.org/10.1016/j.jet.2014.10.002). It is reasoned that in order not to disincentivize a student to give consent, we should violate his priorities to allow improvement of others' assignment only when the assignment of this student can not be improved any more, so that his chance of getting into a better school would not be hurted by his consent. To identify which students are not Pareto-improvable given the outcome of DA, we could first identify which schools are under-demanded.
-
-2.1 Definition of **Under-demanded school:** A school s is *under-demanded* at a matching $\mu$ if no student prefers it to his assignment under $\mu$, that is, $\nexists i$, such that $s \succ_{i} \mu(i)$.
-
-The following lemma tells us that students who are matched with under-demanded school in a DA matching are not Pareto-improvable.
-
-2.2 Lemma: At a DA matching, all students who are matched with under-demanded schools are not Pareto-improvable. 
-Proof: Actually, this result also hold for any non-wasteful matching mechanisms, and this is because Pareto-improvements can only take the form of trading when the matching is non-wasteful. The intuition behind is straightforward, that is, no student would be willing to trade his assignment for a under-demanded school. For technical details, please refer to the Appendix A.1 of Tang &amp; Yu's paper. 
-
-2.3 The simplified Efficiency-adjusted deferred acceptance mechanism **(simplified EADAM):**
-
-<u>Round 0</u>: Run the DA algorithm.
-
-<u>Round k</u> ($k \geq 1$): 
-1. Identify all the under-demanded schools at the (k-1)-th round, settle these schools as the final assignment for students who are matched with these schools, remove these schools and the matched students; 
-2. For each removed student i, check whether he gives consent or not. If not, for each school s that is preferred to his matching $\mu(i)$, we modify the priority of s such that any student j who has a lower priority than i is considered as unacceptable for s[^1];
-3. Stop if all schools are removed. Otherwise, re-run DA with the remaining students and schools (with their modified priorities).
-
-2.4 Observation: The algorithm terminates after at most (|S|+1) rounds.
-
-Proof: This is ensured by the existence of under-demanded school at the end of each round, which is guaranteed by the [Weakly Pareto Optimality of DA](http://localhost:4000/2021/07/19/Jul-19-a/)  For technical details, please refer to the Appendix A.3 of Tang &amp; Yu's paper. 
-
-2.5 Observation: For Round r, $r \geq 1$, the outcome of Round r of EADAM weakly Pareto dominates the outcome of Round (r-1) of EADAM. That is, each student received a weakly better assignment after each iteration of the simplified EADAM.
-
-Proof: Please refer to the Appendix A.3 of Tang &amp; Yu's paper. 
-
-Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's EDAM:
-
-2.6 Theorem: For each instance of school choice with consent problem, the simplified EDAM produced the same outcome as the Kesten's EADAM does.  
-
-<h4>3. To be continued...</h4>
-
-<blockquote id="fn_1">
-<sup>1</sup>. Equivalently, we can drop school s from student j’s preference list.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
+          <h4>
+<ol start="2" type="1">
+<li>One perspective provided by Tang &amp; Yu (2014)
+</h4></li>
+</ol>
+<p>Focusing on each student's incentive to give consent or not in the school choice with consent model we discussed last time, Tang &amp; Yu provided <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.jet.2014.10.002">a new prospective of EADAM</a>. It is reasoned that in order not to disincentivize a student to give consent, we should violate his priorities to allow improvement of others' assignment only when the assignment of this student can not be improved any more, so that his chance of getting into a better school would not be hurted by his consent. To identify which students are not Pareto-improvable given the outcome of DA, we could first identify which schools are under-demanded.</p>
+<p>2.1 Definition of <strong>Under-demanded school:</strong> A school s is <em>under-demanded</em> at a matching <span class="math inline">\(\mu\)</span> if no student prefers it to his assignment under <span class="math inline">\(\mu\)</span>, that is, <span class="math inline">\(\nexists i\)</span>, such that <span class="math inline">\(s \succ_{i} \mu(i)\)</span>.</p>
+<p>The following lemma tells us that students who are matched with under-demanded school in a DA matching are not Pareto-improvable.</p>
+<p>2.2 Lemma: At a DA matching, all students who are matched with under-demanded schools are not Pareto-improvable. Proof: Actually, this result also hold for any non-wasteful matching mechanisms, and this is because Pareto-improvements can only take the form of trading when the matching is non-wasteful. The intuition behind is straightforward, that is, no student would be willing to trade his assignment for a under-demanded school. For technical details, please refer to the Appendix A.1 of Tang &amp; Yu's paper.</p>
+<p>2.3 The simplified Efficiency-adjusted deferred acceptance mechanism <strong>(simplified EADAM):</strong></p>
+<p><u>Round 0</u>: Run the DA algorithm.</p>
+<p><u>Round k</u> (<span class="math inline">\(k \geq 1\)</span>): 1. Identify all the under-demanded schools at the (k-1)-th round, settle these schools as the final assignment for students who are matched with these schools, remove these schools and the matched students; 2. For each removed student i, check whether he gives consent or not. If not, for each school s that is preferred to his matching <span class="math inline">\(\mu(i)\)</span>, we modify the priority of s such that any student j who has a lower priority than i is considered as unacceptable for s<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>; 3. Stop if all schools are removed. Otherwise, re-run DA with the remaining students and schools (with their modified priorities).</p>
+<p>2.4 Observation: The algorithm terminates after at most (|S|+1) rounds.</p>
+<p>Proof: This is ensured by the existence of under-demanded school at the end of each round, which is guaranteed by the <a target="_blank" rel="noopener" href="https://szhangbi.github.io/2021/07/19/Jul-19-a/">Weakly Pareto Optimality of DA</a> For technical details, please refer to the Appendix A.3 of Tang &amp; Yu's paper.</p>
+<p>2.5 Observation: For Round r, <span class="math inline">\(r \geq 1\)</span>, the outcome of Round r of EADAM weakly Pareto dominates the outcome of Round (r-1) of EADAM. That is, each student received a weakly better assignment after each iteration of the simplified EADAM.</p>
+<p>Proof: Please refer to the Appendix A.3 of Tang &amp; Yu's paper.</p>
+<p>Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's EDAM:</p>
+<p>2.6 Theorem: For each instance of school choice with consent problem, the simplified EDAM produced the same outcome as the Kesten's EADAM does.</p>
+<h4>
+<ol start="3" type="1">
+<li>To be continued...
+</h4></li>
+</ol>
 <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Equivalently, we can drop school s from student j's preference list.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+
       
     </div>
 
@@ -300,7 +294,7 @@ Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's E
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-16 23:08:58" itemprop="dateModified" datetime="2021-09-16T23:08:58+08:00">2021-09-16</time>
+                <time title="Modified: 2021-09-16 23:26:48" itemprop="dateModified" datetime="2021-09-16T23:26:48+08:00">2021-09-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -323,60 +317,128 @@ Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's E
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>This posts servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his pioneering paper <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/27867511">School choice with consent</a>. I would cover issues on its original definition, different perspectives of implementation, efficiency, stability, equilibrium and simulation. </p>
-<h4>1. Kesten(2010)'s original definition</h4>
-
+          <p>This post servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his pioneering paper <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/27867511">School choice with consent</a>. I would cover issues on its original definition, different perspectives of implementation, efficiency, stability, equilibrium and simulation.</p>
+<h4>
+<ol type="1">
+<li>Kesten(2010)'s original definition
+</h4></li>
+</ol>
 <p>Before introducing the algorithm, we would need one key concept brought by Kesten:</p>
-<p>1.1 Definition of <strong>Interrupter:</strong> Suppose there is a student i, who is tentatively accepted by a school s at step t, and later rejected by school s at step t’ (t’ &gt; t), meanwhile, if there is some student j, who is rejected by s at step l, $t \leq l &lt; t’$, then we call student i an <strong>interrupter</strong> and say that $(i,s)$ form an <strong>interrupting pair of step t’</strong>.</p>
+<p>1.1 Definition of <strong>Interrupter:</strong> Suppose there is a student i, who is tentatively accepted by a school s at step t, and later rejected by school s at step t' (t' &gt; t), meanwhile, if there is some student j, who is rejected by s at step l, <span class="math inline">\(t \leq l &lt; t&#39;\)</span>, then we call student i an <strong>interrupter</strong> and say that <span class="math inline">\((i,s)\)</span> form an <strong>interrupting pair of step t'</strong>.</p>
 <p>1.2 Remark: An interrupter can be interpreted as someone who interrupts the favorable settlement among other students without any gain to himself.</p>
 <p>1.3 Remark: If the outcome of SOSM is not efficient, then there must be at least one interrupting pair in the DA process. However, the existence of interrupting pair does not imply efficiency loss.</p>
 <p>1.4 Example where interrupting pair may not lead to welfare loss:</p>
-<p>A problem of 4 students, 3 schools with capacities $q_1=q_2=1$, $q_3=2$, priority profile and preference profile are as following:</p>
+A problem of 4 students, 3 schools with capacities <span class="math inline">\(q_1=q_2=1\)</span>, <span class="math inline">\(q_3=2\)</span>, priority profile and preference profile are as following:
 <table>
 <tr>
-<td>$\succ_{s_1}$</td> <td>$\succ_{s_2}$</td> <td>$\succ_{s_3}$</td>
+<td>
+<span class="math inline">\(\succ_{s_1}\)</span>
+</td>
+<td>
+<span class="math inline">\(\succ_{s_2}\)</span>
+</td>
+<td>
+<span class="math inline">\(\succ_{s_3}\)</span>
+</td>
 </tr>
 <tr>
-<td>$i_3$</td> <td>$i_4$</td> <td>$s_1$</td>
+<td>
+<span class="math inline">\(i_3\)</span>
+</td>
+<td>
+<span class="math inline">\(i_4\)</span>
+</td>
+<td>
+<span class="math inline">\(s_1\)</span>
+</td>
 </tr>
 <tr>
-<td>$i_1$</td> <td>$i_3$</td> <td>$i_2$</td> 
+<td>
+<span class="math inline">\(i_1\)</span>
+</td>
+<td>
+<span class="math inline">\(i_3\)</span>
+</td>
+<td>
+<span class="math inline">\(i_2\)</span>
+</td>
 </tr>
 <tr>
-<td>$i_2$</td> <td></td> <td></td> 
+<td>
+<span class="math inline">\(i_2\)</span>
+</td>
+<td>
+</td>
+<td>
+</td>
 </tr>
 </table>
-
 <table>
 <tr>
-<td>$P_{i_1}$</td> <td>$P_{i_2}$</td> <td>$P_{i_3}$</td> <td>$P_{i_4}$</td>
+<td>
+<span class="math inline">\(P_{i_1}\)</span>
+</td>
+<td>
+<span class="math inline">\(P_{i_2}\)</span>
+</td>
+<td>
+<span class="math inline">\(P_{i_3}\)</span>
+</td>
+<td>
+<span class="math inline">\(P_{i_4}\)</span>
+</td>
 </tr>
 <tr>
-<td>$s_1$</td> <td>$s_1$</td> <td>$s_2$</td> <td>$\underline{s_2}$</td>
+<td>
+<span class="math inline">\(s_1\)</span>
+</td>
+<td>
+<span class="math inline">\(s_1\)</span>
+</td>
+<td>
+<span class="math inline">\(s_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\underline{s_2}\)</span>
+</td>
 </tr>
 <tr>
-<td>$\underline{s_3}$</td> <td>$\underline{s_3}$</td> <td>$\underline{s_1}$</td> <td></td>
+<td>
+<span class="math inline">\(\underline{s_3}\)</span>
+</td>
+<td>
+<span class="math inline">\(\underline{s_3}\)</span>
+</td>
+<td>
+<span class="math inline">\(\underline{s_1}\)</span>
+</td>
+<td>
+</td>
 </tr>
 </table>
-
-<p>The SOSM outcome is underlined in the preference profile and is efficient, while $(i_1,s_1)$ form an interrupting pair.</p>
-<p>The essence of the algorithm is to try to recover the welfare loss caused by the interrupters <strong>in a right sequence</strong>. Due to the constraint efficiency of SOSM<sup><a href="#fn_1" id="reffn_1">1</a></sup>, we know any Pareto improvement would result in priority violation (of the interrupter), hence, it is imperative that we solicit the consent of students before we make any welfare improvement.</p>
+<p>The SOSM outcome is underlined in the preference profile and is efficient, while <span class="math inline">\((i_1,s_1)\)</span> form an interrupting pair.</p>
+<p>The essence of the algorithm is to try to recover the welfare loss caused by the interrupters <strong>in a right sequence</strong>. Due to the constraint efficiency of SOSM<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, we know any Pareto improvement would result in priority violation (of the interrupter), hence, it is imperative that we solicit the consent of students before we make any welfare improvement.</p>
 <p>1.5 The Efficiency-adjusted deferred acceptance mechanism <strong>(EADAM)</strong>:</p>
 <p><u>Round 0</u>: Run the DA algorithm.</p>
-<p><u>Round k</u> ($k \geq 1$): If there are no interrupting pairs or no consenting interrupters, then stops. Otherwise, find the last step of the DA procedure of round $k-1$, where a consenting interrupter is rejected by the school he forms interrupting pair with. Identify all the interrupting pair with consenting interrupter of that step. For each interrupting pair with consent $(i,s)$, drop school s from i’s preference list<sup><a href="#fn_2" id="reffn_2">2</a></sup> without changing the relative order of the other remaining schools. Rerun DA with the new preference profile.  </p>
-<p>1.6 Observation: The algorithm terminates after at most |I| &times; |S| rounds. </p>
+<p><u>Round k</u> (<span class="math inline">\(k \geq 1\)</span>): If there are no interrupting pairs or no consenting interrupters, then stops. Otherwise, find the last step of the DA procedure of round <span class="math inline">\(k-1\)</span>, where a consenting interrupter is rejected by the school he forms interrupting pair with. Identify all the interrupting pair with consenting interrupter of that step. For each interrupting pair with consent <span class="math inline">\((i,s)\)</span>, drop school s from i's preference list<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> without changing the relative order of the other remaining schools. Rerun DA with the new preference profile.</p>
+<p>1.6 Observation: The algorithm terminates after at most |I| × |S| rounds.</p>
 <p>Proof: This is because each student can be identified in an interrupting pair for at most |S| times and each round at least one interrupting pair is neutralized.</p>
-<p>1.7 Observation: For Round r, $r \geq 1$, the outcome of Round r of EADAM weakly Pareto dominates the outcome of Round (r-1) of EADAM. That is, each student received a weakly better assignment after each iteration of the EADAM.</p>
-<p>Proof: Please refer to Appendix C of Kesten’s(2010) paper.</p>
-<blockquote id="fn_1">
-<sup>1</sup>. Here, we consider all priorities to be strict. Variants of EADAM can be applied to recover welfare loss due to tie-breaking without seeking consent of a student if he is interrupter due to the specific tie-breaking rule. Hopefully we can talk about this variant and extension in the future.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_2">
-<sup>2</sup>. Equivalently, we can set s as unacceptable for i.<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
-</blockquote>
-<h4>2. To be continued...</h4>
-
+<p>1.7 Observation: For Round r, <span class="math inline">\(r \geq 1\)</span>, the outcome of Round r of EADAM weakly Pareto dominates the outcome of Round (r-1) of EADAM. That is, each student received a weakly better assignment after each iteration of the EADAM.</p>
+<p>Proof: Please refer to Appendix C of Kesten's(2010) paper.</p>
+<h4>
+<ol start="2" type="1">
+<li>To be continued...
+</h4></li>
+</ol>
 <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Here, we consider all priorities to be strict. Variants of EADAM can be applied to recover welfare loss due to tie-breaking without seeking consent of a student if he is interrupter due to the specific tie-breaking rule. Hopefully we can talk about this variant and extension in the future.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Equivalently, we can set s as unacceptable for i.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+
       
     </div>
 
@@ -445,21 +507,21 @@ Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's E
       
           <p>Stability has been argued to be the key to the survival of mechanisms in a two-sided matching markets. While (dominant-strategy) incentive compatbility, also refered as strategy-proofness, is also considered to be of great importance. It is however well known that strategy-proofness is incompatible with stability in the standard two-sided marriage markets. More precisely, under the man-proposing deffered acceptance mechanism, woman may profit from not stating her true preference.</p>
 <p>The paper <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2999493">Truncation Strategies in Matching Markets</a> provides an explaination for the success of firm-proposing DA mechanisms in the entry-level labor market, even though they are not strategy-proof. That is, under low information settings, the scope of profitable manipulation for agents is greatly reduced. It also provides a novel appoarch to explore the strategic behaviors of agents under incomplete information setting.</p>
-<p>Here is the main take-away (in the form of advice for participants): </p>
+<p>Here is the main take-away (in the form of advice for participants):</p>
 <ul>
-<li><strong>If the mechanism deployed is firm-proposing deffered acceptance mechanism, and if you have little information on how others make decisions, such that any two firms A, B in the market are symmetric in the sense that, you think it is equally likely that others would prefer A to B or B to A, and it is equally likely that A would ranks you higher than B does or B would rank you higher than A dose, then you can do no better than simply state your true preference or truncate your preference lists without changing the relative orders.</strong> </li>
+<li><strong>If the mechanism deployed is firm-proposing deffered acceptance mechanism, and if you have little information on how others make decisions, such that any two firms A, B in the market are symmetric in the sense that, you think it is equally likely that others would prefer A to B or B to A, and it is equally likely that A would ranks you higher than B does or B would rank you higher than A dose, then you can do no better than simply state your true preference or truncate your preference lists without changing the relative orders.</strong></li>
 <li>Which one is better, truth-telling or truncation? Well, it depends on your tolerance for risk.</li>
 <li>What if you have some more information? For example, you know which tier the firm lies in, and you know firms in higher tier are preferred to lower tier firms by all other participants. In this case, truncation may no longer be the optimal choice.</li>
 </ul>
 <p>Here are some important concepts introduced by the authors:</p>
 <ul>
-<li>Notations: f for firm, w for worker, $V =F \cup W$</li>
-<li>$P^{f \leftrightarrow f’}_{S}$: for each worker in S, he changes the relative position of f and f’ without changing the others, if f is in S, it changes its preference to (submitted) preference of f’, and if f’ is in f, it changes its preference to (submitted) preference of f.</li>
-<li>Preference profile as random variables: $\widetilde{P}_{-w}$ ranges from all the preference profiles of agents other than w in V.</li>
-<li>Symmetric information: if the distributions of $\widetilde{P}_{-w}$, and $(\widetilde{P}_{-w})^{f \leftrightarrow f’}$ coincide, i.e., if for every specific realization of ${P}_{-w}$, $Pr\{\widetilde{P}_{-w} = P_{-w}\}$ = $Pr\{(\widetilde{P}_{-w})^{f \leftrightarrow f’} = P_{-w}\}$ , or equivalently, $Pr\{\widetilde{P}_{-w} = P_{-w}\}$ = $Pr\{\widetilde{P}_{-w} = P_{-w}^{f \leftrightarrow f’}\}$.</li>
+<li>Notations: f for firm, w for worker, <span class="math inline">\(V =F \cup W\)</span></li>
+<li><span class="math inline">\(P^{f \leftrightarrow f&#39;}_{S}\)</span>: for each worker in S, he changes the relative position of f and f' without changing the others, if f is in S, it changes its preference to (submitted) preference of f', and if f' is in f, it changes its preference to (submitted) preference of f.</li>
+<li>Preference profile as random variables: <span class="math inline">\(\widetilde{P}_{-w}\)</span> ranges from all the preference profiles of agents other than w in V.</li>
+<li>Symmetric information: if the distributions of <span class="math inline">\(\widetilde{P}_{-w}\)</span>, and <span class="math inline">\((\widetilde{P}_{-w})^{f \leftrightarrow f&#39;}\)</span> coincide, i.e., if for every specific realization of <span class="math inline">\({P}_{-w}\)</span>, <span class="math inline">\(Pr\{\widetilde{P}_{-w} = P_{-w}\}\)</span> = <span class="math inline">\(Pr\{(\widetilde{P}_{-w})^{f \leftrightarrow f&#39;} = P_{-w}\}\)</span> , or equivalently, <span class="math inline">\(Pr\{\widetilde{P}_{-w} = P_{-w}\}\)</span> = <span class="math inline">\(Pr\{\widetilde{P}_{-w} = P_{-w}^{f \leftrightarrow f&#39;}\}\)</span>.</li>
 <li>A random matching is a random variable whose range is the set of all matchings.</li>
 </ul>
-<p>The assumption, where the main results are based on, may not sound too realistic, as it requires every pair of the firms in the market to be indistinguishable, however, it is a nice attempt to study the strategic issues faced by the participants under incomplete informations.  </p>
+<p>The assumption, where the main results are based on, may not sound too realistic, as it requires every pair of the firms in the market to be indistinguishable, however, it is a nice attempt to study the strategic issues faced by the participants under incomplete informations.</p>
 <p>Subsequent and extension of the results include the following papers:</p>
 <ul>
 <li>Ehlers, Lars, “In Search of Advice for Physicians in Matching Markets Which Use the Deferred Acceptance Algorithm,” Games and Economic Behavior, 48 (2004), 249–270.</li>
@@ -541,30 +603,30 @@ Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's E
           <p>The following are notations introduced by Erdil and Kumano in their paper <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.566.8067">Prioritizing Diversity in School Choice</a> as an attempt to incorporate more complex priority rule in the school choice problem.</p>
 <ul>
 <li>N ： set of students, X : set of schools;</li>
-<li><strong>priority rule</strong> : $\mathcal{C_x}:2^N \rightarrow 2^{2^N}$ s.t. $S’ \subseteq S$ for all $S’ \in \mathcal{C_x}(S)$</li>
-<li><strong>Consistency</strong> : <ol>
-<li>If there exists S such that $A \cup B \subseteq S$ with $A \mathcal{C_x}(S)$ and $B \notin \mathcal{C_x}(S)$, then whenever $A \cup B \subseteq S’$, we have $B \notin \mathcal{C_x}(S’)$.</li>
-<li>If there exists S such that $A,B \in \mathcal{C_x}(S)$, then whenever $A \cup B \subseteq S’$, we have $A \in \mathcal{C_x}(S’)$ if and only if $B \in \mathcal{C_x}(S’)$.</li>
-</ol>
-</li>
-<li><strong>Definitely chosen students</strong> : $DC_x(S) = \bigcap_{S’ \in \mathcal{C_x}(S)} S’ = \{ i \in S |i \in S’$ for all $S’ \in \mathcal{C_x}(S) \}$</li>
-<li><strong>Substitutable</strong> A priority structure is substitutable (with ties) if for each $x \in X$, and for each $S, T \subseteq N$ with $S \subseteq T$, the following conditions hold: <ol>
-<li>for each $T’ \in  \mathcal{C_x}(T)$, we have $T’ \cap S \subseteq S’$ for some $S’ \in  \mathcal{C_x}(S)$, and</li>
-<li>for each $S’ \in \mathcal{C_x}(S)$, we have $T’ \cap S \subseteq S’$ for some $T’ \in  \mathcal{C_x}(T)$.</li>
-</ol>
-</li>
-<li><strong>Respects priorities</strong> : Given students’  preferences R, an assignment $\mu$ respects priorities C, if: <ol>
-<li>for each $i \in N$, $\mu(i)R_i i$, and</li>
-<li>for each $x \in X$, for every S such that $\mu^{-1}(x) \subseteq S \subseteq \{i \in N | x R_i \mu(i)\}$, we have $\mu^{-1}(x) \in \mathcal{C_x}(S)$.</li>
-</ol>
-</li>
-<li><strong>Pairwise stable</strong> : <ol>
-<li>for each $i \in N$, $\mu(i)R_i i$, </li>
-<li>$\mu^{−1}(x) \in \mathcal{C_x}(\mu^{−1}(x))$ for all $x \in X$,</li>
-<li>there is no $(i, x)\in N \times X$ such that $x P_i \mu(i)$ and $i \in DC_x(\mu^{−1}(x) \cup {i})$.</li>
-</ol>
-</li>
-<li><strong>Acceptant</strong> : A priority structure C is acceptant if for each $x \in X$, for each $S \subseteq N$, and for each $S’ \in \mathcal{C_x}(S)$ we have $|S_0|$ = min{|S|, $q_x$}.</li>
+<li><strong>priority rule</strong> : <span class="math inline">\(\mathcal{C_x}:2^N \rightarrow 2^{2^N}\)</span> s.t. <span class="math inline">\(S&#39; \subseteq S\)</span> for all <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span></li>
+<li><strong>Consistency</strong> :
+<ol type="1">
+<li>If there exists S such that <span class="math inline">\(A \cup B \subseteq S\)</span> with <span class="math inline">\(A \mathcal{C_x}(S)\)</span> and <span class="math inline">\(B \notin \mathcal{C_x}(S)\)</span>, then whenever <span class="math inline">\(A \cup B \subseteq S&#39;\)</span>, we have <span class="math inline">\(B \notin \mathcal{C_x}(S&#39;)\)</span>.</li>
+<li>If there exists S such that <span class="math inline">\(A,B \in \mathcal{C_x}(S)\)</span>, then whenever <span class="math inline">\(A \cup B \subseteq S&#39;\)</span>, we have <span class="math inline">\(A \in \mathcal{C_x}(S&#39;)\)</span> if and only if <span class="math inline">\(B \in \mathcal{C_x}(S&#39;)\)</span>.</li>
+</ol></li>
+<li><strong>Definitely chosen students</strong> : <span class="math inline">\(DC_x(S) = \bigcap_{S&#39; \in \mathcal{C_x}(S)} S&#39; = \{ i \in S |i \in S&#39;\)</span> for all <span class="math inline">\(S&#39; \in \mathcal{C_x}(S) \}\)</span></li>
+<li><strong>Substitutable</strong> A priority structure is substitutable (with ties) if for each <span class="math inline">\(x \in X\)</span>, and for each <span class="math inline">\(S, T \subseteq N\)</span> with <span class="math inline">\(S \subseteq T\)</span>, the following conditions hold:
+<ol type="1">
+<li>for each <span class="math inline">\(T&#39; \in \mathcal{C_x}(T)\)</span>, we have <span class="math inline">\(T&#39; \cap S \subseteq S&#39;\)</span> for some <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span>, and</li>
+<li>for each <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span>, we have <span class="math inline">\(T&#39; \cap S \subseteq S&#39;\)</span> for some <span class="math inline">\(T&#39; \in \mathcal{C_x}(T)\)</span>.</li>
+</ol></li>
+<li><strong>Respects priorities</strong> : Given students’ preferences R, an assignment <span class="math inline">\(\mu\)</span> respects priorities C, if:
+<ol type="1">
+<li>for each <span class="math inline">\(i \in N\)</span>, <span class="math inline">\(\mu(i)R_i i\)</span>, and</li>
+<li>for each <span class="math inline">\(x \in X\)</span>, for every S such that <span class="math inline">\(\mu^{-1}(x) \subseteq S \subseteq \{i \in N | x R_i \mu(i)\}\)</span>, we have <span class="math inline">\(\mu^{-1}(x) \in \mathcal{C_x}(S)\)</span>.</li>
+</ol></li>
+<li><strong>Pairwise stable</strong> :
+<ol type="1">
+<li>for each <span class="math inline">\(i \in N\)</span>, <span class="math inline">\(\mu(i)R_i i\)</span>,</li>
+<li><span class="math inline">\(\mu^{−1}(x) \in \mathcal{C_x}(\mu^{−1}(x))\)</span> for all <span class="math inline">\(x \in X\)</span>,</li>
+<li>there is no <span class="math inline">\((i, x)\in N \times X\)</span> such that <span class="math inline">\(x P_i \mu(i)\)</span> and <span class="math inline">\(i \in DC_x(\mu^{−1}(x) \cup {i})\)</span>.</li>
+</ol></li>
+<li><strong>Acceptant</strong> : A priority structure C is acceptant if for each <span class="math inline">\(x \in X\)</span>, for each <span class="math inline">\(S \subseteq N\)</span>, and for each <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span> we have <span class="math inline">\(|S_0|\)</span> = min{|S|, <span class="math inline">\(q_x\)</span>}.</li>
 </ul>
 
       
@@ -638,21 +700,25 @@ Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's E
 <blockquote>
 <p>The elite pupils were among 49,976 who sat for the Diploma of Secondary Education (DSE) exams between April 23 and May 20, according to the Hong Kong Examinations and Assessment Authority.</p>
 </blockquote>
-<p>…</p>
+<p>...</p>
 <blockquote>
 <p>More than 17,000 secondary school students achieved the minimum requirement for local undergraduate programmes – slightly fewer than last year’s roughly 18,000 – and will now be competing for about 13,000 subsidised first-year university places.</p>
 </blockquote>
-<p>…</p>
+<p>...</p>
 <blockquote>
-<p>…pupils were likely to find it easier to get into one of the eight local publicly-funded universities given fewer candidates met the minimum requirements this year. </p>
-<p>… a smaller overall student population coupled with more pupils choosing to study overseas – including some emigrating with their families – could result in a lower threshold for local university admissions. </p>
-<p>… pupils might be “more ambitious” this year when applying to local universities given the potentially higher likelihood of getting into their preferred undergraduate programme.</p>
+<p>...pupils were likely to find it easier to get into one of the eight local publicly-funded universities given fewer candidates met the minimum requirements this year.</p>
+</blockquote>
+<blockquote>
+<p>... a smaller overall student population coupled with more pupils choosing to study overseas – including some emigrating with their families – could result in a lower threshold for local university admissions.</p>
+</blockquote>
+<blockquote>
+<p>... pupils might be “more ambitious” this year when applying to local universities given the potentially higher likelihood of getting into their preferred undergraduate programme.</p>
 </blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.scmp.com/news/hong-kong/education/article/3141888/6-hong-kong-schools-account-citys-7-perfect-diploma" style="color:blue;">5 of 7 high-fliers in Hong Kong’s DSE exams plan to pursue medical studies in local universities</a> by Chan Ho-him, Mimosa Ngai and Amalissa Hall.</p>
 <blockquote>
 <p>Six of the top achievers are expected to pursue their studies in local universities, with five aiming to major in medicine and one in finance. The last student is set to read law in Britain.</p>
 </blockquote>
-<p>…</p>
+<p>...</p>
 <blockquote>
 <p>The DSE exam replaced the Hong Kong Certificate of Education Examination and A-levels exams in 2012.</p>
 </blockquote>
@@ -660,11 +726,11 @@ Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's E
 <blockquote>
 <p>About 26 per cent of 569 Diploma of Secondary Education (DSE) candidates polled between last month and Monday said they would choose to further their studies overseas <b>if they were not admitted to their chosen local institutions</b>, findings from the survey <span style="color:gray">(by Federation of Youth Groups)</span> showed.</p>
 </blockquote>
-<p>…</p>
+<p>...</p>
 <blockquote>
-<p>The number of pupils choosing to study overseas was not directly equivalent to those who were planning to leave for good … Last year’s survey showed about 25 per cent of respondents said they would go overseas, an increase from around 19 per cent in 2019.</p>
+<p>The number of pupils choosing to study overseas was not directly equivalent to those who were planning to leave for good ... Last year’s survey showed about 25 per cent of respondents said they would go overseas, an increase from around 19 per cent in 2019.</p>
 </blockquote>
-<p>…</p>
+<p>...</p>
 <blockquote>
 <p>Separately, another survey by a locally based education group <span style="color:gray">(Dadi Education)</span> polled 304 families with children aged between six and 18, and found that about 66 per cent of respondents had already or were intending to send their children to study overseas.</p>
 </blockquote>
@@ -746,48 +812,94 @@ Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's E
  .tab { margin-left: 40px; }
 -->
 </style>
-
-
 <p>In the paper <i><a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2938326?seq=1#metadata_info_tab_contents"> Random Paths to Stability in Two-Sided Matching</a></i> , Roth and Vande Vate (1990) proposed an algorithm that can recover stability from arbitrary matching. The paper is short and does not contain example of the execution of the algorithm. I provided two examples here:</p>
-<p><h4>Notation</h4><br><u>Satisfying the blocking pair:</u> For a pair $(m’,w’)$ that blocks $\mu$, we say $\nu$ is obtained by satisfying the blocking pair $(m’,w’)$ from $\mu$ if m’ and w’ are matched at $\nu$, their original partner $\mu(m’)$ and $\mu(w’)$ each becomes unmatched at $\nu$ while the others are matched to the same mate under $\nu$ as they were at $\mu$. </p>
-<p><h4>Decscription of the algorithm</h4><br>Step 0: Given an arbitrary matching $\mu_0$, if it is not individually rational, we satisfy all the blocking pair formed by individuals to obtain an individual rational matching $\mu_1$<br><br>Step 1: If there is no blocking pair for $\mu_1$, then terminate. Otherwise, pick one blocking pair $(m1,w1)$ and obtain $\mu_2$ from $\mu_1$ by satisfying $(m_1,w_1)$, and put the two inside the set $A(1)\equiv \{m_1,w_1\}$.<br><br>Step k (k&gt;1): If there is no blocking pair for $\mu_k$, then terminate. </p>
-<div style="margin-left:95px">Else, if there some men in $A(k-1)$ forms a blocking pair with a woman $w_k$ outside $A(k-1)$, we choose the $m_j$ to be the man who is $w_k$'s most prefered mate in $A(k-1)$, we obtain $\mu_{k+1}$ from $\mu_k$ by satisfying $(m_j,w_k)$ and add $w_k$ to $A(k-1)$ to get $A(k)=A(k-1)\cup\{w_k\}$ and move to next step;</div>
-<div style="margin-left:130px">Else if there are some women in $A(k-1)$ forms a blocking pair with a man $m_k$ outside $A(k-1)$, we choose the $w_j$ to be the woman who is $m_k$'s most prefered mate in $A(k-1)$, we obtain $\mu_{k+1}$ from $\mu_k$ by satisfying $(m_k,w_j)$ and add $m_k$ to $A(k-1)$ to get $A(k)=A(k-1)\cup\{m_k\}$ and move to next step;</div> 
-
-<div style="margin-left:160px">Else no man or woman in $A(k-1)$ involved in any blocking for $\mu(k-1)$, and we find a blocking pair $(m_k,w_k)$ that none of them is in $A(k-1)$, we obtain $\mu_{k+1}$ from $\mu_k$ by satisfying $(m_k,w_k)$ and add $\{m_k,w_k\}$ to $A(k-1)$ to get $A(k)=A(k-1)\cup\{m_k,w_k\}$ and move to next step.</div>
-
-<p><h4>Example 1</h4><br>Starting from the example used by Knuth (1976) to show existence of cyclic blocking pairs, we have: </p>
+<h4>
+Notation
+</h4>
+<p><u>Satisfying the blocking pair:</u> For a pair <span class="math inline">\((m&#39;,w&#39;)\)</span> that blocks <span class="math inline">\(\mu\)</span>, we say <span class="math inline">\(\nu\)</span> is obtained by satisfying the blocking pair <span class="math inline">\((m&#39;,w&#39;)\)</span> from <span class="math inline">\(\mu\)</span> if m' and w' are matched at <span class="math inline">\(\nu\)</span>, their original partner <span class="math inline">\(\mu(m&#39;)\)</span> and <span class="math inline">\(\mu(w&#39;)\)</span> each becomes unmatched at <span class="math inline">\(\nu\)</span> while the others are matched to the same mate under <span class="math inline">\(\nu\)</span> as they were at <span class="math inline">\(\mu\)</span>.</p>
+<h4>
+Decscription of the algorithm
+</h4>
+Step 0: Given an arbitrary matching <span class="math inline">\(\mu_0\)</span>, if it is not individually rational, we satisfy all the blocking pair formed by individuals to obtain an individual rational matching <span class="math inline">\(\mu_1\)</span><br> Step 1: If there is no blocking pair for <span class="math inline">\(\mu_1\)</span>, then terminate. Otherwise, pick one blocking pair <span class="math inline">\((m1,w1)\)</span> and obtain <span class="math inline">\(\mu_2\)</span> from <span class="math inline">\(\mu_1\)</span> by satisfying <span class="math inline">\((m_1,w_1)\)</span>, and put the two inside the set <span class="math inline">\(A(1)\equiv \{m_1,w_1\}\)</span>.<br> Step k (k&gt;1): If there is no blocking pair for <span class="math inline">\(\mu_k\)</span>, then terminate.
+<div style="margin-left:95px">
+Else, if there some men in <span class="math inline">\(A(k-1)\)</span> forms a blocking pair with a woman <span class="math inline">\(w_k\)</span> outside <span class="math inline">\(A(k-1)\)</span>, we choose the <span class="math inline">\(m_j\)</span> to be the man who is <span class="math inline">\(w_k\)</span>'s most prefered mate in <span class="math inline">\(A(k-1)\)</span>, we obtain <span class="math inline">\(\mu_{k+1}\)</span> from <span class="math inline">\(\mu_k\)</span> by satisfying <span class="math inline">\((m_j,w_k)\)</span> and add <span class="math inline">\(w_k\)</span> to <span class="math inline">\(A(k-1)\)</span> to get <span class="math inline">\(A(k)=A(k-1)\cup\{w_k\}\)</span> and move to next step;
+</div>
+<div style="margin-left:130px">
+Else if there are some women in <span class="math inline">\(A(k-1)\)</span> forms a blocking pair with a man <span class="math inline">\(m_k\)</span> outside <span class="math inline">\(A(k-1)\)</span>, we choose the <span class="math inline">\(w_j\)</span> to be the woman who is <span class="math inline">\(m_k\)</span>'s most prefered mate in <span class="math inline">\(A(k-1)\)</span>, we obtain <span class="math inline">\(\mu_{k+1}\)</span> from <span class="math inline">\(\mu_k\)</span> by satisfying <span class="math inline">\((m_k,w_j)\)</span> and add <span class="math inline">\(m_k\)</span> to <span class="math inline">\(A(k-1)\)</span> to get <span class="math inline">\(A(k)=A(k-1)\cup\{m_k\}\)</span> and move to next step;
+</div>
+<div style="margin-left:160px">
+Else no man or woman in <span class="math inline">\(A(k-1)\)</span> involved in any blocking for <span class="math inline">\(\mu(k-1)\)</span>, and we find a blocking pair <span class="math inline">\((m_k,w_k)\)</span> that none of them is in <span class="math inline">\(A(k-1)\)</span>, we obtain <span class="math inline">\(\mu_{k+1}\)</span> from <span class="math inline">\(\mu_k\)</span> by satisfying <span class="math inline">\((m_k,w_k)\)</span> and add <span class="math inline">\(\{m_k,w_k\}\)</span> to <span class="math inline">\(A(k-1)\)</span> to get <span class="math inline">\(A(k)=A(k-1)\cup\{m_k,w_k\}\)</span> and move to next step.
+</div>
+<h4>
+Example 1
+</h4>
+Starting from the example used by Knuth (1976) to show existence of cyclic blocking pairs, we have:
 <table>
-<tr><td>P(m1) =w2, w1, w3</td> <td>P(m2) =w1, w3, w2</td> <td>P(m3) =w1, w2, w3</td> 
+<tr>
+<td>
+P(m1) =w2, w1, w3
+</td>
+<td>
+P(m2) =w1, w3, w2
+</td>
+<td>
+P(m3) =w1, w2, w3
+</td>
 </tr>
 <tr>
-<td>P(w1) = m1, m3, m2 </td> <td>P(w2) = m3, m1, m2 </td> <td>P(w3) = m1, m3, m2</td>
+<td>
+P(w1) = m1, m3, m2
+</td>
+<td>
+P(w2) = m3, m1, m2
+</td>
+<td>
+P(w3) = m1, m3, m2
+</td>
 </tr>
 </table>
-and the initial matching is $\mu_1=\{(m_1,w_1),(m_2,w_2),(m_3,w_3)\}$
-
-Step 0: $\mu_1={(w_1,m_1),(w_2,m_2),(w_3,m_3)}$ is individually rational;
-
-Step 1: The blocking pairs are: $\{(w_2,m_1),(w_2,m_3),(w_3,m_1)\}$, satisfy $(w_2,m_1)$ $\Rightarrow \mu_2 =\{(w_1,w_1),(w_2,m_1),(m_2,m_2),(w_3,m_3)\}$ and $A(1)=\{w_2,m_1\}$;
-
-Step 2: The blocking pairs are: $\{(w_1,m_3),(w_1,m_2),(w_2,m_3)\}$, and $w_2$ is in $A(1)$, satisfy $(w_2,m_3)$ $\Rightarrow \mu_3 =$$ \{(w_1,w_1),(m_1,m_1),(w_2,m_3),(m_2,m_2),(w_3,w_3)\} $ and $A(2)=\{m_1,w_2,m_3\}$;
-
-Step 3: The blocking pairs are: $\{(w_1,m_3),(w_1,m_2),(w_1,m_1),(w_3,m_1),(w_3,m_2)\}$, $m_1$ and $m_2$ is in $A(2)$ and $m_1\;P_{w_1}\;m_3$ , satisfy $(m_1,w_1)$ $\Rightarrow  \mu_4 =$$\{(w_1,m_1),(w_2,m_3),(m_2,m_2),(w_3,w_3)\}$ and $A(3)=\{m_1,w_2,m_3,w_1\}$;
-
-Step 4: The blocking pairs are: $\{(w_3,m_2)\}$, satisfy $(w_3,m_2)$  $\Rightarrow  \mu_5 =$$\{(w_1,m_1),(w_2,m_3),(w_3,m_2)\}$ and $A(3)=\{m_1,w_2,m_3,w_1,w_3,m_2\}$;
-
-Step 5: There is no blocking pair and we achieve a stable matching $\mu_5 =\{(w_1,m_1),(w_2,m_3),(w_3,m_2)\}$, terminate.
-
-
-<h4>Example 2 (Starting from everyone remains single, every stable matching can be achieved)</h4>
-we have: 
+<p>and the initial matching is <span class="math inline">\(\mu_1=\{(m_1,w_1),(m_2,w_2),(m_3,w_3)\}\)</span></p>
+<p>Step 0: <span class="math inline">\(\mu_1={(w_1,m_1),(w_2,m_2),(w_3,m_3)}\)</span> is individually rational;</p>
+<p>Step 1: The blocking pairs are: <span class="math inline">\(\{(w_2,m_1),(w_2,m_3),(w_3,m_1)\}\)</span>, satisfy <span class="math inline">\((w_2,m_1)\)</span> <span class="math inline">\(\Rightarrow \mu_2 =\{(w_1,w_1),(w_2,m_1),(m_2,m_2),(w_3,m_3)\}\)</span> and <span class="math inline">\(A(1)=\{w_2,m_1\}\)</span>;</p>
+<p>Step 2: The blocking pairs are: <span class="math inline">\(\{(w_1,m_3),(w_1,m_2),(w_2,m_3)\}\)</span>, and <span class="math inline">\(w_2\)</span> is in <span class="math inline">\(A(1)\)</span>, satisfy <span class="math inline">\((w_2,m_3)\)</span> <span class="math inline">\(\Rightarrow \mu_3 =\)</span>$ {(w_1,w_1),(m_1,m_1),(w_2,m_3),(m_2,m_2),(w_3,w_3)} $ and <span class="math inline">\(A(2)=\{m_1,w_2,m_3\}\)</span>;</p>
+<p>Step 3: The blocking pairs are: <span class="math inline">\(\{(w_1,m_3),(w_1,m_2),(w_1,m_1),(w_3,m_1),(w_3,m_2)\}\)</span>, <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> is in <span class="math inline">\(A(2)\)</span> and <span class="math inline">\(m_1\;P_{w_1}\;m_3\)</span> , satisfy <span class="math inline">\((m_1,w_1)\)</span> <span class="math inline">\(\Rightarrow \mu_4 =\)</span><span class="math inline">\(\{(w_1,m_1),(w_2,m_3),(m_2,m_2),(w_3,w_3)\}\)</span> and <span class="math inline">\(A(3)=\{m_1,w_2,m_3,w_1\}\)</span>;</p>
+<p>Step 4: The blocking pairs are: <span class="math inline">\(\{(w_3,m_2)\}\)</span>, satisfy <span class="math inline">\((w_3,m_2)\)</span> <span class="math inline">\(\Rightarrow \mu_5 =\)</span><span class="math inline">\(\{(w_1,m_1),(w_2,m_3),(w_3,m_2)\}\)</span> and <span class="math inline">\(A(3)=\{m_1,w_2,m_3,w_1,w_3,m_2\}\)</span>;</p>
+<p>Step 5: There is no blocking pair and we achieve a stable matching <span class="math inline">\(\mu_5 =\{(w_1,m_1),(w_2,m_3),(w_3,m_2)\}\)</span>, terminate.</p>
+<h4>
+Example 2 (Starting from everyone remains single, every stable matching can be achieved)
+</h4>
+we have:
 <table>
-<tr><td>P(m1) =w1, w2, w3, w4</td> <td> P(m2) =w2, w1, w4, w3</td> <td> P(m3) =w3, w4, w1, w2</td> <td> P(m4) =w4, w3, w2, w1</td> 
+<tr>
+<td>
+P(m1) =w1, w2, w3, w4
+</td>
+<td>
+P(m2) =w2, w1, w4, w3
+</td>
+<td>
+P(m3) =w3, w4, w1, w2
+</td>
+<td>
+P(m4) =w4, w3, w2, w1
+</td>
 </tr>
 <tr>
-<td>P(w1) = m4, m3, m2, m1</td> <td>P(w2) = m3, m4, m1, m2</td> <td>P(w3) = m2, m1, m4, m3</td> <td>P(w4) = m1, m2, m3, m4</td>
+<td>
+P(w1) = m4, m3, m2, m1
+</td>
+<td>
+P(w2) = m3, m4, m1, m2
+</td>
+<td>
+P(w3) = m2, m1, m4, m3
+</td>
+<td>
+P(w4) = m1, m2, m3, m4
+</td>
 </tr>
 </table>
+
       
     </div>
 
@@ -861,18 +973,17 @@ we have:
 
       
           <ol>
-<li> <b>Lemma 1</b> In a school choice problem $(S,I,\succsim,P,q)$ where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. $\sum_{s \in S}q_s \geq |I|$ and $i \succsim_s \emptyset$ for $\forall i \in I, \forall s \in S$, there exists at least one school that has not rejected any students under SOSM.<br>
-
-<b>Proof:</b> Suppose all school has rejected some students under SOSM:
-Since SOSM terminates in finite steps, there exists a round $k$, such that there is at least one student rejected in round $k$ and after $k$-th round, no school rejects any students and the algorithm terminates. By our assumption, all students are acceptable, and a school only rejects a student when it runs out of its capacity. This would imply that at round $k$, all schools are full. However, sincere there is a student who has been rejected in round $k$ and not matched, this would contradict with our assumption that the number of students is no less than the total number of seats.
+<li>
+<p><b>Lemma 1</b> In a school choice problem <span class="math inline">\((S,I,\succsim,P,q)\)</span> where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. <span class="math inline">\(\sum_{s \in S}q_s \geq |I|\)</span> and <span class="math inline">\(i \succsim_s \emptyset\)</span> for <span class="math inline">\(\forall i \in I, \forall s \in S\)</span>, there exists at least one school that has not rejected any students under SOSM.<br></p>
+<b>Proof:</b> Suppose all school has rejected some students under SOSM: Since SOSM terminates in finite steps, there exists a round <span class="math inline">\(k\)</span>, such that there is at least one student rejected in round <span class="math inline">\(k\)</span> and after <span class="math inline">\(k\)</span>-th round, no school rejects any students and the algorithm terminates. By our assumption, all students are acceptable, and a school only rejects a student when it runs out of its capacity. This would imply that at round <span class="math inline">\(k\)</span>, all schools are full. However, sincere there is a student who has been rejected in round <span class="math inline">\(k\)</span> and not matched, this would contradict with our assumption that the number of students is no less than the total number of seats.
 </li>
 <br>
-<li> <b>Propositions 2 (Weakly Pareto Optimality of SOSM)</b> When all students are acceptable, there is no matching $\mu$ where all students get a strictly better assignment than his assignment under SOSM, i.e. ther is no $\mu$ such that $\mu(i)\; P_i \; SOSM(i)$,  $\forall i \in I$.<br> 
-
-<b>Proof:</b> Case 1: If $\sum_{s \in S}q_s \leq |I|$, then there are some students unmatched under both $\mu$ and SOSM, so there is someone who is matched under SOSM but become unmatched under $\mu$ or remain unmatched under $\mu$, and hence there exist someone who can't get strictly better assignment. <br>
-Case 2: If $\sum_{s \in S}q_s \leq |I|$, since all student apply to schools in the order of his preference list, we know all student has been rejected at least once, otherwise there is someone who get his top choice and can't get strictly better assignment. We denote $S'$ as the set of school that has rejected students under SOSM. We claim that all students must be assigned at some school $s' \in S'$ under $\mu$, otherwise he is assigned to a school that has not rejected anyone including him under SOSM, which must be no better than his SOSM assignment. However, by <b>Lemma 1</b> we know the total capacity of schools in $S'$ is less than the number of students, i.e. $\sum_{s' \in S'}q_s < |I|$, hence such a matching $\mu$ would not be feasible.
- </li>
+<li>
+<p><b>Propositions 2 (Weakly Pareto Optimality of SOSM)</b> When all students are acceptable, there is no matching <span class="math inline">\(\mu\)</span> where all students get a strictly better assignment than his assignment under SOSM, i.e. ther is no <span class="math inline">\(\mu\)</span> such that <span class="math inline">\(\mu(i)\; P_i \; SOSM(i)\)</span>, <span class="math inline">\(\forall i \in I\)</span>.<br></p>
+<b>Proof:</b> Case 1: If <span class="math inline">\(\sum_{s \in S}q_s \leq |I|\)</span>, then there are some students unmatched under both <span class="math inline">\(\mu\)</span> and SOSM, so there is someone who is matched under SOSM but become unmatched under <span class="math inline">\(\mu\)</span> or remain unmatched under <span class="math inline">\(\mu\)</span>, and hence there exist someone who can't get strictly better assignment. <br> Case 2: If <span class="math inline">\(\sum_{s \in S}q_s \leq |I|\)</span>, since all student apply to schools in the order of his preference list, we know all student has been rejected at least once, otherwise there is someone who get his top choice and can't get strictly better assignment. We denote <span class="math inline">\(S&#39;\)</span> as the set of school that has rejected students under SOSM. We claim that all students must be assigned at some school <span class="math inline">\(s&#39; \in S&#39;\)</span> under <span class="math inline">\(\mu\)</span>, otherwise he is assigned to a school that has not rejected anyone including him under SOSM, which must be no better than his SOSM assignment. However, by <b>Lemma 1</b> we know the total capacity of schools in <span class="math inline">\(S&#39;\)</span> is less than the number of students, i.e. <span class="math inline">\(\sum_{s&#39; \in S&#39;}q_s &lt; |I|\)</span>, hence such a matching <span class="math inline">\(\mu\)</span> would not be feasible.
+</li>
 </ol>
+
       
     </div>
 
@@ -946,6 +1057,7 @@ Case 2: If $\sum_{s \in S}q_s \leq |I|$, since all student apply to schools in t
 
       
           
+
       
     </div>
 

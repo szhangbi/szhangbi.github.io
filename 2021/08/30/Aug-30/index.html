@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="This posts servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his pioneering paper School choice with consent. I would cover is">
+  <meta name="description" content="This post servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his pioneering paper School choice with consent. I would cover iss">
 <meta property="og:type" content="article">
 <meta property="og:title" content="8 Things on EADAM (1)">
 <meta property="og:url" content="http://example.com/2021/08/30/Aug-30/index.html">
 <meta property="og:site_name" content="Shiyu&#39;s site">
-<meta property="og:description" content="This posts servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his pioneering paper School choice with consent. I would cover is">
+<meta property="og:description" content="This post servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his pioneering paper School choice with consent. I would cover iss">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-16T15:08:58.201Z">
+<meta property="article:modified_time" content="2021-09-16T15:26:48.973Z">
 <meta property="article:author" content="Jake ZHANG Shiyu">
 <meta property="article:tag" content="School choice">
 <meta property="article:tag" content="EADAM">
@@ -197,7 +197,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-16 23:08:58" itemprop="dateModified" datetime="2021-09-16T23:08:58+08:00">2021-09-16</time>
+                <time title="Modified: 2021-09-16 23:26:48" itemprop="dateModified" datetime="2021-09-16T23:26:48+08:00">2021-09-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,60 +227,128 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>This posts servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his pioneering paper <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/27867511">School choice with consent</a>. I would cover issues on its original definition, different perspectives of implementation, efficiency, stability, equilibrium and simulation. </p>
-<h4>1. Kesten(2010)'s original definition</h4>
-
+        <p>This post servers as a survey on the Efficiency-adjusted deferred acceptance mechanism (EADAM) firstly introduced by Kesten (2010) in his pioneering paper <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/27867511">School choice with consent</a>. I would cover issues on its original definition, different perspectives of implementation, efficiency, stability, equilibrium and simulation.</p>
+<h4>
+<ol type="1">
+<li>Kesten(2010)'s original definition
+</h4></li>
+</ol>
 <p>Before introducing the algorithm, we would need one key concept brought by Kesten:</p>
-<p>1.1 Definition of <strong>Interrupter:</strong> Suppose there is a student i, who is tentatively accepted by a school s at step t, and later rejected by school s at step t’ (t’ &gt; t), meanwhile, if there is some student j, who is rejected by s at step l, $t \leq l &lt; t’$, then we call student i an <strong>interrupter</strong> and say that $(i,s)$ form an <strong>interrupting pair of step t’</strong>.</p>
+<p>1.1 Definition of <strong>Interrupter:</strong> Suppose there is a student i, who is tentatively accepted by a school s at step t, and later rejected by school s at step t' (t' &gt; t), meanwhile, if there is some student j, who is rejected by s at step l, <span class="math inline">\(t \leq l &lt; t&#39;\)</span>, then we call student i an <strong>interrupter</strong> and say that <span class="math inline">\((i,s)\)</span> form an <strong>interrupting pair of step t'</strong>.</p>
 <p>1.2 Remark: An interrupter can be interpreted as someone who interrupts the favorable settlement among other students without any gain to himself.</p>
 <p>1.3 Remark: If the outcome of SOSM is not efficient, then there must be at least one interrupting pair in the DA process. However, the existence of interrupting pair does not imply efficiency loss.</p>
 <p>1.4 Example where interrupting pair may not lead to welfare loss:</p>
-<p>A problem of 4 students, 3 schools with capacities $q_1=q_2=1$, $q_3=2$, priority profile and preference profile are as following:</p>
+A problem of 4 students, 3 schools with capacities <span class="math inline">\(q_1=q_2=1\)</span>, <span class="math inline">\(q_3=2\)</span>, priority profile and preference profile are as following:
 <table>
 <tr>
-<td>$\succ_{s_1}$</td> <td>$\succ_{s_2}$</td> <td>$\succ_{s_3}$</td>
+<td>
+<span class="math inline">\(\succ_{s_1}\)</span>
+</td>
+<td>
+<span class="math inline">\(\succ_{s_2}\)</span>
+</td>
+<td>
+<span class="math inline">\(\succ_{s_3}\)</span>
+</td>
 </tr>
 <tr>
-<td>$i_3$</td> <td>$i_4$</td> <td>$s_1$</td>
+<td>
+<span class="math inline">\(i_3\)</span>
+</td>
+<td>
+<span class="math inline">\(i_4\)</span>
+</td>
+<td>
+<span class="math inline">\(s_1\)</span>
+</td>
 </tr>
 <tr>
-<td>$i_1$</td> <td>$i_3$</td> <td>$i_2$</td> 
+<td>
+<span class="math inline">\(i_1\)</span>
+</td>
+<td>
+<span class="math inline">\(i_3\)</span>
+</td>
+<td>
+<span class="math inline">\(i_2\)</span>
+</td>
 </tr>
 <tr>
-<td>$i_2$</td> <td></td> <td></td> 
+<td>
+<span class="math inline">\(i_2\)</span>
+</td>
+<td>
+</td>
+<td>
+</td>
 </tr>
 </table>
-
 <table>
 <tr>
-<td>$P_{i_1}$</td> <td>$P_{i_2}$</td> <td>$P_{i_3}$</td> <td>$P_{i_4}$</td>
+<td>
+<span class="math inline">\(P_{i_1}\)</span>
+</td>
+<td>
+<span class="math inline">\(P_{i_2}\)</span>
+</td>
+<td>
+<span class="math inline">\(P_{i_3}\)</span>
+</td>
+<td>
+<span class="math inline">\(P_{i_4}\)</span>
+</td>
 </tr>
 <tr>
-<td>$s_1$</td> <td>$s_1$</td> <td>$s_2$</td> <td>$\underline{s_2}$</td>
+<td>
+<span class="math inline">\(s_1\)</span>
+</td>
+<td>
+<span class="math inline">\(s_1\)</span>
+</td>
+<td>
+<span class="math inline">\(s_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\underline{s_2}\)</span>
+</td>
 </tr>
 <tr>
-<td>$\underline{s_3}$</td> <td>$\underline{s_3}$</td> <td>$\underline{s_1}$</td> <td></td>
+<td>
+<span class="math inline">\(\underline{s_3}\)</span>
+</td>
+<td>
+<span class="math inline">\(\underline{s_3}\)</span>
+</td>
+<td>
+<span class="math inline">\(\underline{s_1}\)</span>
+</td>
+<td>
+</td>
 </tr>
 </table>
-
-<p>The SOSM outcome is underlined in the preference profile and is efficient, while $(i_1,s_1)$ form an interrupting pair.</p>
-<p>The essence of the algorithm is to try to recover the welfare loss caused by the interrupters <strong>in a right sequence</strong>. Due to the constraint efficiency of SOSM<sup><a href="#fn_1" id="reffn_1">1</a></sup>, we know any Pareto improvement would result in priority violation (of the interrupter), hence, it is imperative that we solicit the consent of students before we make any welfare improvement.</p>
+<p>The SOSM outcome is underlined in the preference profile and is efficient, while <span class="math inline">\((i_1,s_1)\)</span> form an interrupting pair.</p>
+<p>The essence of the algorithm is to try to recover the welfare loss caused by the interrupters <strong>in a right sequence</strong>. Due to the constraint efficiency of SOSM<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, we know any Pareto improvement would result in priority violation (of the interrupter), hence, it is imperative that we solicit the consent of students before we make any welfare improvement.</p>
 <p>1.5 The Efficiency-adjusted deferred acceptance mechanism <strong>(EADAM)</strong>:</p>
 <p><u>Round 0</u>: Run the DA algorithm.</p>
-<p><u>Round k</u> ($k \geq 1$): If there are no interrupting pairs or no consenting interrupters, then stops. Otherwise, find the last step of the DA procedure of round $k-1$, where a consenting interrupter is rejected by the school he forms interrupting pair with. Identify all the interrupting pair with consenting interrupter of that step. For each interrupting pair with consent $(i,s)$, drop school s from i’s preference list<sup><a href="#fn_2" id="reffn_2">2</a></sup> without changing the relative order of the other remaining schools. Rerun DA with the new preference profile.  </p>
-<p>1.6 Observation: The algorithm terminates after at most |I| &times; |S| rounds. </p>
+<p><u>Round k</u> (<span class="math inline">\(k \geq 1\)</span>): If there are no interrupting pairs or no consenting interrupters, then stops. Otherwise, find the last step of the DA procedure of round <span class="math inline">\(k-1\)</span>, where a consenting interrupter is rejected by the school he forms interrupting pair with. Identify all the interrupting pair with consenting interrupter of that step. For each interrupting pair with consent <span class="math inline">\((i,s)\)</span>, drop school s from i's preference list<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> without changing the relative order of the other remaining schools. Rerun DA with the new preference profile.</p>
+<p>1.6 Observation: The algorithm terminates after at most |I| × |S| rounds.</p>
 <p>Proof: This is because each student can be identified in an interrupting pair for at most |S| times and each round at least one interrupting pair is neutralized.</p>
-<p>1.7 Observation: For Round r, $r \geq 1$, the outcome of Round r of EADAM weakly Pareto dominates the outcome of Round (r-1) of EADAM. That is, each student received a weakly better assignment after each iteration of the EADAM.</p>
-<p>Proof: Please refer to Appendix C of Kesten’s(2010) paper.</p>
-<blockquote id="fn_1">
-<sup>1</sup>. Here, we consider all priorities to be strict. Variants of EADAM can be applied to recover welfare loss due to tie-breaking without seeking consent of a student if he is interrupter due to the specific tie-breaking rule. Hopefully we can talk about this variant and extension in the future.<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
-</blockquote>
-<blockquote id="fn_2">
-<sup>2</sup>. Equivalently, we can set s as unacceptable for i.<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
-</blockquote>
-<h4>2. To be continued...</h4>
-
+<p>1.7 Observation: For Round r, <span class="math inline">\(r \geq 1\)</span>, the outcome of Round r of EADAM weakly Pareto dominates the outcome of Round (r-1) of EADAM. That is, each student received a weakly better assignment after each iteration of the EADAM.</p>
+<p>Proof: Please refer to Appendix C of Kesten's(2010) paper.</p>
+<h4>
+<ol start="2" type="1">
+<li>To be continued...
+</h4></li>
+</ol>
 <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Here, we consider all priorities to be strict. Variants of EADAM can be applied to recover welfare loss due to tie-breaking without seeking consent of a student if he is interrupter due to the specific tie-breaking rule. Hopefully we can talk about this variant and extension in the future.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Equivalently, we can set s as unacceptable for i.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+
     </div>
 
     
@@ -364,7 +432,13 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1. Kesten(2010)&#39;s original definition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2. To be continued...</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">
+
+Kesten(2010)&#39;s original definition
+</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">
+
+To be continued...
+</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
