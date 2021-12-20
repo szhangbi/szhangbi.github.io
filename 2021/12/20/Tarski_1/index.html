@@ -20,21 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="One perspective provided by Tang &amp; Yu (2014)   Focusing on each student&#39;s incentive to give consent or not in the school choice with consent model we discussed last time, Tang &amp; Yu prov">
+  <meta name="description" content="This post serves as a summary of the paper On a characterization of stable matchings by Hiroyuki Adachi (2000). Tarski&#39;s fixed point theorem states that, For\((L,\leq)\) being a complete lattice and">
 <meta property="og:type" content="article">
-<meta property="og:title" content="8 Things on EADAM (2)">
-<meta property="og:url" content="http://example.com/2021/09/01/Sept-1/index.html">
+<meta property="og:title" content="Existence and lattice structure of stable matchings can be proven by Tarski’s fixed point theorem.">
+<meta property="og:url" content="http://example.com/2021/12/20/Tarski_1/index.html">
 <meta property="og:site_name" content="Shiyu&#39;s site">
-<meta property="og:description" content="One perspective provided by Tang &amp; Yu (2014)   Focusing on each student&#39;s incentive to give consent or not in the school choice with consent model we discussed last time, Tang &amp; Yu prov">
+<meta property="og:description" content="This post serves as a summary of the paper On a characterization of stable matchings by Hiroyuki Adachi (2000). Tarski&#39;s fixed point theorem states that, For\((L,\leq)\) being a complete lattice and">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-08-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-16T15:30:29.840Z">
+<meta property="article:published_time" content="2021-12-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-20T14:37:14.260Z">
 <meta property="article:author" content="Jake ZHANG Shiyu">
-<meta property="article:tag" content="School choice">
-<meta property="article:tag" content="EADAM">
+<meta property="article:tag" content="Stable Marriage">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/09/01/Sept-1/">
+<link rel="canonical" href="http://example.com/2021/12/20/Tarski_1/">
 
 
 <script id="page-configurations">
@@ -47,7 +46,7 @@
   };
 </script>
 
-  <title>8 Things on EADAM (2) | Shiyu's site</title>
+  <title>Existence and lattice structure of stable matchings can be proven by Tarski’s fixed point theorem. | Shiyu's site</title>
   
 
 
@@ -167,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/01/Sept-1/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/20/Tarski_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -180,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          8 Things on EADAM (2)
+          Existence and lattice structure of stable matchings can be proven by Tarski’s fixed point theorem.
         </h1>
 
         <div class="post-meta">
@@ -189,16 +188,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-09-01 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-01T00:00:00+08:00">2021-09-01</time>
+              <time title="Created: 2021-12-20 00:00:00 / Modified: 22:37:14" itemprop="dateCreated datePublished" datetime="2021-12-20T00:00:00+08:00">2021-12-20</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-16 23:30:29" itemprop="dateModified" datetime="2021-09-16T23:30:29+08:00">2021-09-16</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -227,36 +220,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4>
-<ol start="2" type="1">
-<li>One perspective provided by Tang &amp; Yu (2014)
-</h4></li>
-</ol>
-<p>Focusing on each student's incentive to give consent or not in the school choice with consent model we discussed last time, Tang &amp; Yu provided <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.jet.2014.10.002">a new prospective of EADAM</a>. It is reasoned that in order not to disincentivize a student to give consent, we should violate his priorities to allow improvement of others' assignment only when the assignment of this student can not be improved any more, so that his chance of getting into a better school would not be hurted by his consent. To identify which students are not Pareto-improvable given the outcome of DA, we could first identify which schools are under-demanded.</p>
-<p>2.1 Definition of <strong>Under-demanded school:</strong> A school s is <em>under-demanded</em> at a matching <span class="math inline">\(\mu\)</span> if no student prefers it to his assignment under <span class="math inline">\(\mu\)</span>, that is, <span class="math inline">\(\nexists i\)</span>, such that <span class="math inline">\(s \succ_{i} \mu(i)\)</span>.</p>
-<p>The following lemma tells us that students who are matched with under-demanded school in a DA matching are not Pareto-improvable.</p>
-<p>2.2 Lemma: At a DA matching, all students who are matched with under-demanded schools are not Pareto-improvable. Proof: Actually, this result also hold for any non-wasteful matching mechanisms, and this is because Pareto-improvements can only take the form of trading when the matching is non-wasteful. The intuition behind is straightforward, that is, no student would be willing to trade his assignment for a under-demanded school. For technical details, please refer to the Appendix A.1 of Tang &amp; Yu's paper.</p>
-<p>2.3 The simplified Efficiency-adjusted deferred acceptance mechanism <strong>(simplified EADAM):</strong></p>
-<p><u>Round 0</u>: Run the DA algorithm.</p>
-<p><u>Round k</u> (<span class="math inline">\(k \geq 1\)</span>): 1. Identify all the under-demanded schools at the (k-1)-th round, settle these schools as the final assignment for students who are matched with these schools, remove these schools and the matched students; 2. For each removed student i, check whether he gives consent or not. If not, for each school s that is preferred to his matching <span class="math inline">\(\mu(i)\)</span>, we modify the priority of s such that any student j who has a lower priority than i is considered as unacceptable for s<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>; 3. Stop if all schools are removed. Otherwise, re-run DA with the remaining students and schools (with their modified priorities).</p>
-<p>2.4 Observation: The algorithm terminates after at most (|S|+1) rounds.</p>
-<p>Proof: This is ensured by the existence of under-demanded school at the end of each round, which is guaranteed by the <a target="_blank" rel="noopener" href="https://szhangbi.github.io/2021/07/19/Jul-19-a/">Weakly Pareto Optimality of DA</a> For technical details, please refer to the Appendix A.3 of Tang &amp; Yu's paper.</p>
-<p>2.5 Observation: For Round r, <span class="math inline">\(r \geq 1\)</span>, the outcome of Round r of EADAM weakly Pareto dominates the outcome of Round (r-1) of EADAM. That is, each student received a weakly better assignment after each iteration of the simplified EADAM.</p>
-<p>Proof: Please refer to the Appendix A.3 of Tang &amp; Yu's paper.</p>
-<p>Tang &amp; Yu's simplified EADAM are actually outcome equivalent with Kesten's EDAM:</p>
-<p>2.6 Theorem: For each instance of school choice with consent problem, the simplified EDAM produced the same outcome as the Kesten's EADAM does.</p>
-<h4>
-<ol start="3" type="1">
-<li>To be continued...
-</h4></li>
-</ol>
+        <p>This post serves as a summary of the paper <a target="_blank" rel="noopener" href="https://doi.org/10.1016/S0165-1765(99)00241-4"><i>On a characterization of stable matchings</i></a> by Hiroyuki Adachi (2000).</p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Knaster%E2%80%93Tarski_theorem"><b>Tarski's fixed point theorem</b></a> states that, For<span class="math inline">\((L,\leq)\)</span> being a complete lattice and <span class="math inline">\(f:L \to L\)</span> being a monotone function w.r.t. <span class="math inline">\(\leq\)</span>, the set of fixed points of <span class="math inline">\(f\)</span> forms a complete lattice.</p>
+<p>The key of the proof is to identify a complete lattice structure where stable matchings can be considered as fixed points of some increasing function. And it turned out, we can consider <b>pre-matchings</b> to be the set <span class="math inline">\(L\)</span> and common preference of man to be the partial order.</p>
+<p>Informally, <b>pre-matching</b> is a looser concept than matching. A matching <span class="math inline">\(\mu: M \cup W \to M \cup W\)</span> is a one-to-one correspondence and is onto itself of order 2(<span class="math inline">\(\mu(\mu(x))=x\)</span>) as we require a man to be matched to the woman who is matched to him. Pre-matching only requires one-to-one, mathematically, a pre-matchinng can be described by a pair of function <span class="math inline">\(\nu \equiv (\nu_M,\nu_W)\)</span> where <span class="math inline">\(\nu_M : M \to M \cup W\)</span> s.t. if <span class="math inline">\(\nu_M(m) \notin W\)</span> then <span class="math inline">\(\nu_M(m)=m\)</span>, and <span class="math inline">\(\nu_W : W \to M \cup W\)</span> s.t. if <span class="math inline">\(\nu_W(w) \notin M\)</span> then <span class="math inline">\(\nu_W(w)=w\)</span>. The set of all such pair of functions is called <span class="math inline">\(pre-matchings\)</span>, i.e. <span class="math inline">\(V:=V_M \times V_W\)</span>.</p>
+<p><b>Common preference</b> of man over pre-matching is a partial order such that a prematching is prefered to the other if every man prefers his pre-matched partner to that in the other pre-matching, mathematically, <br> <span class="math inline">\(\geq_M\)</span> on <span class="math inline">\(V_M\)</span> specifies <span class="math inline">\(\nu_M \geq_M \nu_M&#39;\)</span> if.f. <span class="math inline">\(\nu_M(m) \geq_M \nu_M&#39;(m)\)</span> for all m;<br> <span class="math inline">\(\geq_W\)</span> on <span class="math inline">\(V_W\)</span> specifies <span class="math inline">\(\nu_W \geq_W \nu_W&#39;\)</span> if.f. <span class="math inline">\(\nu_W(w) \geq_W \nu_W&#39;(w)\)</span> for all m; <br> <span class="math inline">\(\geqslant_M\)</span> on <span class="math inline">\(V\)</span> specifies <span class="math inline">\(\nu_M \geqslant_M \nu_M&#39;\)</span> if.f. <span class="math inline">\(\nu_M \geq_M \nu_M&#39;\)</span> and <span class="math inline">\(\nu_M \leq_W \nu_M&#39;\)</span>.</p>
+<p><b><span class="math inline">\((V,\geqslant_M)\)</span> is a complete lattice because it is finite.</b></p>
+<p><b>All stable matchings can be considered as pre-matching that solves the following two equations</b><br><span class="math inline">\(\nu_M(m)= \underset{w.r.t. \geq_m}{max}\{\{w \in W| m\geq_w \nu_W(w)\} \cup \{m\}\}\)</span> for all <span class="math inline">\(m\in M\)</span> (1)<br> <span class="math inline">\(\nu_W(w)= \underset{w.r.t. \geq_w}{max}\{\{m \in M| m\geq_m \nu_M(m)\} \cup \{w\}\}\)</span> for all <span class="math inline">\(w\in W\)</span> (2) <br> For proofs, one can refer to Prop. 3.4 of the original paper.</p>
+<p>Consider a mapping <span class="math inline">\(T\equiv(T_1,T_2)\)</span> with <span class="math inline">\(T_1: V \to V_M\)</span>, such that <span class="math inline">\(T_1(\nu)\)</span> is the solution of (1), while <span class="math inline">\(T_2(\nu)\)</span> is the solution of (2). It is not hard to show that <span class="math inline">\(T\)</span> is non-decreasing in <span class="math inline">\(\nu\)</span> w.r.t. <span class="math inline">\(\geqslant_M\)</span>.</p>
+<p><b>A Stable matching <span class="math inline">\(\mu\)</span> is a fixed point of <span class="math inline">\(T\)</span></b> as it solves both equation (1,2) simultaneously. So, according to Tarski's fixed point theorem, the set of stable matchings (<span class="math inline">\(\hat{V}\)</span> that solves (1,2)) is non-empty and <span class="math inline">\((\hat{V},\geqslant_M)\)</span> is a complete lattice.</p>
 <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>Equivalently, we can drop school s from student j's preference list.<a href="#fnref1" class="footnote-back">↩</a></p></li>
-</ol>
-</section>
 
     </div>
 
@@ -266,8 +239,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/School-choice/" rel="tag"># School choice</a>
-              <a href="/tags/EADAM/" rel="tag"># EADAM</a>
+              <a href="/tags/Stable-Marriage/" rel="tag"># Stable Marriage</a>
           </div>
 
         
@@ -276,13 +248,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/08/30/Aug-30/" rel="prev" title="8 Things on EADAM (1)">
-      <i class="fa fa-chevron-left"></i> 8 Things on EADAM (1)
+    <a href="/2021/09/01/Sept-1/" rel="prev" title="8 Things on EADAM (2)">
+      <i class="fa fa-chevron-left"></i> 8 Things on EADAM (2)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/12/20/Tarski_1/" rel="next" title="Existence and lattice structure of stable matchings can be proven by Tarski’s fixed point theorem.">
-      Existence and lattice structure of stable matchings can be proven by Tarski’s fixed point theorem. <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -341,13 +310,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">
-
-One perspective provided by Tang &amp; Yu (2014)
-</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">
-
-To be continued...
-</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
