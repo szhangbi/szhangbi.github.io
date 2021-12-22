@@ -160,6 +160,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/22/Roth1990Sec324/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jake ZHANG Shiyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiyu's site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/22/Roth1990Sec324/" class="post-title-link" itemprop="url">Stable matchings can be represented as extreme points of the solutions of a system of linear inequalities</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-12-22 00:00:00 / Modified: 22:53:05" itemprop="dateCreated datePublished" datetime="2021-12-22T00:00:00+08:00">2021-12-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>This post serves as a summary of Section 3.2.4 in the book <a target="_blank" rel="noopener" href="https://doi.org/10.1017/CCOL052139015X"><i>Two-Sided Matching</i></a> by Roth and Sotomayor(1990). From the last post, we know that the set of stable matchings can be thought as set of fixed points for some functions on a complete lattice, in this post, we would show a similar and as surprising result, that the set of stable matchings can be characterized as the set of <b>extreme points</b> of a system of linear constraints.</p>
+<p>An <b>extreme points</b> of a convex set <span class="math inline">\(C\)</span> is a point that doesn't line in any line segment entirely contained in the set <span class="math inline">\(C\)</span>. That is, for <span class="math inline">\(x \in C\)</span> being an extreme point <span class="math inline">\(\nexists y,z \in C\)</span> s.t. <span class="math inline">\(x=\alpha y + (1- \alpha)z\)</span> for some <span class="math inline">\(\alpha \in (0,1)\)</span>, or equivalently, <span class="math inline">\(x=\alpha y + (1- \alpha)z\)</span> <span class="math inline">\(\Rightarrow \alpha = 0 \text{ or } 1\)</span>.</p>
+<p>In a market of <span class="math inline">\(M \times W\)</span>, we can represent <b>fractional matchings</b> by a <span class="math inline">\(|M| \times |W|\)</span> matrix <span class="math inline">\(\mathbf{x}\)</span>, which satisfies the following constraints:<br> <span class="math inline">\(\sum_{j}x_{mj} \leq 1\)</span> for all m in M (1);<br> <span class="math inline">\(\sum_{i}x_{jw} \leq 1\)</span> for all w in W (2);<br> <span class="math inline">\(x_{mw} \geq 0\)</span> for all m in M and all w in W (3);<br> One way is to interpret <span class="math inline">\(\mathbf{x}\)</span> as lotteries and to consider <span class="math inline">\(x_{mw}\)</span> as the probability that m is matched to w. The other way is to interpret <span class="math inline">\(\mathbf{x}\)</span> as time-sharing arrangements and to consider <span class="math inline">\(x_{mw}\)</span> as the time that m is matched with w.</p>
+<p>A matrix <span class="math inline">\(\mathbf{x}\)</span> is a (configuration of) <b>matching</b> if there is matching <span class="math inline">\(\mu\)</span> s.t. <span class="math inline">\(x_{mw}=1\)</span> if.f. <span class="math inline">\(\mu(m)=w\)</span>. We can see that <b>every integer solutions of the above constraints (1,2,3) is a matching</b>, where <span class="math inline">\(\sum_{j}x_{mj} = 0\)</span> means m is unmatched and <span class="math inline">\(\sum_{i}x_{jw} = 0\)</span> means w is unmatched.</p>
+<p>For a matching to be <b>individually rational</b>, we need to impose the constraint to make sure no one is matched with unacceptable partner. Denoting <span class="math inline">\(A \equiv \{(m,w)|w \succ_m w \&amp; m \succ_w w\}\)</span>, we can express the constraints as:<br> <span class="math inline">\(x_{mw}=0\)</span> for <span class="math inline">\((m,w) \in M \times W \setminus A\)</span> (4);</p>
+<p>For <b>stability</b>, we need one more constraint:<br><span class="math inline">\(\underset{j \succ_m w}{\sum}x_{mj} + \underset{i \succ_w m}{\sum}x_{iw} + x_{mw} \geq 1\)</span> for all <span class="math inline">\((m,w) \in A\)</span> (5)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>;</p>
+<p>It is not difficult to see <b><span style="font-size: 1.2em;">every integer solution of the constraints (1-5) is an extreme points</span></b>. Because if not, we can find <span class="math inline">\(\mathbf{y} \neq \mathbf{z}\)</span> s.t. <span class="math inline">\(0&lt;\alpha y_{ij} + (1- \alpha) z_{ij}&lt;1\)</span> for some <span class="math inline">\((i,j)\)</span> violating that every element of <span class="math inline">\(\mathbf{x}\)</span> is an integer.</p>
+<p>To show that <b><span style="font-size: 1.2em;">every extreme points of the set of solutions for the constraints (1-5) is an integer solution</span></b>, we need to construct an auxiliary matrix <span class="math inline">\(\mathbf{z(x)}=\mathbf{\bar{z}(x)}-\mathbf{\underline{z}(x)}\)</span>, where<br> <span class="math inline">\(\bar{z}(x)_{mw}=1\)</span> if <span class="math inline">\(w=\bar{x}(m)\)</span> and <span class="math inline">\(\bar{z}(x)_{mw}=0\)</span> otherwise;<br> <span class="math inline">\(\underline{z}(x)_{mw}=1\)</span> if <span class="math inline">\(w=\underline{x}(m)\)</span> and <span class="math inline">\(\underline{z}(x)_{mw}=0\)</span> otherwise;<br> <span class="math inline">\(\bar{x}(m)\equiv \underset{w.r.t \succ_m}{\max}\{w \in W| x_{mw}&gt;0\}\)</span> is man's most preferred woman among <span class="math inline">\(\{w \in W s.t. x_{mw}&gt;0\}\)</span>;<br> <span class="math inline">\(\underline{x}(m)\equiv \underset{w.r.t \succ_m}{\min}\{w \in W| x_{mw}&gt;0\}\)</span> is man's least preferred woman among <span class="math inline">\(\{w \in W s.t. x_{mw}&gt;0\}\)</span>.</p>
+<p>such that <u>for any extreme solution <span class="math inline">\(\mathbf{x}\)</span>, we can find small enough <span class="math inline">\(\delta\)</span>, s.t. both <span class="math inline">\(\mathbf{x}-\delta \mathbf{z(x)}\)</span> and <span class="math inline">\(\mathbf{x}+\delta \mathbf{z(x)}\)</span> would solve (1-5)</u>, while <span class="math inline">\(\mathbf{x} = \frac{1}{2}(\mathbf{x}+\delta \mathbf{z(x)}) + \frac{1}{2} (\mathbf{x}-\delta \mathbf{z(x)})\)</span>, hence, we must require <span class="math inline">\(\mathbf{z(x)}=0\)</span>. This would imply <span class="math inline">\(\bar{x}(m)=\underline{x}(m)\)</span> for all m, and we know <b><span class="math inline">\(\mathbf{x}\)</span> is an integer solution</b>.</p>
+<p>For details of the proof of the statement underline above, one can refer to the book or the paper by Vande Vate (1992).</p>
+<p><b>Reference</b></p>
+<p>Roth, A., &amp; Sotomayor, M. (1990). The structure of the set of stable matchings. In Two-Sided Matching: A Study in Game-Theoretic Modeling and Analysis (Econometric Society Monographs, pp. 54-77). Cambridge: Cambridge University Press. doi:10.1017/CCOL052139015X.003</p>
+<p>Rothblum, U.G. (1992). Characterization of stable matchings as extreme points of a polytope. Mathematical Programming, 54, 57-67.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>We require it to be hold for all <span class="math inline">\((m,w) \in A\)</span> instead of all <span class="math inline">\((m,w) \in M \times W\)</span> because we allow the case of being unmacthed, e.g. when m is not acceptable to any woman and w is not acceptable to any man, we can have <span class="math inline">\(\underset{j \succ_m w}{\sum}x_{mj} = \underset{i \succ_w m}{\sum}x_{iw} = x_{mw}=0\)</span> <span class="math inline">\(\Rightarrow \underset{j \succ_m w}{\sum}x_{mj} + \underset{i \succ_w m}{\sum}x_{iw} + x_{mw} = 0\)</span><a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/20/Tarski_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -183,10 +269,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-12-20 00:00:00 / Modified: 22:37:14" itemprop="dateCreated datePublished" datetime="2021-12-20T00:00:00+08:00">2021-12-20</time>
+              <time title="Created: 2021-12-20 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-20T00:00:00+08:00">2021-12-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-22 22:54:07" itemprop="dateModified" datetime="2021-12-22T22:54:07+08:00">2021-12-22</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -217,6 +309,8 @@
 <p><b>All stable matchings can be considered as pre-matching that solves the following two equations</b><br><span class="math inline">\(\nu_M(m)= \underset{w.r.t. \geq_m}{max}\{\{w \in W| m\geq_w \nu_W(w)\} \cup \{m\}\}\)</span> for all <span class="math inline">\(m\in M\)</span> (1)<br> <span class="math inline">\(\nu_W(w)= \underset{w.r.t. \geq_w}{max}\{\{m \in M| m\geq_m \nu_M(m)\} \cup \{w\}\}\)</span> for all <span class="math inline">\(w\in W\)</span> (2) <br> For proofs, one can refer to Prop. 3.4 of the original paper.</p>
 <p>Consider a mapping <span class="math inline">\(T\equiv(T_1,T_2)\)</span> with <span class="math inline">\(T_1: V \to V_M\)</span>, such that <span class="math inline">\(T_1(\nu)\)</span> is the solution of (1), while <span class="math inline">\(T_2(\nu)\)</span> is the solution of (2). It is not hard to show that <span class="math inline">\(T\)</span> is non-decreasing in <span class="math inline">\(\nu\)</span> w.r.t. <span class="math inline">\(\geqslant_M\)</span>.</p>
 <p><b>A Stable matching <span class="math inline">\(\mu\)</span> is a fixed point of <span class="math inline">\(T\)</span></b> as it solves both equation (1,2) simultaneously. So, according to Tarski's fixed point theorem, the set of stable matchings (<span class="math inline">\(\hat{V}\)</span> that solves (1,2)) is non-empty and <span class="math inline">\((\hat{V},\geqslant_M)\)</span> is a complete lattice.</p>
+<p><b>Reference</b></p>
+<p>Adachi, H. (2000). On a characterization of stable matchings. Economics Letters, 68, 43-49.</p>
 <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
 
       
@@ -1215,7 +1309,7 @@ P(w4) = m1, m2, m3, m4
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

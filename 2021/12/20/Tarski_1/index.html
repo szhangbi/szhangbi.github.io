@@ -28,7 +28,7 @@
 <meta property="og:description" content="This post serves as a summary of the paper On a characterization of stable matchings by Hiroyuki Adachi (2000). Tarski&#39;s fixed point theorem states that, For\((L,\leq)\) being a complete lattice and">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-12-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-20T14:37:14.260Z">
+<meta property="article:modified_time" content="2021-12-22T14:54:07.994Z">
 <meta property="article:author" content="Jake ZHANG Shiyu">
 <meta property="article:tag" content="Stable Marriage">
 <meta name="twitter:card" content="summary">
@@ -188,10 +188,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-12-20 00:00:00 / Modified: 22:37:14" itemprop="dateCreated datePublished" datetime="2021-12-20T00:00:00+08:00">2021-12-20</time>
+              <time title="Created: 2021-12-20 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-20T00:00:00+08:00">2021-12-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-22 22:54:07" itemprop="dateModified" datetime="2021-12-22T22:54:07+08:00">2021-12-22</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -229,6 +235,8 @@
 <p><b>All stable matchings can be considered as pre-matching that solves the following two equations</b><br><span class="math inline">\(\nu_M(m)= \underset{w.r.t. \geq_m}{max}\{\{w \in W| m\geq_w \nu_W(w)\} \cup \{m\}\}\)</span> for all <span class="math inline">\(m\in M\)</span> (1)<br> <span class="math inline">\(\nu_W(w)= \underset{w.r.t. \geq_w}{max}\{\{m \in M| m\geq_m \nu_M(m)\} \cup \{w\}\}\)</span> for all <span class="math inline">\(w\in W\)</span> (2) <br> For proofs, one can refer to Prop. 3.4 of the original paper.</p>
 <p>Consider a mapping <span class="math inline">\(T\equiv(T_1,T_2)\)</span> with <span class="math inline">\(T_1: V \to V_M\)</span>, such that <span class="math inline">\(T_1(\nu)\)</span> is the solution of (1), while <span class="math inline">\(T_2(\nu)\)</span> is the solution of (2). It is not hard to show that <span class="math inline">\(T\)</span> is non-decreasing in <span class="math inline">\(\nu\)</span> w.r.t. <span class="math inline">\(\geqslant_M\)</span>.</p>
 <p><b>A Stable matching <span class="math inline">\(\mu\)</span> is a fixed point of <span class="math inline">\(T\)</span></b> as it solves both equation (1,2) simultaneously. So, according to Tarski's fixed point theorem, the set of stable matchings (<span class="math inline">\(\hat{V}\)</span> that solves (1,2)) is non-empty and <span class="math inline">\((\hat{V},\geqslant_M)\)</span> is a complete lattice.</p>
+<p><b>Reference</b></p>
+<p>Adachi, H. (2000). On a characterization of stable matchings. Economics Letters, 68, 43-49.</p>
 <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
 
     </div>
@@ -251,7 +259,10 @@
     <a href="/2021/09/01/Sept-1/" rel="prev" title="8 Things on EADAM (2)">
       <i class="fa fa-chevron-left"></i> 8 Things on EADAM (2)
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/22/Roth1990Sec324/" rel="next" title="Stable matchings can be represented as extreme points of the solutions of a system of linear inequalities">
+      Stable matchings can be represented as extreme points of the solutions of a system of linear inequalities <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -323,7 +334,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
