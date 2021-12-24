@@ -160,6 +160,402 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/24/Tarski_2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jake ZHANG Shiyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiyu's site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/24/Tarski_2/" class="post-title-link" itemprop="url">Existence and lattice structure of stable matchings can be proven by Tarski’s fixed point theorem(2).</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-12-24 00:00:00 / Modified: 17:47:04" itemprop="dateCreated datePublished" datetime="2021-12-24T00:00:00+08:00">2021-12-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Examples/" itemprop="url" rel="index"><span itemprop="name">Examples</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>This post serves as a continuation of the previous post on Hiroyuki Adachi (2000), with a few examples provided for illustration.</p>
+An interesting question to ask is: <b>whether we can recover stable matchings from all pre-matchings using the mapping <span class="math inline">\(T\)</span>? The answer is no</b>:<br> Consider the preference profile used by Knuth (1976) to show existence of cyclic blocking pairs:
+<table>
+<tr>
+<td>
+P(m1) =w2, w1, w3, m1
+</td>
+<td>
+P(m2) =w1, w3, w2, m2
+</td>
+<td>
+P(m3) =w1, w2, w3, m3
+</td>
+</tr>
+<tr>
+<td>
+P(w1) = m1, m3, m2, w1
+</td>
+<td>
+P(w2) = m3, m1, m2, w2
+</td>
+<td>
+P(w3) = m1, m3, m2, w3
+</td>
+</tr>
+</table>
+<h4>
+Example 1 (Can't recover stable matching from all pre-matching)
+</h4>
+<p>Starting from the pre-matching where everyone points to his favorite partner, i.e.</p>
+<table>
+<tr>
+<td>
+<span class="math inline">\(\nu_0(m_1)=w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_0(m_2)=w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_0(m_3)=w_1\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_0(w_1)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_0(w_2)=m_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_0(w_3)=m_1\)</span>
+</td>
+</tr>
+</table>
+<p>and would get into a cycle of 4 from the 5-th iteration:</p>
+<table>
+<tbody style="border-bottom: solid 3px black;">
+<tr>
+<td>
+<span class="math inline">\(\nu_i(m_1)=w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_i(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_i(m_3)=w_1\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_i(w_1)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_i(w_2)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_i(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+<tbody style="border-bottom: solid 3px black;">
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+1}(m_1)=w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(m_3)=w_2\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+1}(w_1)=m_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(w_2)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+<tbody style="border-bottom: solid 3px black;">
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+2}(m_1)=w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+2}(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+2}(m_3)=w_1\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+2}(w_1)=m_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(w_2)=m_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+2}(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+<tbody style="border-bottom: solid 3px black;">
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+3}(m_1)=w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(m_3)=w_1\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+3}(w_1)=m_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(w_2)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+4}(m_1)=w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+4}(m_3)=w_1\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+4}(w_1)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+4}(w_2)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+4}(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+<b>How about we starting from a matching? The answer is still no</b>:
+<h4>
+Example 2 (Can't recover stable matching from all matching)
+</h4>
+<p>Starting from a matching <span class="math inline">\(\mu_0=\{(m_1,w_1),(m_2,w_2),(m_3,w_3)\}\)</span>, i.e.</p>
+<table>
+<tr>
+<td>
+<span class="math inline">\(\nu_0(m_1)=w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_0(m_2)=w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_0(m_3)=w_3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_0(w_1)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_0(w_2)=m_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_0(w_3)=m_3\)</span>
+</td>
+</tr>
+</table>
+<p>and would again get into a cycle of 4 from the 3-rd iteration:</p>
+<table>
+<tbody style="border-bottom: solid 3px black;">
+<tr>
+<td>
+<span class="math inline">\(\nu_i(m_1)=w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_i(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_i(m_3)=w_1\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_i(w_1)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_i(w_2)=m_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_i(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+<tbody style="border-bottom: solid 3px black;">
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+1}(m_1)=w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(m_3)=w_2\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+1}(w_1)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(w_2)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+<tbody style="border-bottom: solid 3px black;">
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+2}(m_1)=w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+2}(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+2}(m_3)=w_2\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+2}(w_1)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+1}(w_2)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+2}(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+<tbody style="border-bottom: solid 3px black;">
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+3}(m_1)=w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(m_3)=w_2\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+3}(w_1)=m_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(w_2)=m_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+4}(m_1)=w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+3}(m_2)=w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+4}(m_3)=w_1\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\nu_{i+4}(w_1)=m_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+4}(w_2)=m_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\nu_{i+4}(w_3)=m_2\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/22/Roth1990Sec324/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -183,10 +579,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-12-22 00:00:00 / Modified: 22:58:54" itemprop="dateCreated datePublished" datetime="2021-12-22T00:00:00+08:00">2021-12-22</time>
+              <time title="Created: 2021-12-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-22T00:00:00+08:00">2021-12-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-12-24 17:49:58" itemprop="dateModified" datetime="2021-12-24T17:49:58+08:00">2021-12-24</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -278,7 +680,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-12-22 22:54:07" itemprop="dateModified" datetime="2021-12-22T22:54:07+08:00">2021-12-22</time>
+                <time title="Modified: 2021-12-24 17:49:44" itemprop="dateModified" datetime="2021-12-24T17:49:44+08:00">2021-12-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -304,8 +706,9 @@
           <p>This post serves as a summary of the paper <a target="_blank" rel="noopener" href="https://doi.org/10.1016/S0165-1765(99)00241-4"><i>On a characterization of stable matchings</i></a> by Hiroyuki Adachi (2000).</p>
 <p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Knaster%E2%80%93Tarski_theorem"><b>Tarski's fixed point theorem</b></a> states that, For<span class="math inline">\((L,\leq)\)</span> being a complete lattice and <span class="math inline">\(f:L \to L\)</span> being a monotone function w.r.t. <span class="math inline">\(\leq\)</span>, the set of fixed points of <span class="math inline">\(f\)</span> forms a complete lattice.</p>
 <p>The key of the proof is to identify a complete lattice structure where stable matchings can be considered as fixed points of some increasing function. And it turned out, we can consider <b>pre-matchings</b> to be the set <span class="math inline">\(L\)</span> and common preference of man to be the partial order.</p>
-<p>Informally, <b>pre-matching</b> is a looser concept than matching. A matching <span class="math inline">\(\mu: M \cup W \to M \cup W\)</span> is a one-to-one correspondence and is onto itself of order 2(<span class="math inline">\(\mu(\mu(x))=x\)</span>) as we require a man to be matched to the woman who is matched to him. Pre-matching only requires one-to-one, mathematically, a pre-matchinng can be described by a pair of function <span class="math inline">\(\nu \equiv (\nu_M,\nu_W)\)</span> where <span class="math inline">\(\nu_M : M \to M \cup W\)</span> s.t. if <span class="math inline">\(\nu_M(m) \notin W\)</span> then <span class="math inline">\(\nu_M(m)=m\)</span>, and <span class="math inline">\(\nu_W : W \to M \cup W\)</span> s.t. if <span class="math inline">\(\nu_W(w) \notin M\)</span> then <span class="math inline">\(\nu_W(w)=w\)</span>. The set of all such pair of functions is called <span class="math inline">\(pre-matchings\)</span>, i.e. <span class="math inline">\(V:=V_M \times V_W\)</span>.</p>
+<p>Informally, <b>pre-matching</b> is a looser concept than matching. A matching <span class="math inline">\(\mu: M \cup W \to M \cup W\)</span> is a one-to-one correspondence and is onto itself of order 2(<span class="math inline">\(\mu(\mu(x))=x\)</span>) as we require a man to be matched to the woman who is matched to him. Pre-matching only requires it to be a function, mathematically, a pre-matchinng can be described by a pair of function <span class="math inline">\(\nu \equiv (\nu_M,\nu_W)\)</span> where <span class="math inline">\(\nu_M : M \to M \cup W\)</span> s.t. if <span class="math inline">\(\nu_M(m) \notin W\)</span> then <span class="math inline">\(\nu_M(m)=m\)</span>, and <span class="math inline">\(\nu_W : W \to M \cup W\)</span> s.t. if <span class="math inline">\(\nu_W(w) \notin M\)</span> then <span class="math inline">\(\nu_W(w)=w\)</span>. The set of all such pair of functions is called <span class="math inline">\(pre-matchings\)</span>, i.e. <span class="math inline">\(V:=V_M \times V_W\)</span>.</p>
 <p><b>Common preference</b> of man over pre-matching is a partial order such that a prematching is prefered to the other if every man prefers his pre-matched partner to that in the other pre-matching, mathematically, <br> <span class="math inline">\(\geq_M\)</span> on <span class="math inline">\(V_M\)</span> specifies <span class="math inline">\(\nu_M \geq_M \nu_M&#39;\)</span> if.f. <span class="math inline">\(\nu_M(m) \geq_M \nu_M&#39;(m)\)</span> for all m;<br> <span class="math inline">\(\geq_W\)</span> on <span class="math inline">\(V_W\)</span> specifies <span class="math inline">\(\nu_W \geq_W \nu_W&#39;\)</span> if.f. <span class="math inline">\(\nu_W(w) \geq_W \nu_W&#39;(w)\)</span> for all m; <br> <span class="math inline">\(\geqslant_M\)</span> on <span class="math inline">\(V\)</span> specifies <span class="math inline">\(\nu_M \geqslant_M \nu_M&#39;\)</span> if.f. <span class="math inline">\(\nu_M \geq_M \nu_M&#39;\)</span> and <span class="math inline">\(\nu_M \leq_W \nu_M&#39;\)</span>.</p>
+<p><b><span class="math inline">\((V,\geqslant_M)\)</span> is a lattice.</b> For <span class="math inline">\(\nu_1=(\nu_{1M},\nu_{1W})=((\nu_{1m})_{m \in M},(\nu_{1w})_{w \in W})\)</span>, <span class="math inline">\(\nu_2=(\nu_{2M},\nu_{2W})=((\nu_{2m})_{m \in M},(\nu_{2w})_{w \in W}) \in V\)</span>, <span class="math inline">\(\nu_1 \wedge \nu_2 = ((\nu_{1m} \wedge_m \nu_{2m})_{m \in M},(\nu_{1w} \vee_w \nu_{2w})_{w \in W})\)</span> and <span class="math inline">\(\nu_1 \vee \nu_2 = ((\nu_{1m} \vee_m \nu_{2m})_{m \in M},(\nu_{1w} \wedge_w \nu_{2w})_{w \in W})\)</span><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
 <p><b><span class="math inline">\((V,\geqslant_M)\)</span> is a complete lattice because it is finite.</b></p>
 <p><b>All stable matchings can be considered as pre-matching that solves the following two equations</b><br><span class="math inline">\(\nu_M(m)= \underset{w.r.t. \geq_m}{max}\{\{w \in W| m\geq_w \nu_W(w)\} \cup \{m\}\}\)</span> for all <span class="math inline">\(m\in M\)</span> (1)<br> <span class="math inline">\(\nu_W(w)= \underset{w.r.t. \geq_w}{max}\{\{m \in M| m\geq_m \nu_M(m)\} \cup \{w\}\}\)</span> for all <span class="math inline">\(w\in W\)</span> (2) <br> For proofs, one can refer to Prop. 3.4 of the original paper.</p>
 <p>Consider a mapping <span class="math inline">\(T\equiv(T_1,T_2)\)</span> with <span class="math inline">\(T_1: V \to V_M\)</span>, such that <span class="math inline">\(T_1(\nu)\)</span> is the solution of (1), while <span class="math inline">\(T_2(\nu)\)</span> is the solution of (2). It is not hard to show that <span class="math inline">\(T\)</span> is non-decreasing in <span class="math inline">\(\nu\)</span> w.r.t. <span class="math inline">\(\geqslant_M\)</span>.</p>
@@ -313,6 +716,12 @@
 <p><b>Reference</b></p>
 <p>Adachi, H. (2000). On a characterization of stable matchings. Economics Letters, 68, 43-49.</p>
 <script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Here I am abusing notations a bit, <span class="math inline">\(w_1 \wedge_m w_2\)</span> means m's less preferable woman among <span class="math inline">\(w_1,w_2\)</span>, while <span class="math inline">\(w_1 \vee_m w_2\)</span> means m's more preferable woman among the two.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
 
       
     </div>
@@ -1170,82 +1579,11 @@ P(w4) = m1, m2, m3, m4
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/19/Jul-19-b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jake ZHANG Shiyu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shiyu's site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/19/Jul-19-b/" class="post-title-link" itemprop="url">Summary of <i>Expanding ''Choice'' in School Choice </i> by Abdulkadirog˘lu et. al. (2015)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-19T00:00:00+08:00">2021-07-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-20 11:43:10" itemprop="dateModified" datetime="2021-07-20T11:43:10+08:00">2021-07-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
 
 
 
@@ -1310,7 +1648,7 @@ P(w4) = m1, m2, m3, m4
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
