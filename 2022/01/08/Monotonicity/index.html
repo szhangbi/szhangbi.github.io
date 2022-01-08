@@ -20,21 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Lemma 1 In a school choice problem \((S,I,\succsim,P,q)\) where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. \(\sum_{s \i">
+  <meta name="description" content="In this post, I provide my (a bit verbose) proof of a monotonicity property shared by both Student-proposing Deferred Acceptance and Immediate Acceptance mechanisms. That is, a student can weakly incr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Extension of Thm 2.27 in Roth and Sotomayor (1990) to the context of school choice">
-<meta property="og:url" content="http://example.com/2021/07/19/Jul-19-a/index.html">
+<meta property="og:title" content="A student can weakly increase her chance of being assigned to a school by ranking it higher in her list under SOSM and BM.">
+<meta property="og:url" content="http://example.com/2022/01/08/Monotonicity/index.html">
 <meta property="og:site_name" content="Shiyu&#39;s site">
-<meta property="og:description" content="Lemma 1 In a school choice problem \((S,I,\succsim,P,q)\) where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. \(\sum_{s \i">
+<meta property="og:description" content="In this post, I provide my (a bit verbose) proof of a monotonicity property shared by both Student-proposing Deferred Acceptance and Immediate Acceptance mechanisms. That is, a student can weakly incr">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-07-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-03T12:48:48.341Z">
+<meta property="article:published_time" content="2022-01-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-08T13:27:45.699Z">
 <meta property="article:author" content="Jake ZHANG Shiyu">
 <meta property="article:tag" content="School choice">
-<meta property="article:tag" content="Roth-Sotomayor-1990">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/07/19/Jul-19-a/">
+<link rel="canonical" href="http://example.com/2022/01/08/Monotonicity/">
 
 
 <script id="page-configurations">
@@ -47,7 +46,7 @@
   };
 </script>
 
-  <title>Extension of Thm 2.27 in Roth and Sotomayor (1990) to the context of school choice | Shiyu's site</title>
+  <title>A student can weakly increase her chance of being assigned to a school by ranking it higher in her list under SOSM and BM. | Shiyu's site</title>
   
 
 
@@ -167,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/19/Jul-19-a/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/08/Monotonicity/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -180,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Extension of Thm 2.27 in Roth and Sotomayor (1990) to the context of school choice
+          A student can weakly increase her chance of being assigned to a school by ranking it higher in her list under SOSM and BM.
         </h1>
 
         <div class="post-meta">
@@ -189,16 +188,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-19T00:00:00+08:00">2021-07-19</time>
+              <time title="Created: 2022-01-08 00:00:00 / Modified: 21:27:45" itemprop="dateCreated datePublished" datetime="2022-01-08T00:00:00+08:00">2022-01-08</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-01-03 20:48:48" itemprop="dateModified" datetime="2022-01-03T20:48:48+08:00">2022-01-03</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -225,8 +218,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2021/07/19/Jul-19-a/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/19/Jul-19-a/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2022/01/08/Monotonicity/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/01/08/Monotonicity/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -241,17 +234,51 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ol>
-<li>
-<p><b>Lemma 1</b> In a school choice problem <span class="math inline">\((S,I,\succsim,P,q)\)</span> where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. <span class="math inline">\(\sum_{s \in S}q_s \geq |I|\)</span> and <span class="math inline">\(i \succsim_s \emptyset\)</span> for <span class="math inline">\(\forall i \in I, \forall s \in S\)</span>, there exists at least one school that has not rejected any students under SOSM.<br></p>
-<b>Proof:</b> Suppose all school has rejected some students under SOSM: Since SOSM terminates in finite steps, there exists a round <span class="math inline">\(k\)</span>, such that there is at least one student rejected in round <span class="math inline">\(k\)</span> and after <span class="math inline">\(k\)</span>-th round, no school rejects any students and the algorithm terminates. By our assumption, all students are acceptable, and a school only rejects a student when it runs out of its capacity. This would imply that at round <span class="math inline">\(k\)</span>, all schools are full. However, sincere there is a student who has been rejected in round <span class="math inline">\(k\)</span> and not matched, this would contradict with our assumption that the number of students is no less than the total number of seats.
-</li>
-<br>
-<li>
-<p><b>Propositions 2 (Weakly Pareto Optimality of SOSM)</b> When all students are acceptable, there is no matching <span class="math inline">\(\mu\)</span> where all students get a strictly better assignment than his assignment under SOSM, i.e. ther is no <span class="math inline">\(\mu\)</span> such that <span class="math inline">\(\mu(i)\; P_i \; SOSM(i)\)</span>, <span class="math inline">\(\forall i \in I\)</span>.<br></p>
-<b>Proof:</b> Case 1: If <span class="math inline">\(\sum_{s \in S}q_s \geq |I|\)</span>, then there are some students unmatched under both <span class="math inline">\(\mu\)</span> and SOSM, so there is someone who is matched under SOSM but become unmatched under <span class="math inline">\(\mu\)</span> or remain unmatched under <span class="math inline">\(\mu\)</span>, and hence there exist someone who can't get strictly better assignment. <br> Case 2: If <span class="math inline">\(\sum_{s \in S}q_s \leq |I|\)</span>, since all student apply to schools in the order of his preference list, we know all student has been rejected at least once, otherwise there is someone who get his top choice and can't get strictly better assignment. We denote <span class="math inline">\(S&#39;\)</span> as the set of school that has rejected students under SOSM. We claim that all students must be assigned at some school <span class="math inline">\(s&#39; \in S&#39;\)</span> under <span class="math inline">\(\mu\)</span>, otherwise he is assigned to a school that has not rejected anyone including him under SOSM, which must be no better than his SOSM assignment. However, by <b>Lemma 1</b> we know the total capacity of schools in <span class="math inline">\(S&#39;\)</span> is less than the number of students, i.e. <span class="math inline">\(\sum_{s&#39; \in S&#39;}q_s &lt; |I|\)</span>, hence such a matching <span class="math inline">\(\mu\)</span> would not be feasible.
-</li>
+        <p>In this post, I provide my (a bit verbose) proof of a monotonicity property shared by both Student-proposing Deferred Acceptance and Immediate Acceptance mechanisms. That is, a student can weakly increase her chance of being assigned to a school by ranking it higher in her list.</p>
+<h4>
+Notations
+</h4>
+<p><span class="math inline">\(I\)</span> for the set of students and <span class="math inline">\(i\)</span> for a general student, the Ranked Order List submitted by student <span class="math inline">\(i\)</span> is denoted as <span class="math inline">\(L_i\)</span>, the lists submitted by others are denoted as <span class="math inline">\(L_{-i}\)</span>; <span class="math inline">\(S\)</span> for the set of schools and <span class="math inline">\(s\)</span> for a general school, <span class="math inline">\(q_s\)</span> for the capacity of school <span class="math inline">\(s\)</span>, the priority list over students at school <span class="math inline">\(s\)</span> is denoted as <span class="math inline">\(P_i\)</span>; SOSM for Student optimal stable mechanism and BM for Boston Mechanism, <span class="math inline">\(\mu^{M}(i,L_i,L_{-i})\)</span> to be the assignment of student i under mechanism M; we say a student <span class="math inline">\(i\)</span> moves up a school <span class="math inline">\(s\)</span> in her list if she ranks <span class="math inline">\(s\)</span> higher while keeping the relative ranking among the remaining schools unchanged, that is <span class="math inline">\(|\{s&#39;|s&#39; L_i s \}|&lt;|\{s&#39;|s&#39; L&#39;_i s \}|\)</span> and <span class="math inline">\(s&#39; L_i s \Leftrightarrow s&#39; L&#39;_i s\)</span>.</p>
+<h4>
+Lemma 1
+</h4>
+<p>Given <span class="math inline">\(\forall \; (I,S,\mathbf{q},\mathbf{P},L_{-i})\)</span>, if <span class="math inline">\(\mu^{SOSM}(i,L_i,L_{-i})=s\)</span> and if i moves up s in her list to have <span class="math inline">\(L&#39;_i\)</span>, then <span class="math inline">\(\mu^{SOSM}(i,L&#39;_i,L_{-i})=s\)</span>.</p>
+<p><b>Proof</b> by contradiction:<br> Suppose <span class="math inline">\(\mu^{SOSM}(i,L&#39;_i,L_{-i})=s&#39; \neq s\)</span>.<br> Suppose i applies to s <b>at step t</b> under <span class="math inline">\(\mu^{SOSM}(L_i,L_{-i})\)</span> and at <b>step <span class="math inline">\(t&#39;&lt;t\)</span></b> under <span class="math inline">\(\mu^{SOSM}(L&#39;_i,L_{-i})\)</span>, we know <b>the steps ahead of <span class="math inline">\(t&#39;\)</span></b> are identical under the two cases<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, such that the application of other students are the same for <span class="math inline">\(i&#39; \neq i\)</span>.</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(s L_i s&#39;\)</span>, then it implies <b>at some step <span class="math inline">\(k\)</span></b> before the algorithm terminates, there is a student <span class="math inline">\(a\)</span> applying to <span class="math inline">\(s\)</span> under <span class="math inline">\(\mu&#39;\)</span>, who never applies to <span class="math inline">\(s\)</span> under <span class="math inline">\(\mu(L)\)</span>, and her priority is higher than <span class="math inline">\(i\)</span>, i.e. <span class="math inline">\(a P_s i\)</span>. This must be caused<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> by some other student <span class="math inline">\(b\)</span>, who applied to a's original assignment <span class="math inline">\(\mu(a,Li,L_{-i})\)</span>, <b>at a step <span class="math inline">\(k&#39; &lt; k\)</span></b>. This must be caused by another student <span class="math inline">\(c\)</span>, who applied to b's original assignment <span class="math inline">\(\mu(b,Li,L_{-i})\)</span>, <b>at a step <span class="math inline">\(k&#39;&#39; &lt; k&#39;\)</span></b>...<br> Continuing with the above argument, we would reach a step <span class="math inline">\(j &lt; t&#39;\)</span><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, where a student x's behavior deviates from what she did under <span class="math inline">\(\mu(L)\)</span>, contradicting with the fact that all previous steps before <span class="math inline">\(t&#39;\)</span> shall be identical;</p></li>
+<li><p>If <span class="math inline">\(s&#39; L_i s\)</span>, then this would directly violate the strategy-proofness of SOSM.</p></li>
 </ol>
+<p>By above, we know <span class="math inline">\(\mu^{SOSM}(i,L&#39;_i,L_{-i})=s\)</span>.</p>
+<h4>
+Lemma 2
+</h4>
+<p>Given <span class="math inline">\(\forall \; (I,S,\mathbf{q},\mathbf{P},L_{-i})\)</span>, if <span class="math inline">\(\mu^{BM}(i,L_i,L_{-i})=s\)</span> and if i moves up s in her list to have <span class="math inline">\(L&#39;_i\)</span>, then <span class="math inline">\(\mu^{BM}(i,L&#39;_i,L_{-i})=s\)</span>.</p>
+<p><b>Proof:</b> Under <span class="math inline">\(\mu^{BM}(i,L_i,L_{-i})\)</span>, when i applies to s at step k, school s must not be full, otherwise i would be rejected and not assigned to s. Then, under <span class="math inline">\(\mu^{BM}(i,L&#39;_i,L_{-i})\)</span>, when i applies to s at an earlier step <span class="math inline">\(t&#39;&lt;t\)</span>, s must not be full either, i would be accepted at that step and the assignment would be finalized. So <span class="math inline">\(\mu^{BM}(i,L&#39;_i,L_{-i})=s\)</span> as well.</p>
+<h4>
+Lemma 3
+</h4>
+<p><span class="math inline">\(\exists \; (I,S,\mathbf{q},\mathbf{P},L_{-i})\)</span>, s.t. <span class="math inline">\(\mu^{SOSM}(L_i,L_{-i}) = s&#39; L_i s\)</span>, and after she moves up s in her list to have <span class="math inline">\(L&#39;_i\)</span>, <span class="math inline">\(\mu^{SOSM}(i,L&#39;_i,L_{-i})=s\)</span>.</p>
+<p><b>Proof:</b>Suppose i has top priority at s and s', while lowest priority at any other school, and all student other than i rank s and s; as the bottom two, and for each other school <span class="math inline">\(s&#39;&#39;\)</span>, there are <span class="math inline">\(q_{s&#39;&#39;}\)</span> students putting it as the top choice. Under such extreme case, when i would either be accepted by s or s', depending on which school she applies to first.</p>
+<h4>
+Lemma 4
+</h4>
+<p><span class="math inline">\(\exists \; (I,S,\mathbf{q},\mathbf{P},L_{-i})\)</span>, s.t. <span class="math inline">\(\mu^{BM}(L_i,L_{-i}) = s&#39; L_i s\)</span>, and after she moves up s in her list to have <span class="math inline">\(L&#39;_i\)</span>, <span class="math inline">\(\mu^{BM}(i,L&#39;_i,L_{-i})=s\)</span>.</p>
+<p><b>Proof:</b> Same as above.</p>
+Here are the implications:
+<h4>
+Proposition 1
+</h4>
+<p>Under SOSM or BM, with whatever distribution of the priorities and preferences, a student i can weakly increase her chance of being assigned to a school s by moving s up in her list.</p>
+<p><b>Proof:</b> Given any realization of the priorities and preferences, if i is originally assigned to s, by lemma 1 and 2, she is still assigned to s if she moves up s.<br> According to lemma 3 and 4, there are cases where i is originally not assigned to s<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>, but can be assigned to s after moving up s.<br> Whether she can strictly increase her chance depends on whether the above cases have possible possibility.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Or, if i ranks s at the top, there is no previous step;<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>If not, at step <span class="math inline">\(k\)</span> under <span class="math inline">\(\mu(L&#39;)\)</span>, there are <span class="math inline">\(q_s\)</span> students applying to s, each with priority higher than i at s, had they also applied to s under <span class="math inline">\(\mu(L)\)</span>, <span class="math inline">\(\mu(i,L)=s\)</span> would violate the stability.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Or, j=0, this is also a contradiction;<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>Under SOSM, by strategy-proofness, she must be assigned to a school worse than s, and this is not necessary under BM.<a href="#fnref4" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
 
     </div>
 
@@ -262,7 +289,6 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/School-choice/" rel="tag"># School choice</a>
-              <a href="/tags/Roth-Sotomayor-1990/" rel="tag"># Roth-Sotomayor-1990</a>
           </div>
 
         
@@ -271,13 +297,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/07/19/Jul-19-b/" rel="prev" title="Summary of <i>Expanding ''Choice'' in School Choice </i> by Abdulkadirog˘lu et. al. (2015)">
-      <i class="fa fa-chevron-left"></i> Summary of <i>Expanding ''Choice'' in School Choice </i> by Abdulkadirog˘lu et. al. (2015)
+    <a href="/2021/12/24/Tarski_2/" rel="prev" title="Existence and lattice structure of stable matchings can be proven by Tarski’s fixed point theorem(2).">
+      <i class="fa fa-chevron-left"></i> Existence and lattice structure of stable matchings can be proven by Tarski’s fixed point theorem(2).
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/07/20/Jul-20-a/" rel="next" title="An example of an algorithm that converge to stable matching from arbitary matching.">
-      An example of an algorithm that converge to stable matching from arbitary matching. <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -343,6 +366,19 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">
+Notations
+</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">
+Lemma 1
+</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">
+Lemma 2
+</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">
+Lemma 3
+</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">
+Lemma 4
+</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">
+Proposition 1
+</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -356,7 +392,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -562,9 +598,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "http://example.com/2021/07/19/Jul-19-a/";
-    this.page.identifier = "2021/07/19/Jul-19-a/";
-    this.page.title = "Extension of Thm 2.27 in Roth and Sotomayor (1990) to the context of school choice";
+    this.page.url = "http://example.com/2022/01/08/Monotonicity/";
+    this.page.identifier = "2022/01/08/Monotonicity/";
+    this.page.title = "A student can weakly increase her chance of being assigned to a school by ranking it higher in her list under SOSM and BM.";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

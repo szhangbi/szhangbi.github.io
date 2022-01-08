@@ -244,6 +244,104 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/19/Weak_Pareto/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jake ZHANG Shiyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiyu's site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/19/Weak_Pareto/" class="post-title-link" itemprop="url">Extension of Thm 2.27 in Roth and Sotomayor (1990) to the context of school choice</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-19T00:00:00+08:00">2021-07-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-03 20:48:48" itemprop="dateModified" datetime="2022-01-03T20:48:48+08:00">2022-01-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Proofs/" itemprop="url" rel="index"><span itemprop="name">Proofs</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2021/07/19/Weak_Pareto/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/19/Weak_Pareto/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>
+<p><b>Lemma 1</b> In a school choice problem <span class="math inline">\((S,I,\succsim,P,q)\)</span> where total capacity is no less than the total number of students and where all students are acceptable for all schools, i.e. <span class="math inline">\(\sum_{s \in S}q_s \geq |I|\)</span> and <span class="math inline">\(i \succsim_s \emptyset\)</span> for <span class="math inline">\(\forall i \in I, \forall s \in S\)</span>, there exists at least one school that has not rejected any students under SOSM.<br></p>
+<b>Proof:</b> Suppose all school has rejected some students under SOSM: Since SOSM terminates in finite steps, there exists a round <span class="math inline">\(k\)</span>, such that there is at least one student rejected in round <span class="math inline">\(k\)</span> and after <span class="math inline">\(k\)</span>-th round, no school rejects any students and the algorithm terminates. By our assumption, all students are acceptable, and a school only rejects a student when it runs out of its capacity. This would imply that at round <span class="math inline">\(k\)</span>, all schools are full. However, sincere there is a student who has been rejected in round <span class="math inline">\(k\)</span> and not matched, this would contradict with our assumption that the number of students is no less than the total number of seats.
+</li>
+<br>
+<li>
+<p><b>Propositions 2 (Weakly Pareto Optimality of SOSM)</b> When all students are acceptable, there is no matching <span class="math inline">\(\mu\)</span> where all students get a strictly better assignment than his assignment under SOSM, i.e. ther is no <span class="math inline">\(\mu\)</span> such that <span class="math inline">\(\mu(i)\; P_i \; SOSM(i)\)</span>, <span class="math inline">\(\forall i \in I\)</span>.<br></p>
+<b>Proof:</b> Case 1: If <span class="math inline">\(\sum_{s \in S}q_s \geq |I|\)</span>, then there are some students unmatched under both <span class="math inline">\(\mu\)</span> and SOSM, so there is someone who is matched under SOSM but become unmatched under <span class="math inline">\(\mu\)</span> or remain unmatched under <span class="math inline">\(\mu\)</span>, and hence there exist someone who can't get strictly better assignment. <br> Case 2: If <span class="math inline">\(\sum_{s \in S}q_s \leq |I|\)</span>, since all student apply to schools in the order of his preference list, we know all student has been rejected at least once, otherwise there is someone who get his top choice and can't get strictly better assignment. We denote <span class="math inline">\(S&#39;\)</span> as the set of school that has rejected students under SOSM. We claim that all students must be assigned at some school <span class="math inline">\(s&#39; \in S&#39;\)</span> under <span class="math inline">\(\mu\)</span>, otherwise he is assigned to a school that has not rejected anyone including him under SOSM, which must be no better than his SOSM assignment. However, by <b>Lemma 1</b> we know the total capacity of schools in <span class="math inline">\(S&#39;\)</span> is less than the number of students, i.e. <span class="math inline">\(\sum_{s&#39; \in S&#39;}q_s &lt; |I|\)</span>, hence such a matching <span class="math inline">\(\mu\)</span> would not be feasible.
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
@@ -313,7 +411,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
