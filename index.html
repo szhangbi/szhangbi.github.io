@@ -160,6 +160,138 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/15/School_bayesian/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jake ZHANG Shiyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiyu's site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/15/School_bayesian/" class="post-title-link" itemprop="url">Existence of Bayesian Nash Equilibrium in School Choice Games</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-01-15 00:00:00" itemprop="dateCreated datePublished" datetime="2022-01-15T00:00:00+08:00">2022-01-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-01-17 22:13:51" itemprop="dateModified" datetime="2022-01-17T22:13:51+08:00">2022-01-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Proofs/" itemprop="url" rel="index"><span itemprop="name">Proofs</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/01/15/School_bayesian/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/01/15/School_bayesian/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>In this post, I summarized the proof used by He (2017) to show the existence of symmetric Bayesian Nash Equilibrium in Proposition 1 of his paper <a target="_blank" rel="noopener" href="https://www.tse-fr.eu/sites/default/files/TSE/documents/doc/by/he/bm.pdf"><i> Gaming the Boston school choice mechanism in Beijing</i></a>.</p>
+<h4>
+Notation and assumption
+</h4>
+<p><span class="math inline">\(I\)</span> for students and <span class="math inline">\(S\)</span> for schools; <span class="math inline">\(\mathbf{L}_{i}=(L^1_i,L^2_1,\dots,L^{|S|}_i)\)</span> is the preference list submitted by student i, and <span class="math inline">\(L^k_i \in S\)</span> is the k-th choice in his list. <span class="math inline">\(\mathbf{L}\)</span> denotes the set of all possible list, and the set of all the probibility disrtibution over <span class="math inline">\(\mathbf{L}\)</span> is denoted by <span class="math inline">\(\Delta(\mathbf{L}\)</span>) and <span class="math inline">\(L_{-i}\)</span> denotes the lists submitted by students other than i.</p>
+<p><b>Assumption 1</b> Students are expected utility maximizers. and we denote their von Neumann-Morgenstern utilities for each school by a vector <span class="math inline">\([v_{i,s}]_{s \in S}\)</span>.</p>
+<p><b>Assumption 2</b> The valuations <span class="math inline">\(v_i \equiv [v_{i,s}]_{s \in S}\)</span> follow a distribution <span class="math inline">\(F\)</span>, which is commonly known by all students.<br> e.g. suppose there are 3 schools, then <span class="math inline">\(\mathbf{v}_i = \mathbb{R}^3\)</span>, for <span class="math inline">\(V=\{v_{i,1}\in [0,1],v_{i,2}\in [0,1], v_{i,3}\in [0,1]\}\)</span>, we have <span class="math inline">\(Pr(v_{i} \in V)=\int \mathbb{\Large{1}}\{ v \in V\}\,dF(v)\)</span> to denote the probability or the proportion of students whose valuations are in that set.</p>
+<p><b>Assumption 3</b> The realization of the valuation <span class="math inline">\(v_i\)</span> is privately known to student <span class="math inline">\(i\)</span> himself for each <span class="math inline">\(i \in I\)</span>.</p>
+<p><b>Assumption 4</b> All schools are acceptable for each students<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>Given submitted <span class="math inline">\((L_i,L_{-i})\)</span>, we use <span class="math inline">\(a_{s}(L_i,L_{-i}) \in [0,1]\)</span><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> to denote the probability that student <span class="math inline">\(i\)</span> is admitted by school <span class="math inline">\(s\)</span> given the above submitted preference profile, and this probability is determined by the mechanism.</p>
+<p>Given submitted <span class="math inline">\((L_i,L_{-i})\)</span>, the expected utility of student <span class="math inline">\(i\)</span> is<br />
+<span class="math display">\[V_i(v_i,L_i,L_{-i})=\sum_{s \in S}a_s(L_i,L_{-i})v_{i,s}\]</span></p>
+<p>A mixed strategy <span class="math inline">\(\sigma\)</span> specifies a probability distribution over all lists, and the mixed strategy profile <span class="math inline">\(\sigma(\mathbf{v}_i): R^{|S|} \rightarrow \Delta(\mathbf{L})\)</span> specifies what mixed strategy <span class="math inline">\(i\)</span> should apply contingent on his valuation over school is <span class="math inline">\(\mathbf{v}_i\)</span>.</p>
+<p>Given applied mixed strategies <span class="math inline">\((\sigma_i,\sigma_{-i})\)</span>, the expected utility of student <span class="math inline">\(i\)</span> is <span class="math display">\[V_i(v_i,\sigma_i,\sigma_{-i})=\sum_{s \in S}\sum_{L_i \in \mathbf{L}}\sum_{L_{-i} \in \mathbf{L}^{|I|-1}}\text{Pr(}L_i\text{is played under $\sigma_i$)}\text{Pr(}L_{-i}\text{is played under $\sigma_{-i}(v_{-i})$)}a_s(L_i,L_{-i})v_{i,s}\]</span></p>
+<p>For simplification of the expression, we write <span class="math display">\[A_s(\sigma_i,\sigma_{-i})=\sum_{L_i \in \mathbf{L}}\sum_{L_{-i} \in \mathbf{L}^{|I|-1}}\text{Pr(}L_i\text{is played under $\sigma_i$)}\text{Pr(}L_{-i}\text{is played under $\sigma_{-i}$)}a_s(L_i,L_{-i})\]</span> to denote the probability of being admitted to school <span class="math inline">\(s\)</span> under the mixed strategies.</p>
+<p>And we can simplify the notation to be <span class="math inline">\(V_i(v_i,\sigma_i,\sigma_{-i})= A(\sigma_i,\sigma_{-i})*v_i\)</span>, where <span class="math inline">\(A(\sigma_i,\sigma_{-i})=[A_s(\sigma_i,\sigma_{-i})]_{s \in S}\)</span></p>
+<h4>
+School choice as a Bayesian Game
+</h4>
+<p>The school choice can be considered as a Bayesian Game consisting of the tuple <span class="math inline">\((I,\Omega,(\mathbf{L}_i),(\mathbf{v}_i),(\mathbf{F}_{-i}),(\mathbf{V}_i))\)</span>, where <br> <span class="math inline">\(I\)</span> is the set of students as a finite set of player;<br> <span class="math inline">\(\Omega: \omega \times \mathbf{v}_{-i}\)</span> is the state of the realization of the lottery that determines priority and the realization of others' valuations;<br> <span class="math inline">\((\mathbf{L}_{i})\)</span> is the set of actions for each student <span class="math inline">\(i\)</span>, which is his submitted list;<br> <span class="math inline">\((\mathbf{v}_i)\)</span> is the set of type for each student <span class="math inline">\(i\)</span>, which is his valuations over the schools;<br> students hold common prior belief on the distribution of other's valuation as <span class="math inline">\(F_{-i}(\mathbf{v}_{-i})\)</span><br> student i's payoff function is given by <span class="math inline">\(V_i(v_i,L_i,L_{-i})\)</span> above.</p>
+<p>Then, a stundent's interim expected payoff (after knowing his valuation <span class="math inline">\(v_i\)</span>) is <span class="math display">\[\begin{aligned}\underset{\text{over }\omega \times \mathbf{v}_{-i}}{E}[V_i(v_i,\sigma(v_i),\sigma_{-i}(v_{-i}))] &amp;=\int V_i(v_i,\sigma_i(v_i),\sigma_{-i}(v_{-i})) \,dF_{-i}(v_{-i})\\&amp;=\int A(\sigma_i,\sigma_{-i})*v_i \,dF_{-i}(v_{-i}) \\&amp;= \int\sum_{s \in S}\sum_{L_i \in \mathbf{L}}\sum_{L_{-i} \in \mathbf{L}^{|I|-1}}\text{Pr(}L_i\text{is played under $\sigma_i$)}\text{Pr(}L_{-i}\text{is played under $\sigma_{-i}$)}a_s(L_i,L_{-i})v_{i,s} \,dF_{-i}(v_{-i})
+\end{aligned}\]</span></p>
+<p><b>Definition 1</b> A (mixed-strategy) <b>Bayesian Nash Equilibrium</b> is a strategy profile <span class="math inline">\((\sigma_i(\cdot))_{i \in I}\)</span>, such that <span class="math display">\[\sigma_i(v_i) = arg\max_{\sigma&#39;_i \in \Delta(\mathbf{L})} \;\;\underset{\text{over }\omega \times \mathbf{v}_{-i}}{E}[V_i(v_i,\sigma(v_i),\sigma_{-i}(v_{-i}))]\]</span> for each <span class="math inline">\(i\)</span> and <span class="math inline">\(\forall v_i\)</span>.</p>
+<h4>
+School choice as a Non-atomic Game
+</h4>
+<p>To prove the existence of a symmetric Bayesian Nash Equilibrium of the above game, we can convert it into a nonatomic game, which is a game with complete information and a continuum of non-atomic players. The existence result of non-atomic game is first established by <a target="_blank" rel="noopener" href="https://doi.org/10.1007/BF01014905">Schmeidler(1973)</a>, and then generalized by <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2000034">Khan(1986)</a>.</p>
+<p>Specially, the school choice game can be considered as a non-atomic game consisting of <span class="math inline">\(((\mathbf{V},\mathcal{B},\mu),\Delta(\mathbf{L}),\mathbf{X},\mathbf{u})\)</span>, where<br></p>
+<p><span class="math inline">\((\mathbf{V},\mathcal{B}(\mathbf{V}),\mu)\)</span> is a complete, finite measure space of the types, with <span class="math inline">\(\mathbf{V}=R^{|S|}\)</span> to be the set of types, <span class="math inline">\(\mathcal{B}(\mathbf{V})\)</span> to be the Borel <span class="math inline">\(\sigma\)</span>-algebra of <span class="math inline">\(\mathbf{v}\)</span>, and <span class="math inline">\(\mu\)</span> is the non-atomic measure<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> on <span class="math inline">\((\mathbf{v},\mathcal{B}(\mathbf{v}))\)</span>, s.t. <span class="math inline">\(\mu(V)=(|I|-1)\int \mathbb{\Large{1}}\{v \in V\}\,dF(v)\)</span>;<br> <span class="math inline">\(\Delta(\mathbf{L})\)</span> is the set of mixed strategies for each player;<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a><br> <span class="math inline">\(\mathbf{X}: \mathbf{V} \rightarrow \Delta(\mathbf{L})\)</span> is a measurable map that describes the mixed strategy applied by each type;<br> <span class="math inline">\(\mathbf{u}(\cdot,\cdot):\mathbf{V} \times L_1(\mu,X(\cdot)) \rightarrow R^{2^{|S|}}\)</span><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> is the auxiliary utility function, and <span class="math display">\[\begin{aligned}u^{j}(v_i,x)&amp;=V(v_i,L_j,\hat{x})\\&amp;=\int A(L_j,\hat{x}(v_{-i}))*v_i \,dF_{-i}(v_{-i}) \\&amp;= \int\sum_{s \in S}\sum_{L_{-i} \in \mathbf{L}^{|I|-1}}\text{Pr(}L_{-i}\text{is played under $\hat{x}(v_{-i}$)}a_s(L_j,L_{-i})v_{i,s} \,dF_{-i}(v_{-i})\\&amp;=\underset{\text{over } \omega \times v_{-j}}E[v_i,L_j,\hat{x}(v_{-i})]
+\end{aligned}\]</span> is the payoff to player of type <span class="math inline">\(v_i\)</span> when he submits <span class="math inline">\(L_j\)</span> while the other player act according to the strategy profile described by <span class="math inline">\(\hat{x}\)</span>, and we construct it to coincide with the interim expected utility of a student whose valuation is <span class="math inline">\(v_i\)</span>, submission is <span class="math inline">\(L_j\)</span> while others' strategies contingent on their realization of valuations are given by <span class="math inline">\(x(v_j)\)</span> for <span class="math inline">\(j \neq i\)</span></p>
+<p>Hence, the payoff for a player of type <span class="math inline">\(v\)</span> when he applied strategy <span class="math inline">\(y=(y_1,\cdots,y_{2^{|I|}})\)</span>, while others follows strategy x, can be expressed as <span class="math inline">\(h_{v}(y)=y*u(v,x)\)</span>.</p>
+<p><b>Definition 2</b> An equilibrium of the non-atomic game is the strategy profile <span class="math inline">\(\hat{x}\)</span>, s.t. <span class="math display">\[\hat{x}*u(v,\hat{x}) \geq y*u(v,\hat{x}) \;\;\;\; a.e. \forall v\in V\]</span></p>
+<p>[to be continued...]</p>
+<p><b>Reference</b></p>
+<p>-He, Yinghua. (2017). &quot;Gaming the Boston school choice mechanism in Beijing.&quot; Working Paper.<br> -Schmeidler, David. (1973). Equilibrium Points of Non-Atomic Games. Journal of Statistical Physics. 7. 295-300.<br> -Khan, Mohammed. (1986). Equilibrium Points of Nonatomic Games Over a Banach Space. Transactions of The American Mathematical Society - TRANS AMER MATH SOC. 293. 737-737.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This is an assumption I made to simplify our expression, which is not assumed in He's paper, and would not affect the existence results;<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>The uncertainty might come from the lottery that was used to determine student's priority.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Hence, <span class="math inline">\(\forall A \in \mathbf{V}\)</span>, s.t. <span class="math inline">\(\mu(A)&gt;0\)</span>, <span class="math inline">\(\exists \; B \subset A\)</span>, and <span class="math inline">\(\mu(B)&gt;0\)</span>.<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>More specifically, since there are at most <span class="math inline">\(2^{|S|}\)</span> cases of submission, we can index the lists and characterize a mixed strategy by <span class="math inline">\(x=(x_1,x_2,\cdots,x_{2^{|S|}})\)</span>, with <span class="math inline">\(\sum^{2^{|S|}}_{j=1}x_i =1\)</span>, where <span class="math inline">\(x_j\)</span> stands for the probability that <span class="math inline">\(L_j\)</span> is submitted under this strategy.<a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p><span class="math inline">\(L_1(\mu,X(\cdot))\)</span> is a technical term, which denotes the set <span class="math inline">\(\{ y \in L_1(\mu, R^{2^{|S|}}): y(v) \in X(V)\text{ for almost all } v \in V\}\)</span>, while <span class="math inline">\(L_1(\mu, R^{2^{|S|}})\)</span> denote the space of all (equivalence classes of) integrable functions y defined on V with <span class="math inline">\(||y|| = \int ||y(v)||_{2} \,d\mu(v)\)</span>. For why we refer to equivalent classes, <a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/3035233/what-does-mean-element-of-lp-are-equivalence-class-rather-than-function">this question on Math StackExchange</a> shares some insight.<a href="#fnref5" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/08/Monotonicity/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1568,185 +1700,6 @@ A problem of 4 students, 3 schools with capacities <span class="math inline">\(q
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/20/Jul-20-a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jake ZHANG Shiyu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shiyu's site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/20/Jul-20-a/" class="post-title-link" itemprop="url">An example of an algorithm that converge to stable matching from arbitary matching.</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-07-20 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-20T00:00:00+08:00">2021-07-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-16 22:37:32" itemprop="dateModified" datetime="2021-09-16T22:37:32+08:00">2021-09-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Examples/" itemprop="url" rel="index"><span itemprop="name">Examples</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/07/20/Jul-20-a/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/20/Jul-20-a/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <style type="text/css">
-<!--
- .tab { margin-left: 40px; }
--->
-</style>
-<p>In the paper <i><a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2938326?seq=1#metadata_info_tab_contents"> Random Paths to Stability in Two-Sided Matching</a></i> , Roth and Vande Vate (1990) proposed an algorithm that can recover stability from arbitrary matching. The paper is short and does not contain example of the execution of the algorithm. I provided two examples here:</p>
-<h4>
-Notation
-</h4>
-<p><u>Satisfying the blocking pair:</u> For a pair <span class="math inline">\((m&#39;,w&#39;)\)</span> that blocks <span class="math inline">\(\mu\)</span>, we say <span class="math inline">\(\nu\)</span> is obtained by satisfying the blocking pair <span class="math inline">\((m&#39;,w&#39;)\)</span> from <span class="math inline">\(\mu\)</span> if m' and w' are matched at <span class="math inline">\(\nu\)</span>, their original partner <span class="math inline">\(\mu(m&#39;)\)</span> and <span class="math inline">\(\mu(w&#39;)\)</span> each becomes unmatched at <span class="math inline">\(\nu\)</span> while the others are matched to the same mate under <span class="math inline">\(\nu\)</span> as they were at <span class="math inline">\(\mu\)</span>.</p>
-<h4>
-Decscription of the algorithm
-</h4>
-Step 0: Given an arbitrary matching <span class="math inline">\(\mu_0\)</span>, if it is not individually rational, we satisfy all the blocking pair formed by individuals to obtain an individual rational matching <span class="math inline">\(\mu_1\)</span><br> Step 1: If there is no blocking pair for <span class="math inline">\(\mu_1\)</span>, then terminate. Otherwise, pick one blocking pair <span class="math inline">\((m1,w1)\)</span> and obtain <span class="math inline">\(\mu_2\)</span> from <span class="math inline">\(\mu_1\)</span> by satisfying <span class="math inline">\((m_1,w_1)\)</span>, and put the two inside the set <span class="math inline">\(A(1)\equiv \{m_1,w_1\}\)</span>.<br> Step k (k&gt;1): If there is no blocking pair for <span class="math inline">\(\mu_k\)</span>, then terminate.
-<div style="margin-left:95px">
-Else, if there some men in <span class="math inline">\(A(k-1)\)</span> forms a blocking pair with a woman <span class="math inline">\(w_k\)</span> outside <span class="math inline">\(A(k-1)\)</span>, we choose the <span class="math inline">\(m_j\)</span> to be the man who is <span class="math inline">\(w_k\)</span>'s most prefered mate in <span class="math inline">\(A(k-1)\)</span>, we obtain <span class="math inline">\(\mu_{k+1}\)</span> from <span class="math inline">\(\mu_k\)</span> by satisfying <span class="math inline">\((m_j,w_k)\)</span> and add <span class="math inline">\(w_k\)</span> to <span class="math inline">\(A(k-1)\)</span> to get <span class="math inline">\(A(k)=A(k-1)\cup\{w_k\}\)</span> and move to next step;
-</div>
-<div style="margin-left:130px">
-Else if there are some women in <span class="math inline">\(A(k-1)\)</span> forms a blocking pair with a man <span class="math inline">\(m_k\)</span> outside <span class="math inline">\(A(k-1)\)</span>, we choose the <span class="math inline">\(w_j\)</span> to be the woman who is <span class="math inline">\(m_k\)</span>'s most prefered mate in <span class="math inline">\(A(k-1)\)</span>, we obtain <span class="math inline">\(\mu_{k+1}\)</span> from <span class="math inline">\(\mu_k\)</span> by satisfying <span class="math inline">\((m_k,w_j)\)</span> and add <span class="math inline">\(m_k\)</span> to <span class="math inline">\(A(k-1)\)</span> to get <span class="math inline">\(A(k)=A(k-1)\cup\{m_k\}\)</span> and move to next step;
-</div>
-<div style="margin-left:160px">
-Else no man or woman in <span class="math inline">\(A(k-1)\)</span> involved in any blocking for <span class="math inline">\(\mu(k-1)\)</span>, and we find a blocking pair <span class="math inline">\((m_k,w_k)\)</span> that none of them is in <span class="math inline">\(A(k-1)\)</span>, we obtain <span class="math inline">\(\mu_{k+1}\)</span> from <span class="math inline">\(\mu_k\)</span> by satisfying <span class="math inline">\((m_k,w_k)\)</span> and add <span class="math inline">\(\{m_k,w_k\}\)</span> to <span class="math inline">\(A(k-1)\)</span> to get <span class="math inline">\(A(k)=A(k-1)\cup\{m_k,w_k\}\)</span> and move to next step.
-</div>
-<h4>
-Example 1
-</h4>
-Starting from the example used by Knuth (1976) to show existence of cyclic blocking pairs, we have:
-<table>
-<tr>
-<td>
-P(m1) =w2, w1, w3
-</td>
-<td>
-P(m2) =w1, w3, w2
-</td>
-<td>
-P(m3) =w1, w2, w3
-</td>
-</tr>
-<tr>
-<td>
-P(w1) = m1, m3, m2
-</td>
-<td>
-P(w2) = m3, m1, m2
-</td>
-<td>
-P(w3) = m1, m3, m2
-</td>
-</tr>
-</table>
-<p>and the initial matching is <span class="math inline">\(\mu_1=\{(m_1,w_1),(m_2,w_2),(m_3,w_3)\}\)</span></p>
-<p>Step 0: <span class="math inline">\(\mu_1={(w_1,m_1),(w_2,m_2),(w_3,m_3)}\)</span> is individually rational;</p>
-<p>Step 1: The blocking pairs are: <span class="math inline">\(\{(w_2,m_1),(w_2,m_3),(w_3,m_1)\}\)</span>, satisfy <span class="math inline">\((w_2,m_1)\)</span> <span class="math inline">\(\Rightarrow \mu_2 =\{(w_1,w_1),(w_2,m_1),(m_2,m_2),(w_3,m_3)\}\)</span> and <span class="math inline">\(A(1)=\{w_2,m_1\}\)</span>;</p>
-<p>Step 2: The blocking pairs are: <span class="math inline">\(\{(w_1,m_3),(w_1,m_2),(w_2,m_3)\}\)</span>, and <span class="math inline">\(w_2\)</span> is in <span class="math inline">\(A(1)\)</span>, satisfy <span class="math inline">\((w_2,m_3)\)</span> <span class="math inline">\(\Rightarrow \mu_3 =\)</span>$ {(w_1,w_1),(m_1,m_1),(w_2,m_3),(m_2,m_2),(w_3,w_3)} $ and <span class="math inline">\(A(2)=\{m_1,w_2,m_3\}\)</span>;</p>
-<p>Step 3: The blocking pairs are: <span class="math inline">\(\{(w_1,m_3),(w_1,m_2),(w_1,m_1),(w_3,m_1),(w_3,m_2)\}\)</span>, <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> is in <span class="math inline">\(A(2)\)</span> and <span class="math inline">\(m_1\;P_{w_1}\;m_3\)</span> , satisfy <span class="math inline">\((m_1,w_1)\)</span> <span class="math inline">\(\Rightarrow \mu_4 =\)</span><span class="math inline">\(\{(w_1,m_1),(w_2,m_3),(m_2,m_2),(w_3,w_3)\}\)</span> and <span class="math inline">\(A(3)=\{m_1,w_2,m_3,w_1\}\)</span>;</p>
-<p>Step 4: The blocking pairs are: <span class="math inline">\(\{(w_3,m_2)\}\)</span>, satisfy <span class="math inline">\((w_3,m_2)\)</span> <span class="math inline">\(\Rightarrow \mu_5 =\)</span><span class="math inline">\(\{(w_1,m_1),(w_2,m_3),(w_3,m_2)\}\)</span> and <span class="math inline">\(A(3)=\{m_1,w_2,m_3,w_1,w_3,m_2\}\)</span>;</p>
-<p>Step 5: There is no blocking pair and we achieve a stable matching <span class="math inline">\(\mu_5 =\{(w_1,m_1),(w_2,m_3),(w_3,m_2)\}\)</span>, terminate.</p>
-<h4>
-Example 2 (Starting from everyone remains single, every stable matching can be achieved)
-</h4>
-we have:
-<table>
-<tr>
-<td>
-P(m1) =w1, w2, w3, w4
-</td>
-<td>
-P(m2) =w2, w1, w4, w3
-</td>
-<td>
-P(m3) =w3, w4, w1, w2
-</td>
-<td>
-P(m4) =w4, w3, w2, w1
-</td>
-</tr>
-<tr>
-<td>
-P(w1) = m4, m3, m2, m1
-</td>
-<td>
-P(w2) = m3, m4, m1, m2
-</td>
-<td>
-P(w3) = m2, m1, m4, m3
-</td>
-<td>
-P(w4) = m1, m2, m3, m4
-</td>
-</tr>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1816,7 +1769,7 @@ P(w4) = m1, m2, m3, m4
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
