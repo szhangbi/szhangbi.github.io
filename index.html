@@ -160,6 +160,292 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/14/Core-Stability-CE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jake ZHANG Shiyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiyu's site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/14/Core-Stability-CE/" class="post-title-link" itemprop="url">Core, Stability and Competitive equilibrium in "Housing market"</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-14 20:18:54" itemprop="dateCreated datePublished" datetime="2022-05-14T20:18:54+08:00">2022-05-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-16 21:09:33" itemprop="dateModified" datetime="2022-05-16T21:09:33+08:00">2022-05-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/05/14/Core-Stability-CE/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/05/14/Core-Stability-CE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <style>
+ul li{
+  margin-bottom: 12px;
+}
+
+ol li{
+  margin-bottom: 5px;
+}
+</style>
+<p>This post cites examples from the paper by <a target="_blank" rel="noopener" href="https://doi.org/10.1016/0304-4068%2877%2990004-0">Roth and Postlewaite (1977)</a> and aims to help its reader understand and differentiate concepts like Weak/Strong Core, Weak/Strong Stability, Pareto-Efficiency and Competitive Equilibrium in the &quot;Housing market&quot; model proposed by <a target="_blank" rel="noopener" href="https://doi.org/10.1016/0304-4068%2874%2990033-0">Shapley and Scarf (1974)</a>.</p>
+<h4>
+The Housing Market Model
+</h4>
+<p>
+In Shapley and Scarf (1974)'s model, a group of traders come to the market, each with one object as his endowment. Each trader demand/consume no more than one object. No side payment is allowed and the objects are indivisible, an analogy is housing.
+</p>
+<p>
+From now on, we denote <span class="math inline">\(N\)</span> for the set of traders, <span class="math inline">\(i\)</span> for an arbitrary trader, <span class="math inline">\(\mathbf{w}=(w_1,w_2,\dots,w_n)\)</span> for their endowments and <span class="math inline">\(\mathbf{p}\)</span> for the non-negative price vector. <span class="math inline">\(w_k \succsim_i w_l\)</span> designates that <span class="math inline">\(i\)</span> likes object k at least as well as object l; <span class="math inline">\(w_k \succ_i w_l\)</span> designates that i strictly prefers object k to l; and <span class="math inline">\(w_k \sim_i w_l\)</span> designates that i is indifferent between object k and l.A market is denoted by <span class="math inline">\(M(\mathbf{w},\succsim)\)</span>. An allocation <span class="math inline">\(\mu=(\mu(i_1),\mu(i_2),\dots,\mu(i_n))\)</span> is a permutation of <span class="math inline">\(\mathbf{w}\)</span> and maps traders one-to-one to the objects.
+</p>
+<h4>
+The concept
+</h4>
+<h5>
+On Core:
+</h5>
+<ul>
+<li>
+<b>Def. Strong Domination:</b> We say an allocation <span class="math inline">\(\mu^x\)</span> <i>strongly dominates</i> <span class="math inline">\(\mu^y\)</span> if there exists some coalition <span class="math inline">\(S \subseteq N\)</span>, such that:
+<ol type="i">
+<li>
+The allocation is <i>effective</i>, that re-allocation can take place only with the endowments within the coalition: <span class="math inline">\(\{\mu^{x}(i) |i \in S\}=\{w_i | i \in S\}\)</span>
+</li>
+<li>
+Each member of the coalition <i>strictly prefers</i> his assignment in <span class="math inline">\(\mu^x\)</span> to that in <span class="math inline">\(\mu^y\)</span>: <span class="math inline">\(\mu^x(i) \succ_i \mu^y(i) \text{ for all } i \in S\)</span>
+</li>
+</ol>
+</li>
+<li>
+<b>Def. Weak Core:</b> The Weak Core of the market <span class="math inline">\(M(\mathbf{w},\succsim)\)</span> is the set of allocations that are not <i>strongly dominated</i> by any other allocations, i.e. <span class="math inline">\(\{\mu | \nexists \nu \text{ s.t. }\nu \text{ strongly dominates } \mu \}\)</span>
+</li>
+Similarly, we define:
+<li>
+<b>Def. Weak Domination:</b> We say an allocation <span class="math inline">\(\mu^x\)</span> <i>weakly dominates</i> <span class="math inline">\(\mu^y\)</span> if there exists some coalition <span class="math inline">\(S \subseteq N\)</span>, such that:
+<ol type="i">
+<li>
+The allocation is <i>effective</i>: <span class="math inline">\(\{\mu^{x}(i) |i \in S\}=\{w_i | i \in S\}\)</span>
+</li>
+<li>
+Each member of the coalition weakly prefers <span class="math inline">\(\mu^x\)</span> to <span class="math inline">\(\mu^y\)</span>: <span class="math inline">\(\mu^x(i) \succsim_i \mu^y(x) \text{ for all } i \in S\)</span>
+</li>
+</ol>
+</li>
+<li>
+<b>Def. Strong Core:</b> The Weak Core of the market <span class="math inline">\(M(\mathbf{w},\succsim)\)</span> is the set of allocations that are not <i>weakly dominated</i> by any other allocations.
+</li>
+</ul>
+<h5>
+On Stability:
+</h5>
+<ul>
+<li>
+<b>Def. Blocking:</b> A coalition <span class="math inline">\(S \subseteq N\)</span> blocks an allocation <span class="math inline">\(\mu\)</span> if there exists some allocation <span class="math inline">\(\nu\)</span>, s.t.
+<ol type="i">
+<li>
+<span class="math inline">\(\{\nu(i) |i \in S\}=\{\mu(i) | i \in S\}\)</span>
+</li>
+<li>
+Each member of the coalition <i>strictly prefers</i> his assignment in <span class="math inline">\(\nu\)</span> to that in <span class="math inline">\(\mu\)</span>: <span class="math inline">\(\nu(i) \succ_i \mu(i) \text{ for all } i \in S\)</span>
+</li>
+</ol>
+</li>
+<li>
+<b>Def. Stability:</b> An allocation <span class="math inline">\(\mu\)</span> is stable if it is not blocked by any coalition. <br> Alternatively, we can define stability with the use of core: An allocation <span class="math inline">\(\mu\)</span> is stable if it is in the core of <span class="math inline">\(M(\mu,\succsim)\)</span>.
+</li>
+</ul>
+<h5>
+On Competitive equilibrium:
+</h5>
+<ul>
+<li>
+<b>Def. Efficiency Equilibrium:</b> A pair <span class="math inline">\((\mathbf{p},\mu)\)</span> is an efficiency equilibrium if no trader <span class="math inline">\(i\)</span> could sell his assignment <span class="math inline">\(\mu(i)\)</span> at price <span class="math inline">\(p_i\)</span> to purchase a more preferred object, i.e. <span class="math inline">\(\mu(j) \succ_i \mu(i) \Rightarrow p_{\mu(j)} &gt; p_{\mu(i)}\)</span> for all <span class="math inline">\(i,j\)</span>.
+</li>
+<li>
+<b>Def. Efficiency Allocation:</b> An allocation <span class="math inline">\(\mu\)</span> is said to be efficient if there exists a price vector <span class="math inline">\(\mathbf{p}\)</span> such that <span class="math inline">\((\mathbf{p},\mu)\)</span> is an Efficiency Equilibrium.
+</li>
+<li>
+<b>Def. Competitive Equilibrium:</b> A pair <span class="math inline">\((\mathbf{p},\mu)\)</span> is an competitive equilibrium if it is an efficiency equilibrium and the price of his assignment equals that of his endowment for each trader, i.e. <span class="math inline">\(p_{\mu(i)}=p_{w_i}\)</span>.
+</li>
+</ul>
+<h4>
+The relationship between concepts
+</h4>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/04/Stability_incomplete_info/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jake ZHANG Shiyu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shiyu's site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/04/Stability_incomplete_info/" class="post-title-link" itemprop="url">A notion of stability for matching with incomplete information</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-04 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-04T00:00:00+08:00">2022-05-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-06 12:37:05" itemprop="dateModified" datetime="2022-05-06T12:37:05+08:00">2022-05-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022/05/04/Stability_incomplete_info/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/05/04/Stability_incomplete_info/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Liu et al. (2014) introduced a notion of stability in one-to-one matching problems with transferable utility and asymmetric information on one side, in their paper <a target="_blank" rel="noopener" href="https://doi.org/10.3982/ECTA11183"><i>Stable Matching with Incomplete Information</i></a>. This post serves as a summary.</p>
+<h4>
+Setup and Notation
+</h4>
+<p>They consider a two-sided model, where a worker(/firm) is matched with a firm(/worker), or remains unmatched. Let <span class="math inline">\(I\)</span> designate the finite set of workers and <span class="math inline">\(J\)</span> designate the finite set of firms. A <i>matching</i> is a function <span class="math inline">\(\mu: I \rightarrow J\cup \{\emptyset\}\)</span>, and it is one-to-one on <span class="math inline">\(\mu^{-1}(J)\)</span>. <span class="math inline">\(\mu(i)=\emptyset\)</span> means the worker <span class="math inline">\(i\)</span> is unmatched and <span class="math inline">\(\mu^{-1}(j)=\emptyset\)</span> means the firm <span class="math inline">\(j\)</span> is unmatched.</p>
+<p>Agents' <i>type</i> described their productivity, and <span class="math inline">\(W \subset \mathbb{R}\)</span> is the set of types for workers, <span class="math inline">\(F \subset \mathbb{R}\)</span> is the set of types for firms. The function <span class="math inline">\(\mathbf{w}: \rightarrow W\)</span> maps index of worker to his type, similarly, <span class="math inline">\(\mathbf{f}: J \rightarrow F\)</span> maps index of firm to its type.</p>
+<h4>
+Key Concept
+</h4>
+<p><b>Complete Information Stability</b></p>
+<h4>
+Main Results
+</h4>
+<h4>
+Example
+</h4>
+<h4>
+Reference
+</h4>
+<p>-Liu, Q., Mailath, G. J., Postlewaite, A., &amp; Samuelson, L. (2014). Stable matching with incomplete information. Econometrica, 82(2), 541-587.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/15/School_bayesian/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1491,241 +1777,6 @@ A problem of 4 students, 3 schools with capacities <span class="math inline">\(q
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/30/Jul-30/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jake ZHANG Shiyu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shiyu's site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/30/Jul-30/" class="post-title-link" itemprop="url">Introducing choice correspondence into school choice model</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-07-30 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-30T00:00:00+08:00">2021-07-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-16 22:36:43" itemprop="dateModified" datetime="2021-09-16T22:36:43+08:00">2021-09-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/07/30/Jul-30/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/30/Jul-30/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>The following are notations introduced by Erdil and Kumano in their paper <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.566.8067">Prioritizing Diversity in School Choice</a> as an attempt to incorporate more complex priority rule in the school choice problem.</p>
-<ul>
-<li>N ： set of students, X : set of schools;</li>
-<li><strong>priority rule</strong> : <span class="math inline">\(\mathcal{C_x}:2^N \rightarrow 2^{2^N}\)</span> s.t. <span class="math inline">\(S&#39; \subseteq S\)</span> for all <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span></li>
-<li><strong>Consistency</strong> :
-<ol type="1">
-<li>If there exists S such that <span class="math inline">\(A \cup B \subseteq S\)</span> with <span class="math inline">\(A \mathcal{C_x}(S)\)</span> and <span class="math inline">\(B \notin \mathcal{C_x}(S)\)</span>, then whenever <span class="math inline">\(A \cup B \subseteq S&#39;\)</span>, we have <span class="math inline">\(B \notin \mathcal{C_x}(S&#39;)\)</span>.</li>
-<li>If there exists S such that <span class="math inline">\(A,B \in \mathcal{C_x}(S)\)</span>, then whenever <span class="math inline">\(A \cup B \subseteq S&#39;\)</span>, we have <span class="math inline">\(A \in \mathcal{C_x}(S&#39;)\)</span> if and only if <span class="math inline">\(B \in \mathcal{C_x}(S&#39;)\)</span>.</li>
-</ol></li>
-<li><strong>Definitely chosen students</strong> : <span class="math inline">\(DC_x(S) = \bigcap_{S&#39; \in \mathcal{C_x}(S)} S&#39; = \{ i \in S |i \in S&#39;\)</span> for all <span class="math inline">\(S&#39; \in \mathcal{C_x}(S) \}\)</span></li>
-<li><strong>Substitutable</strong> A priority structure is substitutable (with ties) if for each <span class="math inline">\(x \in X\)</span>, and for each <span class="math inline">\(S, T \subseteq N\)</span> with <span class="math inline">\(S \subseteq T\)</span>, the following conditions hold:
-<ol type="1">
-<li>for each <span class="math inline">\(T&#39; \in \mathcal{C_x}(T)\)</span>, we have <span class="math inline">\(T&#39; \cap S \subseteq S&#39;\)</span> for some <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span>, and</li>
-<li>for each <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span>, we have <span class="math inline">\(T&#39; \cap S \subseteq S&#39;\)</span> for some <span class="math inline">\(T&#39; \in \mathcal{C_x}(T)\)</span>.</li>
-</ol></li>
-<li><strong>Respects priorities</strong> : Given students’ preferences R, an assignment <span class="math inline">\(\mu\)</span> respects priorities C, if:
-<ol type="1">
-<li>for each <span class="math inline">\(i \in N\)</span>, <span class="math inline">\(\mu(i)R_i i\)</span>, and</li>
-<li>for each <span class="math inline">\(x \in X\)</span>, for every S such that <span class="math inline">\(\mu^{-1}(x) \subseteq S \subseteq \{i \in N | x R_i \mu(i)\}\)</span>, we have <span class="math inline">\(\mu^{-1}(x) \in \mathcal{C_x}(S)\)</span>.</li>
-</ol></li>
-<li><strong>Pairwise stable</strong> :
-<ol type="1">
-<li>for each <span class="math inline">\(i \in N\)</span>, <span class="math inline">\(\mu(i)R_i i\)</span>,</li>
-<li><span class="math inline">\(\mu^{−1}(x) \in \mathcal{C_x}(\mu^{−1}(x))\)</span> for all <span class="math inline">\(x \in X\)</span>,</li>
-<li>there is no <span class="math inline">\((i, x)\in N \times X\)</span> such that <span class="math inline">\(x P_i \mu(i)\)</span> and <span class="math inline">\(i \in DC_x(\mu^{−1}(x) \cup {i})\)</span>.</li>
-</ol></li>
-<li><strong>Acceptant</strong> : A priority structure C is acceptant if for each <span class="math inline">\(x \in X\)</span>, for each <span class="math inline">\(S \subseteq N\)</span>, and for each <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span> we have <span class="math inline">\(|S_0|\)</span> = min{|S|, <span class="math inline">\(q_x\)</span>}.</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/21/Jul-21/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jake ZHANG Shiyu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shiyu's site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/21/Jul-21/" class="post-title-link" itemprop="url">Today (Jul-21) is DSE result day for year 2021</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-07-21 00:00:00 / Modified: 22:44:16" itemprop="dateCreated datePublished" datetime="2021-07-21T00:00:00+08:00">2021-07-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Media/" itemprop="url" rel="index"><span itemprop="name">Media</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/07/21/Jul-21/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/21/Jul-21/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Here is some coverage from SCMP:</p>
-<p><a target="_blank" rel="noopener" href="https://www.scmp.com/news/hong-kong/education/article/3141805/7-hong-kong-students-perfect-university-entrance-exams" style="color:blue;">7 Hong Kong students achieve perfect scores for DSE university entrance exams after year marked by coronavirus setbacks</a> by Chan Ho-him.</p>
-<blockquote>
-<p>The elite pupils were among 49,976 who sat for the Diploma of Secondary Education (DSE) exams between April 23 and May 20, according to the Hong Kong Examinations and Assessment Authority.</p>
-</blockquote>
-<p>...</p>
-<blockquote>
-<p>More than 17,000 secondary school students achieved the minimum requirement for local undergraduate programmes – slightly fewer than last year’s roughly 18,000 – and will now be competing for about 13,000 subsidised first-year university places.</p>
-</blockquote>
-<p>...</p>
-<blockquote>
-<p>...pupils were likely to find it easier to get into one of the eight local publicly-funded universities given fewer candidates met the minimum requirements this year.</p>
-</blockquote>
-<blockquote>
-<p>... a smaller overall student population coupled with more pupils choosing to study overseas – including some emigrating with their families – could result in a lower threshold for local university admissions.</p>
-</blockquote>
-<blockquote>
-<p>... pupils might be “more ambitious” this year when applying to local universities given the potentially higher likelihood of getting into their preferred undergraduate programme.</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.scmp.com/news/hong-kong/education/article/3141888/6-hong-kong-schools-account-citys-7-perfect-diploma" style="color:blue;">5 of 7 high-fliers in Hong Kong’s DSE exams plan to pursue medical studies in local universities</a> by Chan Ho-him, Mimosa Ngai and Amalissa Hall.</p>
-<blockquote>
-<p>Six of the top achievers are expected to pursue their studies in local universities, with five aiming to major in medicine and one in finance. The last student is set to read law in Britain.</p>
-</blockquote>
-<p>...</p>
-<blockquote>
-<p>The DSE exam replaced the Hong Kong Certificate of Education Examination and A-levels exams in 2012.</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.scmp.com/news/hong-kong/education/article/3141265/more-1-4-hong-kong-secondary-school-leavers-plan-study" style="color:blue;">More than 1 in 4 Hong Kong secondary school leavers plan to study overseas after DSE exam, survey finds</a> by Chan Ho-him.</p>
-<blockquote>
-<p>About 26 per cent of 569 Diploma of Secondary Education (DSE) candidates polled between last month and Monday said they would choose to further their studies overseas <b>if they were not admitted to their chosen local institutions</b>, findings from the survey <span style="color:gray">(by Federation of Youth Groups)</span> showed.</p>
-</blockquote>
-<p>...</p>
-<blockquote>
-<p>The number of pupils choosing to study overseas was not directly equivalent to those who were planning to leave for good ... Last year’s survey showed about 25 per cent of respondents said they would go overseas, an increase from around 19 per cent in 2019.</p>
-</blockquote>
-<p>...</p>
-<blockquote>
-<p>Separately, another survey by a locally based education group <span style="color:gray">(Dadi Education)</span> polled 304 families with children aged between six and 18, and found that about 66 per cent of respondents had already or were intending to send their children to study overseas.</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1795,7 +1846,7 @@ A problem of 4 students, 3 schools with capacities <span class="math inline">\(q
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1808,7 +1859,7 @@ A problem of 4 students, 3 schools with capacities <span class="math inline">\(q
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
