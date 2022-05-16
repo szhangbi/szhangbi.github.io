@@ -160,121 +160,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/30/Jul-30/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jake ZHANG Shiyu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Shiyu's site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/30/Jul-30/" class="post-title-link" itemprop="url">Introducing choice correspondence into school choice model</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-07-30 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-30T00:00:00+08:00">2021-07-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-09-16 22:36:43" itemprop="dateModified" datetime="2021-09-16T22:36:43+08:00">2021-09-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/07/30/Jul-30/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/07/30/Jul-30/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>The following are notations introduced by Erdil and Kumano in their paper <a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.566.8067">Prioritizing Diversity in School Choice</a> as an attempt to incorporate more complex priority rule in the school choice problem.</p>
-<ul>
-<li>N ： set of students, X : set of schools;</li>
-<li><strong>priority rule</strong> : <span class="math inline">\(\mathcal{C_x}:2^N \rightarrow 2^{2^N}\)</span> s.t. <span class="math inline">\(S&#39; \subseteq S\)</span> for all <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span></li>
-<li><strong>Consistency</strong> :
-<ol type="1">
-<li>If there exists S such that <span class="math inline">\(A \cup B \subseteq S\)</span> with <span class="math inline">\(A \mathcal{C_x}(S)\)</span> and <span class="math inline">\(B \notin \mathcal{C_x}(S)\)</span>, then whenever <span class="math inline">\(A \cup B \subseteq S&#39;\)</span>, we have <span class="math inline">\(B \notin \mathcal{C_x}(S&#39;)\)</span>.</li>
-<li>If there exists S such that <span class="math inline">\(A,B \in \mathcal{C_x}(S)\)</span>, then whenever <span class="math inline">\(A \cup B \subseteq S&#39;\)</span>, we have <span class="math inline">\(A \in \mathcal{C_x}(S&#39;)\)</span> if and only if <span class="math inline">\(B \in \mathcal{C_x}(S&#39;)\)</span>.</li>
-</ol></li>
-<li><strong>Definitely chosen students</strong> : <span class="math inline">\(DC_x(S) = \bigcap_{S&#39; \in \mathcal{C_x}(S)} S&#39; = \{ i \in S |i \in S&#39;\)</span> for all <span class="math inline">\(S&#39; \in \mathcal{C_x}(S) \}\)</span></li>
-<li><strong>Substitutable</strong> A priority structure is substitutable (with ties) if for each <span class="math inline">\(x \in X\)</span>, and for each <span class="math inline">\(S, T \subseteq N\)</span> with <span class="math inline">\(S \subseteq T\)</span>, the following conditions hold:
-<ol type="1">
-<li>for each <span class="math inline">\(T&#39; \in \mathcal{C_x}(T)\)</span>, we have <span class="math inline">\(T&#39; \cap S \subseteq S&#39;\)</span> for some <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span>, and</li>
-<li>for each <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span>, we have <span class="math inline">\(T&#39; \cap S \subseteq S&#39;\)</span> for some <span class="math inline">\(T&#39; \in \mathcal{C_x}(T)\)</span>.</li>
-</ol></li>
-<li><strong>Respects priorities</strong> : Given students’ preferences R, an assignment <span class="math inline">\(\mu\)</span> respects priorities C, if:
-<ol type="1">
-<li>for each <span class="math inline">\(i \in N\)</span>, <span class="math inline">\(\mu(i)R_i i\)</span>, and</li>
-<li>for each <span class="math inline">\(x \in X\)</span>, for every S such that <span class="math inline">\(\mu^{-1}(x) \subseteq S \subseteq \{i \in N | x R_i \mu(i)\}\)</span>, we have <span class="math inline">\(\mu^{-1}(x) \in \mathcal{C_x}(S)\)</span>.</li>
-</ol></li>
-<li><strong>Pairwise stable</strong> :
-<ol type="1">
-<li>for each <span class="math inline">\(i \in N\)</span>, <span class="math inline">\(\mu(i)R_i i\)</span>,</li>
-<li><span class="math inline">\(\mu^{−1}(x) \in \mathcal{C_x}(\mu^{−1}(x))\)</span> for all <span class="math inline">\(x \in X\)</span>,</li>
-<li>there is no <span class="math inline">\((i, x)\in N \times X\)</span> such that <span class="math inline">\(x P_i \mu(i)\)</span> and <span class="math inline">\(i \in DC_x(\mu^{−1}(x) \cup {i})\)</span>.</li>
-</ol></li>
-<li><strong>Acceptant</strong> : A priority structure C is acceptant if for each <span class="math inline">\(x \in X\)</span>, for each <span class="math inline">\(S \subseteq N\)</span>, and for each <span class="math inline">\(S&#39; \in \mathcal{C_x}(S)\)</span> we have <span class="math inline">\(|S_0|\)</span> = min{|S|, <span class="math inline">\(q_x\)</span>}.</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/21/Jul-21/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -825,7 +710,7 @@ P(w4) = m1, m2, m3, m4
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -838,7 +723,7 @@ P(w4) = m1, m2, m3, m4
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
