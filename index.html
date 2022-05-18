@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-18 12:40:56" itemprop="dateModified" datetime="2022-05-18T12:40:56+08:00">2022-05-18</time>
+                <time title="Modified: 2022-05-18 17:00:34" itemprop="dateModified" datetime="2022-05-18T17:00:34+08:00">2022-05-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -383,7 +383,7 @@ Using <span class="math inline">\((o_1,o_2,o_3)\)</span> to denote <span class="
 The existence of Competitive Equilibrium can be proven by Gale's constructive approach of Top-Trading Cycle, which is stated in Sec 6 of Shapley and Scarf (1974).<br> Basically, a <i>Trading Cycle</i> is a group of traders <span class="math inline">\((i_1,i_2,\dots,i_n=i_0)\)</span> where <span class="math inline">\(i_k\)</span> gets the object of <span class="math inline">\(i_{k+1}\)</span>'s among <span class="math inline">\(k=0,1,\dots,n-1\)</span>.
 </p>
 <p>
-<b>Claim 2</b> Every competitive allocation is in the Weak Core
+<b>Claim 2</b> Every competitive allocation is in the Weak Core.
 </p>
 <p>
 Suppose a competitive equilibrium <span class="math inline">\((\mathbf{p},\mu)\)</span> is strongly dominated by another allocation, then there exists a trading cycle <span class="math inline">\(S=(i_1,i_2,\dots,i_n=i_0)\)</span> whose member can each reallocate his endowment for a better assignment than the current one. Since <span class="math inline">\(\mathbf{p}\)</span> is efficient, we have <span class="math inline">\(p_{w_{i_{k+1}}}&gt;p_{\mu(i_k)}\)</span>, since it is competitive, we also have <span class="math inline">\(p_{\mu(i_k)}=p_{w_{i_k}}\)</span>, hence we get <span class="math inline">\(p_{\mu(i_n)}=p_{w_{i_n}}&gt;p_{\mu(i_1)}=p_{w_{i_1}}&gt;p_{\mu(i_2)}=p_{w_{i_2}}&gt;\dots&gt;p_{\mu(i_n)}\)</span>, a contradiction!
@@ -433,13 +433,13 @@ By Lemma 1 and Claim 2 we establish the non-emptiness of Weak Core.<br> The non-
 <span class="math inline">\(\text{Weak Core}=\{(w_2,w_1,w_3),(w_1,w_3,w_2)\}\)</span>,<br> However, <span class="math inline">\((w_2,w_1,w_3)\)</span> weakly dominates <span class="math inline">\((w_1,w_3,w_2)\)</span> with coalition <span class="math inline">\(\{i_2,i_3\}\)</span> and <span class="math inline">\((w_1,w_3,w_2)\)</span> weakly dominates <span class="math inline">\((w_2,w_1,w_3)\)</span> with coalition <span class="math inline">\(\{i_1,i_2\}\)</span>.<br> Hence, Strong Core = <span class="math inline">\(\emptyset\)</span>.
 </p>
 <p>
-<b>Claim 4</b> There may exists an competitive allocation that is not in the Strong Core.
+<b>Claim 4</b> There may exist an competitive allocation that is not in the Strong Core.
 </p>
 <p>
 For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 2 can form a competitive equilibrium together with <span class="math inline">\(\mathbf{p}\)</span> where <span class="math inline">\(p_1=p2&gt;p_3\)</span>, however, it is weakly dominated by coalition <span class="math inline">\((w_1,w_3,w_2)\)</span>.
 </p>
 <p>
-<b>Claim 5</b> There may exists an allocation in the Weak Core that is not stable.
+<b>Claim 5</b> There may exist an allocation in the Weak Core that is not stable.
 </p>
 <p>
 For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 1 is blocked by coalition <span class="math inline">\(\{1,3\}\)</span>.
@@ -451,16 +451,157 @@ For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 1 is
 If a coalition <span class="math inline">\(S\)</span> could block <span class="math inline">\(\mu\)</span>, with a more preferable re-allocation <span class="math inline">\(\nu\)</span> on S, then we could construct a allocation <span class="math inline">\(\mu&#39;\)</span> such that <span class="math inline">\(\mu&#39;=\nu \text{ on } S\)</span> and <span class="math inline">\(\mu&#39;=\mu \text{ on } N \setminus S\)</span>. <span class="math inline">\(\mu&#39;\)</span> weakly dominates <span class="math inline">\(\mu\)</span> with <span class="math inline">\(N\)</span> being the coalition.
 </p>
 <p>
-<b>Claim 7</b> A allocation is stable if and only if it is efficient.
+<b>Claim 7</b> An allocation is stable if and only if it is efficient.
+</p>
+<p>
+This is stated as Theorem 1 in Roth and Postlewaite (1977). To prove that stability implies efficiency, we can again use Top-Trading Cycle algorithm; The proof of efficiency implying stability is similar to that of Claim 2.
+</p>
+<p>
+<b>Claim 8</b> There may exist a stable allocation that is not competitive.
+</p>
+<p>
+Consider the following example:<br> <b>Example 3</b> (Stable/Efficient but not competitive equilibrium):<br>
+<table>
+<tr>
+<td>
+<span class="math inline">\(\succsim_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_4\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(w_4\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+</tr>
+</table>
+The allocation <span class="math inline">\((w_2,w_3,w_4,w_1)\)</span> is stable as everyone except <span class="math inline">\(i_1\)</span> gets his top choice. However, it is not compatible with any competitive price. Because if so, we would have <span class="math inline">\(p_{w_1}=p_{w_2}=p_{w_3}=p_{w_4}\)</span>, however, <span class="math inline">\(w_3 \succ_{3} w_2=\mu(i_2)\)</span>, leading to contradiction!
+</p>
+<p>
+<b>Claim 9</b> There may exist a stable allocation that is not in the Weak Core.
+</p>
+<p>
+Consider the following example:<br> <b>Example 4</b> (Stable but not in Core):<br>
+<table>
+<tr>
+<td>
+<span class="math inline">\(\succsim_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_4\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(w_4\)</span>
+</td>
+<td>
+<span class="math inline">\(w_4\)</span>
+</td>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+</tr>
+</table>
+The allocation <span class="math inline">\((w_2,w_1,w_4,w_3)\)</span> is stable both <span class="math inline">\(i_1\)</span> and <span class="math inline">\(i_3\)</span> get their top choices. However, it is not in the Weak Core. Because it is strongly dominated by some allocation where <span class="math inline">\(\{i_2,i_4\}\)</span> form a coalition to trade with each other.
+</p>
+Especially, when indifference is excluded, we have the nice result:
+<p>
+<b>Claim 10</b>(Theorem 2 in Roth and Postlewaite (1977)) If no trader is indifferent between any goods, then the Strong Core is always non-empty, and contains the unique competitive allocation.
 </p>
 <h4>
-More counter-intuitive examples with indifference
+Conclusion
 </h4>
+The relationship is summarized in the following Venn Diagram:
+<p>
+<img src="https://szhangbi.github.io/2022/05/14/Core-Stability-CE/Venn_CSCE.png" alt="Venn Diagram">
+</p>
 <h4>
 Reference
 </h4>
 <p>-Roth, A. E., &amp; Postlewaite, A. (1977). Weak versus strong domination in a market with indivisible goods. Journal of Mathematical Economics, 4(2), 131-137. <br> -Shapley, L., &amp; Scarf, H. (1974). On cores and indivisibility. Journal of Mathematical Economics, 1(1), 23-37.</p>
-</ul>
+
 
       
     </div>
@@ -559,7 +700,7 @@ Notation and assumption
 <p><b>Assumption 4</b> All schools are acceptable for each students<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
 <p><b>Assumption 5</b> The realization of each student's cardinal preferences are independent.</p>
 <p>Given submitted <span class="math inline">\((L_i,L_{-i})\)</span>, we use <span class="math inline">\(a_{s}(L_i,L_{-i}) \in [0,1]\)</span><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> to denote the probability that student <span class="math inline">\(i\)</span> is admitted by school <span class="math inline">\(s\)</span> given the above submitted preference profile, and this probability is determined by the mechanism.</p>
-<p>Given submitted <span class="math inline">\((L_i,L_{-i})\)</span>, the expected utility of student <span class="math inline">\(i\)</span> is<br />
+<p>Given submitted <span class="math inline">\((L_i,L_{-i})\)</span>, the expected utility of student <span class="math inline">\(i\)</span> is<br>
 <span class="math display">\[V_i(v_i,L_i,L_{-i})=\sum_{s \in S}a_s(L_i,L_{-i})v_{i,s}\]</span></p>
 <p>A mixed strategy <span class="math inline">\(\sigma\)</span> specifies a probability distribution over all lists, and the mixed strategy profile <span class="math inline">\(\sigma(\mathbf{v}_i): R^{|S|} \rightarrow \Delta(\mathbf{L})\)</span> specifies what mixed strategy <span class="math inline">\(i\)</span> should apply contingent on his valuation over school is <span class="math inline">\(\mathbf{v}_i\)</span>.</p>
 <p>Given applied mixed strategies <span class="math inline">\((\sigma_i,\sigma_{-i})\)</span>, the expected utility of student <span class="math inline">\(i\)</span> is <span class="math display">\[V_i(v_i,\sigma_i,\sigma_{-i})=\sum_{s \in S}\sum_{L_i \in \mathbf{L}}\sum_{L_{-i} \in \mathbf{L}^{|I|-1}}\text{Pr(}L_i\text{is played under $\sigma_i$)}\text{Pr(}L_{-i}\text{is played under $\sigma_{-i}(v_{-i})$)}a_s(L_i,L_{-i})v_{i,s}\]</span></p>
@@ -604,7 +745,7 @@ for all <span class="math inline">\(x \in \Delta(\mathbf{L})\)</span> and <span 
 <p><b>Reference</b></p>
 <p>-He, Yinghua. (2017). &quot;Gaming the Boston school choice mechanism in Beijing.&quot; Working Paper.<br> -Schmeidler, David. (1973). Equilibrium Points of Non-Atomic Games. Journal of Statistical Physics. 7. 295-300.<br> -Khan, Mohammed. (1986). Equilibrium Points of Nonatomic Games Over a Banach Space. Transactions of The American Mathematical Society - TRANS AMER MATH SOC. 293. 737-737.</p>
 <section class="footnotes">
-<hr />
+<hr>
 <ol>
 <li id="fn1"><p>This is an assumption I made to simplify our expression, which is not assumed in He's paper, and would not affect the existence results;<a href="#fnref1" class="footnote-back">↩</a></p></li>
 <li id="fn2"><p>The uncertainty might come from the lottery that was used to determine student's priority.<a href="#fnref2" class="footnote-back">↩</a></p></li>
@@ -737,7 +878,7 @@ Proposition 1
 <p>Under SOSM or BM, with whatever distribution of the priorities and preferences, a student i can weakly increase her chance of being assigned to a school s by moving s up in her list.</p>
 <p><b>Proof:</b> Given any realization of the priorities and preferences, if i is originally assigned to s, by lemma 1 and 2, she is still assigned to s if she moves up s.<br> According to lemma 3 and 4, there are cases where i is originally not assigned to s<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>, but can be assigned to s after moving up s.<br> Whether she can strictly increase her chance depends on whether the above cases have possible possibility.</p>
 <section class="footnotes">
-<hr />
+<hr>
 <ol>
 <li id="fn1"><p>Or, if i ranks s at the top, there is no previous step;<a href="#fnref1" class="footnote-back">↩</a></p></li>
 <li id="fn2"><p>If not, at step <span class="math inline">\(k\)</span> under <span class="math inline">\(\mu(L&#39;)\)</span>, there are <span class="math inline">\(q_s\)</span> students applying to s, each with priority higher than i at s, had they also applied to s under <span class="math inline">\(\mu(L)\)</span>, <span class="math inline">\(\mu(i,L)=s\)</span> would violate the stability.<a href="#fnref2" class="footnote-back">↩</a></p></li>
@@ -1255,9 +1396,9 @@ Example 2 (Can't recover stable matching from all matching)
 <p><b>Reference</b></p>
 <p>Roth, A., &amp; Sotomayor, M. (1990). The structure of the set of stable matchings. In Two-Sided Matching: A Study in Game-Theoretic Modeling and Analysis (Econometric Society Monographs, pp. 54-77). Cambridge: Cambridge University Press. doi:10.1017/CCOL052139015X.003</p>
 <p>Rothblum, U.G. (1992). Characterization of stable matchings as extreme points of a polytope. Mathematical Programming, 54, 57-67.</p>
-<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
 <section class="footnotes">
-<hr />
+<hr>
 <ol>
 <li id="fn1"><p>We require it to be hold for all <span class="math inline">\((m,w) \in A\)</span> instead of all <span class="math inline">\((m,w) \in M \times W\)</span> because we allow the case of being unmacthed, e.g. when m is not acceptable to any woman and w is not acceptable to any man, we can have <span class="math inline">\(\underset{j \succ_m w}{\sum}x_{mj} = \underset{i \succ_w m}{\sum}x_{iw} = x_{mw}=0\)</span> <span class="math inline">\(\Rightarrow \underset{j \succ_m w}{\sum}x_{mj} + \underset{i \succ_w m}{\sum}x_{iw} + x_{mw} = 0\)</span><a href="#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
@@ -1361,9 +1502,9 @@ Example 2 (Can't recover stable matching from all matching)
 <p><b>A Stable matching <span class="math inline">\(\mu\)</span> is a fixed point of <span class="math inline">\(T\)</span></b> as it solves both equation (1,2) simultaneously. So, according to Tarski's fixed point theorem, the set of stable matchings (<span class="math inline">\(\hat{V}\)</span> that solves (1,2)) is non-empty and <span class="math inline">\((\hat{V},\geqslant_M)\)</span> is a complete lattice.</p>
 <p><b>Reference</b></p>
 <p>Adachi, H. (2000). On a characterization of stable matchings. Economics Letters, 68, 43-49.</p>
-<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
 <section class="footnotes">
-<hr />
+<hr>
 <ol>
 <li id="fn1"><p>Here I am abusing notations a bit, <span class="math inline">\(w_1 \wedge_m w_2\)</span> means m's less preferable woman among <span class="math inline">\(w_1,w_2\)</span>, while <span class="math inline">\(w_1 \vee_m w_2\)</span> means m's more preferable woman among the two.<a href="#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
@@ -1458,8 +1599,8 @@ Example 2 (Can't recover stable matching from all matching)
           <h4>
 <ol start="2" type="1">
 <li>One perspective provided by Tang &amp; Yu (2014)
-</h4></li>
-</ol>
+</li></ol></h4>
+
 <p>Focusing on each student's incentive to give consent or not in the school choice with consent model we discussed last time, Tang &amp; Yu provided <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.jet.2014.10.002">a new prospective of EADAM</a>. It is reasoned that in order not to disincentivize a student to give consent, we should violate his priorities to allow improvement of others' assignment only when the assignment of this student can not be improved any more, so that his chance of getting into a better school would not be hurted by his consent. To identify which students are not Pareto-improvable given the outcome of DA, we could first identify which schools are under-demanded.</p>
 <p>2.1 Definition of <strong>Under-demanded school:</strong> A school s is <em>under-demanded</em> at a matching <span class="math inline">\(\mu\)</span> if no student prefers it to his assignment under <span class="math inline">\(\mu\)</span>, that is, <span class="math inline">\(\nexists i\)</span>, such that <span class="math inline">\(s \succ_{i} \mu(i)\)</span>.</p>
 <p>The following lemma tells us that students who are matched with under-demanded school in a DA matching are not Pareto-improvable.</p>
@@ -1476,11 +1617,11 @@ Example 2 (Can't recover stable matching from all matching)
 <h4>
 <ol start="3" type="1">
 <li>To be continued...
-</h4></li>
-</ol>
-<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
+</li></ol></h4>
+
+<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
 <section class="footnotes">
-<hr />
+<hr>
 <ol>
 <li id="fn1"><p>Equivalently, we can drop school s from student j's preference list.<a href="#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
@@ -1576,8 +1717,8 @@ Example 2 (Can't recover stable matching from all matching)
 <h4>
 <ol type="1">
 <li>Kesten(2010)'s original definition
-</h4></li>
-</ol>
+</li></ol></h4>
+
 <p>Before introducing the algorithm, we would need one key concept brought by Kesten:</p>
 <p>1.1 Definition of <strong>Interrupter:</strong> Suppose there is a student i, who is tentatively accepted by a school s at step t, and later rejected by school s at step t' (t' &gt; t), meanwhile, if there is some student j, who is rejected by s at step l, <span class="math inline">\(t \leq l &lt; t&#39;\)</span>, then we call student i an <strong>interrupter</strong> and say that <span class="math inline">\((i,s)\)</span> form an <strong>interrupting pair of step t'</strong>.</p>
 <p>1.2 Remark: An interrupter can be interpreted as someone who interrupts the favorable settlement among other students without any gain to himself.</p>
@@ -1683,11 +1824,11 @@ A problem of 4 students, 3 schools with capacities <span class="math inline">\(q
 <h4>
 <ol start="2" type="1">
 <li>To be continued...
-</h4></li>
-</ol>
-<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer=""></script>
+</li></ol></h4>
+
+<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
 <section class="footnotes">
-<hr />
+<hr>
 <ol>
 <li id="fn1"><p>Here, we consider all priorities to be strict. Variants of EADAM can be applied to recover welfare loss due to tie-breaking without seeking consent of a student if he is interrupter due to the specific tie-breaking rule. Hopefully we can talk about this variant and extension in the future.<a href="#fnref1" class="footnote-back">↩</a></p></li>
 <li id="fn2"><p>Equivalently, we can set s as unacceptable for i.<a href="#fnref2" class="footnote-back">↩</a></p></li>

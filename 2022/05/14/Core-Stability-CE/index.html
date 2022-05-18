@@ -27,11 +27,13 @@
 <meta property="og:site_name" content="Shiyu&#39;s site">
 <meta property="og:description" content="ul li{   margin-bottom: 12px; }  ol li{   margin-bottom: 5px; }  This post cites examples from the paper by Roth and Postlewaite (1977) and aims to help its reader understand and differentia">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://szhangbi.github.io/2022/05/14/Core-Stability-CE/Venn_CSCE.png">
 <meta property="article:published_time" content="2022-05-14T12:18:54.000Z">
-<meta property="article:modified_time" content="2022-05-18T04:40:56.273Z">
+<meta property="article:modified_time" content="2022-05-18T09:00:34.537Z">
 <meta property="article:author" content="Jake ZHANG Shiyu">
 <meta property="article:tag" content="Housing market">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://szhangbi.github.io/2022/05/14/Core-Stability-CE/Venn_CSCE.png">
 
 <link rel="canonical" href="http://example.com/2022/05/14/Core-Stability-CE/">
 
@@ -196,7 +198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-18 12:40:56" itemprop="dateModified" datetime="2022-05-18T12:40:56+08:00">2022-05-18</time>
+                <time title="Modified: 2022-05-18 17:00:34" itemprop="dateModified" datetime="2022-05-18T17:00:34+08:00">2022-05-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -395,7 +397,7 @@ Using <span class="math inline">\((o_1,o_2,o_3)\)</span> to denote <span class="
 The existence of Competitive Equilibrium can be proven by Gale's constructive approach of Top-Trading Cycle, which is stated in Sec 6 of Shapley and Scarf (1974).<br> Basically, a <i>Trading Cycle</i> is a group of traders <span class="math inline">\((i_1,i_2,\dots,i_n=i_0)\)</span> where <span class="math inline">\(i_k\)</span> gets the object of <span class="math inline">\(i_{k+1}\)</span>'s among <span class="math inline">\(k=0,1,\dots,n-1\)</span>.
 </p>
 <p>
-<b>Claim 2</b> Every competitive allocation is in the Weak Core
+<b>Claim 2</b> Every competitive allocation is in the Weak Core.
 </p>
 <p>
 Suppose a competitive equilibrium <span class="math inline">\((\mathbf{p},\mu)\)</span> is strongly dominated by another allocation, then there exists a trading cycle <span class="math inline">\(S=(i_1,i_2,\dots,i_n=i_0)\)</span> whose member can each reallocate his endowment for a better assignment than the current one. Since <span class="math inline">\(\mathbf{p}\)</span> is efficient, we have <span class="math inline">\(p_{w_{i_{k+1}}}&gt;p_{\mu(i_k)}\)</span>, since it is competitive, we also have <span class="math inline">\(p_{\mu(i_k)}=p_{w_{i_k}}\)</span>, hence we get <span class="math inline">\(p_{\mu(i_n)}=p_{w_{i_n}}&gt;p_{\mu(i_1)}=p_{w_{i_1}}&gt;p_{\mu(i_2)}=p_{w_{i_2}}&gt;\dots&gt;p_{\mu(i_n)}\)</span>, a contradiction!
@@ -445,13 +447,13 @@ By Lemma 1 and Claim 2 we establish the non-emptiness of Weak Core.<br> The non-
 <span class="math inline">\(\text{Weak Core}=\{(w_2,w_1,w_3),(w_1,w_3,w_2)\}\)</span>,<br> However, <span class="math inline">\((w_2,w_1,w_3)\)</span> weakly dominates <span class="math inline">\((w_1,w_3,w_2)\)</span> with coalition <span class="math inline">\(\{i_2,i_3\}\)</span> and <span class="math inline">\((w_1,w_3,w_2)\)</span> weakly dominates <span class="math inline">\((w_2,w_1,w_3)\)</span> with coalition <span class="math inline">\(\{i_1,i_2\}\)</span>.<br> Hence, Strong Core = <span class="math inline">\(\emptyset\)</span>.
 </p>
 <p>
-<b>Claim 4</b> There may exists an competitive allocation that is not in the Strong Core.
+<b>Claim 4</b> There may exist an competitive allocation that is not in the Strong Core.
 </p>
 <p>
 For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 2 can form a competitive equilibrium together with <span class="math inline">\(\mathbf{p}\)</span> where <span class="math inline">\(p_1=p2&gt;p_3\)</span>, however, it is weakly dominated by coalition <span class="math inline">\((w_1,w_3,w_2)\)</span>.
 </p>
 <p>
-<b>Claim 5</b> There may exists an allocation in the Weak Core that is not stable.
+<b>Claim 5</b> There may exist an allocation in the Weak Core that is not stable.
 </p>
 <p>
 For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 1 is blocked by coalition <span class="math inline">\(\{1,3\}\)</span>.
@@ -463,16 +465,157 @@ For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 1 is
 If a coalition <span class="math inline">\(S\)</span> could block <span class="math inline">\(\mu\)</span>, with a more preferable re-allocation <span class="math inline">\(\nu\)</span> on S, then we could construct a allocation <span class="math inline">\(\mu&#39;\)</span> such that <span class="math inline">\(\mu&#39;=\nu \text{ on } S\)</span> and <span class="math inline">\(\mu&#39;=\mu \text{ on } N \setminus S\)</span>. <span class="math inline">\(\mu&#39;\)</span> weakly dominates <span class="math inline">\(\mu\)</span> with <span class="math inline">\(N\)</span> being the coalition.
 </p>
 <p>
-<b>Claim 7</b> A allocation is stable if and only if it is efficient.
+<b>Claim 7</b> An allocation is stable if and only if it is efficient.
+</p>
+<p>
+This is stated as Theorem 1 in Roth and Postlewaite (1977). To prove that stability implies efficiency, we can again use Top-Trading Cycle algorithm; The proof of efficiency implying stability is similar to that of Claim 2.
+</p>
+<p>
+<b>Claim 8</b> There may exist a stable allocation that is not competitive.
+</p>
+<p>
+Consider the following example:<br> <b>Example 3</b> (Stable/Efficient but not competitive equilibrium):<br>
+<table>
+<tr>
+<td>
+<span class="math inline">\(\succsim_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_4\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(w_4\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+</tr>
+</table>
+The allocation <span class="math inline">\((w_2,w_3,w_4,w_1)\)</span> is stable as everyone except <span class="math inline">\(i_1\)</span> gets his top choice. However, it is not compatible with any competitive price. Because if so, we would have <span class="math inline">\(p_{w_1}=p_{w_2}=p_{w_3}=p_{w_4}\)</span>, however, <span class="math inline">\(w_3 \succ_{3} w_2=\mu(i_2)\)</span>, leading to contradiction!
+</p>
+<p>
+<b>Claim 9</b> There may exist a stable allocation that is not in the Weak Core.
+</p>
+<p>
+Consider the following example:<br> <b>Example 4</b> (Stable but not in Core):<br>
+<table>
+<tr>
+<td>
+<span class="math inline">\(\succsim_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_3\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_4\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(w_4\)</span>
+</td>
+<td>
+<span class="math inline">\(w_4\)</span>
+</td>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+</tr>
+</table>
+The allocation <span class="math inline">\((w_2,w_1,w_4,w_3)\)</span> is stable both <span class="math inline">\(i_1\)</span> and <span class="math inline">\(i_3\)</span> get their top choices. However, it is not in the Weak Core. Because it is strongly dominated by some allocation where <span class="math inline">\(\{i_2,i_4\}\)</span> form a coalition to trade with each other.
+</p>
+Especially, when indifference is excluded, we have the nice result:
+<p>
+<b>Claim 10</b>(Theorem 2 in Roth and Postlewaite (1977)) If no trader is indifferent between any goods, then the Strong Core is always non-empty, and contains the unique competitive allocation.
 </p>
 <h4>
-More counter-intuitive examples with indifference
+Conclusion
 </h4>
+The relationship is summarized in the following Venn Diagram:
+<p>
+<img src="https://szhangbi.github.io/2022/05/14/Core-Stability-CE/Venn_CSCE.png" alt="Venn Diagram">
+</p>
 <h4>
 Reference
 </h4>
 <p>-Roth, A. E., &amp; Postlewaite, A. (1977). Weak versus strong domination in a market with indivisible goods. Journal of Mathematical Economics, 4(2), 131-137. <br> -Shapley, L., &amp; Scarf, H. (1974). On cores and indivisibility. Journal of Mathematical Economics, 1(1), 23-37.</p>
-</ul>
+
 
     </div>
 
@@ -573,7 +716,7 @@ On Competitive equilibrium:
 </span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">
 The relationship between concepts
 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">
-More counter-intuitive examples with indifference
+Conclusion
 </span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">
 Reference
 </span></a></li></ol></div>
