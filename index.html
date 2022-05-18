@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-18 17:00:34" itemprop="dateModified" datetime="2022-05-18T17:00:34+08:00">2022-05-18</time>
+                <time title="Modified: 2022-05-18 17:39:16" itemprop="dateModified" datetime="2022-05-18T17:39:16+08:00">2022-05-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -303,6 +303,9 @@ Each member of the coalition <i>strictly prefers</i> his assignment in <span cla
 <b>Def. Stability:</b> An allocation <span class="math inline">\(\mu\)</span> is stable if it is not blocked by any coalition. <br> Alternatively, we can define stability with the use of core: An allocation <span class="math inline">\(\mu\)</span> is stable if it is in the core of <span class="math inline">\(M(\mu,\succsim)\)</span>.
 </li>
 </ul>
+<p>
+<b>Remark:</b> Stable allocations may be interpreted as those are more likely to persist when traders re-negotiate with their current assignment as the status quo. We might also interpret the Core as predictions for the likely outcomes when each trader is restricted to transact at most once, given their endowments as the starting point.
+</p>
 <h5>
 On Competitive equilibrium:
 </h5>
@@ -324,7 +327,7 @@ On Competitive equilibrium:
 The relationship between concepts
 </h4>
 <p>
-<b>Claim 1</b> Strong Core of a market is a subset of Weak Core of that market.
+<u><b>Claim 1</b> Strong Core of a market is a subset of Weak Core of that market.</u>
 </p>
 <p>
 This can bee seen from the definition, and here is an example.<br> <b>Example 1</b> (from Sec 2 of Roth and Postlewaite (1977)):<br>
@@ -383,13 +386,13 @@ Using <span class="math inline">\((o_1,o_2,o_3)\)</span> to denote <span class="
 The existence of Competitive Equilibrium can be proven by Gale's constructive approach of Top-Trading Cycle, which is stated in Sec 6 of Shapley and Scarf (1974).<br> Basically, a <i>Trading Cycle</i> is a group of traders <span class="math inline">\((i_1,i_2,\dots,i_n=i_0)\)</span> where <span class="math inline">\(i_k\)</span> gets the object of <span class="math inline">\(i_{k+1}\)</span>'s among <span class="math inline">\(k=0,1,\dots,n-1\)</span>.
 </p>
 <p>
-<b>Claim 2</b> Every competitive allocation is in the Weak Core.
+<u><b>Claim 2</b> Every competitive allocation is in the Weak Core.</u>
 </p>
 <p>
 Suppose a competitive equilibrium <span class="math inline">\((\mathbf{p},\mu)\)</span> is strongly dominated by another allocation, then there exists a trading cycle <span class="math inline">\(S=(i_1,i_2,\dots,i_n=i_0)\)</span> whose member can each reallocate his endowment for a better assignment than the current one. Since <span class="math inline">\(\mathbf{p}\)</span> is efficient, we have <span class="math inline">\(p_{w_{i_{k+1}}}&gt;p_{\mu(i_k)}\)</span>, since it is competitive, we also have <span class="math inline">\(p_{\mu(i_k)}=p_{w_{i_k}}\)</span>, hence we get <span class="math inline">\(p_{\mu(i_n)}=p_{w_{i_n}}&gt;p_{\mu(i_1)}=p_{w_{i_1}}&gt;p_{\mu(i_2)}=p_{w_{i_2}}&gt;\dots&gt;p_{\mu(i_n)}\)</span>, a contradiction!
 </p>
 <p>
-<b>Claim 3</b> The Weak Core always exists. While with indifference, the Strong Core may not exists.
+<u><b>Claim 3</b> The Weak Core always exists. While with indifference, the Strong Core may not exists.</u>
 </p>
 <p>
 By Lemma 1 and Claim 2 we establish the non-emptiness of Weak Core.<br> The non-existence of Strong Core when indifference is allowed can be demonstrated by the following, <br> <b>Example 2</b> (from Sec 5 of Shapley and Scarf (1974)):<br>
@@ -433,31 +436,31 @@ By Lemma 1 and Claim 2 we establish the non-emptiness of Weak Core.<br> The non-
 <span class="math inline">\(\text{Weak Core}=\{(w_2,w_1,w_3),(w_1,w_3,w_2)\}\)</span>,<br> However, <span class="math inline">\((w_2,w_1,w_3)\)</span> weakly dominates <span class="math inline">\((w_1,w_3,w_2)\)</span> with coalition <span class="math inline">\(\{i_2,i_3\}\)</span> and <span class="math inline">\((w_1,w_3,w_2)\)</span> weakly dominates <span class="math inline">\((w_2,w_1,w_3)\)</span> with coalition <span class="math inline">\(\{i_1,i_2\}\)</span>.<br> Hence, Strong Core = <span class="math inline">\(\emptyset\)</span>.
 </p>
 <p>
-<b>Claim 4</b> There may exist an competitive allocation that is not in the Strong Core.
+<u><b>Claim 4</b> There may exist an competitive allocation that is not in the Strong Core.</u>
 </p>
 <p>
 For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 2 can form a competitive equilibrium together with <span class="math inline">\(\mathbf{p}\)</span> where <span class="math inline">\(p_1=p2&gt;p_3\)</span>, however, it is weakly dominated by coalition <span class="math inline">\((w_1,w_3,w_2)\)</span>.
 </p>
 <p>
-<b>Claim 5</b> There may exist an allocation in the Weak Core that is not stable.
+<u><b>Claim 5</b> There may exist an allocation in the Weak Core that is not stable.</u>
 </p>
 <p>
 For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 1 is blocked by coalition <span class="math inline">\(\{1,3\}\)</span>.
 </p>
 <p>
-<b>Claim 6</b> Every allocation in the Strong Core is stable.
+<u><b>Claim 6</b> Every allocation in the Strong Core is stable.</u>
 </p>
 <p>
 If a coalition <span class="math inline">\(S\)</span> could block <span class="math inline">\(\mu\)</span>, with a more preferable re-allocation <span class="math inline">\(\nu\)</span> on S, then we could construct a allocation <span class="math inline">\(\mu&#39;\)</span> such that <span class="math inline">\(\mu&#39;=\nu \text{ on } S\)</span> and <span class="math inline">\(\mu&#39;=\mu \text{ on } N \setminus S\)</span>. <span class="math inline">\(\mu&#39;\)</span> weakly dominates <span class="math inline">\(\mu\)</span> with <span class="math inline">\(N\)</span> being the coalition.
 </p>
 <p>
-<b>Claim 7</b> An allocation is stable if and only if it is efficient.
+<u><b>Claim 7</b> An allocation is stable if and only if it is efficient.</u>
 </p>
 <p>
 This is stated as Theorem 1 in Roth and Postlewaite (1977). To prove that stability implies efficiency, we can again use Top-Trading Cycle algorithm; The proof of efficiency implying stability is similar to that of Claim 2.
 </p>
 <p>
-<b>Claim 8</b> There may exist a stable allocation that is not competitive.
+<u><b>Claim 8</b> There may exist a stable allocation that is not competitive.</u>
 </p>
 <p>
 Consider the following example:<br> <b>Example 3</b> (Stable/Efficient but not competitive equilibrium):<br>
@@ -522,7 +525,7 @@ Consider the following example:<br> <b>Example 3</b> (Stable/Efficient but not c
 The allocation <span class="math inline">\((w_2,w_3,w_4,w_1)\)</span> is stable as everyone except <span class="math inline">\(i_1\)</span> gets his top choice. However, it is not compatible with any competitive price. Because if so, we would have <span class="math inline">\(p_{w_1}=p_{w_2}=p_{w_3}=p_{w_4}\)</span>, however, <span class="math inline">\(w_3 \succ_{3} w_2=\mu(i_2)\)</span>, leading to contradiction!
 </p>
 <p>
-<b>Claim 9</b> There may exist a stable allocation that is not in the Weak Core.
+<u><b>Claim 9</b> There may exist a stable allocation that is not in the Weak Core.</u>
 </p>
 <p>
 Consider the following example:<br> <b>Example 4</b> (Stable but not in Core):<br>
@@ -588,14 +591,18 @@ The allocation <span class="math inline">\((w_2,w_1,w_4,w_3)\)</span> is stable 
 </p>
 Especially, when indifference is excluded, we have the nice result:
 <p>
-<b>Claim 10</b>(Theorem 2 in Roth and Postlewaite (1977)) If no trader is indifferent between any goods, then the Strong Core is always non-empty, and contains the unique competitive allocation.
+<u><b>Claim 10</b>(Theorem 2 in Roth and Postlewaite (1977)) If no trader is indifferent between any goods, then the Strong Core is always non-empty, and contains the unique competitive allocation.</u>
 </p>
 <h4>
 Conclusion
 </h4>
-The relationship is summarized in the following Venn Diagram:
+The relationship could be summarized in the following Venn Diagram:
 <p>
-<img src="https://szhangbi.github.io/2022/05/14/Core-Stability-CE/Venn_CSCE.png" alt="Venn Diagram">
+<img src="https://szhangbi.github.io/2022/05/14/Core-Stability-CE/Venn_CSCE.png" alt="Venn Diagram1">
+</p>
+The special case without indifference is described by the following Venn Diagram:
+<p>
+<img src="https://szhangbi.github.io/2022/05/14/Core-Stability-CE/Venn_CSCE_strict.png" alt="Venn Diagram2">
 </p>
 <h4>
 Reference
