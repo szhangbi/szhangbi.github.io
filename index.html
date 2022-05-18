@@ -174,7 +174,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/05/14/Core-Stability-CE/" class="post-title-link" itemprop="url">Core, Stability and Competitive equilibrium in "Housing market"</a>
+            <a href="/2022/05/14/Core-Stability-CE/" class="post-title-link" itemprop="url">Core, Stability and Competitive Equilibrium in "Housing market"</a>
         </h2>
 
         <div class="post-meta">
@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-16 21:09:33" itemprop="dateModified" datetime="2022-05-16T21:09:33+08:00">2022-05-16</time>
+                <time title="Modified: 2022-05-18 12:40:56" itemprop="dateModified" datetime="2022-05-18T12:40:56+08:00">2022-05-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -237,7 +237,7 @@ ol li{
   margin-bottom: 5px;
 }
 </style>
-<p>This post cites examples from the paper by <a target="_blank" rel="noopener" href="https://doi.org/10.1016/0304-4068%2877%2990004-0">Roth and Postlewaite (1977)</a> and aims to help its reader understand and differentiate concepts like Weak/Strong Core, Weak/Strong Stability, Pareto-Efficiency and Competitive Equilibrium in the &quot;Housing market&quot; model proposed by <a target="_blank" rel="noopener" href="https://doi.org/10.1016/0304-4068%2874%2990033-0">Shapley and Scarf (1974)</a>.</p>
+<p>This post cites examples from the paper by <a target="_blank" rel="noopener" href="https://doi.org/10.1016/0304-4068%2877%2990004-0">Roth and Postlewaite (1977)</a> and aims to help its reader understand and differentiate concepts like Weak/Strong Core, Stability, Pareto-Efficiency and Competitive Equilibrium in the &quot;Housing market&quot; model proposed by <a target="_blank" rel="noopener" href="https://doi.org/10.1016/0304-4068%2874%2990033-0">Shapley and Scarf (1974)</a>.</p>
 <h4>
 The Housing Market Model
 </h4>
@@ -245,7 +245,7 @@ The Housing Market Model
 In Shapley and Scarf (1974)'s model, a group of traders come to the market, each with one object as his endowment. Each trader demand/consume no more than one object. No side payment is allowed and the objects are indivisible, an analogy is housing.
 </p>
 <p>
-From now on, we denote <span class="math inline">\(N\)</span> for the set of traders, <span class="math inline">\(i\)</span> for an arbitrary trader, <span class="math inline">\(\mathbf{w}=(w_1,w_2,\dots,w_n)\)</span> for their endowments and <span class="math inline">\(\mathbf{p}\)</span> for the non-negative price vector. <span class="math inline">\(w_k \succsim_i w_l\)</span> designates that <span class="math inline">\(i\)</span> likes object k at least as well as object l; <span class="math inline">\(w_k \succ_i w_l\)</span> designates that i strictly prefers object k to l; and <span class="math inline">\(w_k \sim_i w_l\)</span> designates that i is indifferent between object k and l.A market is denoted by <span class="math inline">\(M(\mathbf{w},\succsim)\)</span>. An allocation <span class="math inline">\(\mu=(\mu(i_1),\mu(i_2),\dots,\mu(i_n))\)</span> is a permutation of <span class="math inline">\(\mathbf{w}\)</span> and maps traders one-to-one to the objects.
+From now on, we denote <span class="math inline">\(N\)</span> for the set of traders, <span class="math inline">\(i\)</span> for an arbitrary trader, <span class="math inline">\(\mathbf{w}=(w_1,w_2,\dots,w_n)\)</span> for their endowments and <span class="math inline">\(\mathbf{p}\)</span> for the non-negative price vector. <span class="math inline">\(w_k \succsim_i w_l\)</span> designates that <span class="math inline">\(i\)</span> likes object k at least as well as object l; <span class="math inline">\(w_k \succ_i w_l\)</span> designates that i strictly prefers object k to l; and <span class="math inline">\(w_k \sim_i w_l\)</span> designates that i is indifferent between object k and l. A market is denoted by <span class="math inline">\(M(\mathbf{w},\succsim)\)</span>. An allocation <span class="math inline">\(\mu=(\mu(i_1),\mu(i_2),\dots,\mu(i_n))\)</span> is a permutation of <span class="math inline">\(\mathbf{w}\)</span> and maps traders one-to-one to the objects.
 </p>
 <h4>
 The concept
@@ -314,12 +314,153 @@ On Competitive equilibrium:
 <b>Def. Efficiency Allocation:</b> An allocation <span class="math inline">\(\mu\)</span> is said to be efficient if there exists a price vector <span class="math inline">\(\mathbf{p}\)</span> such that <span class="math inline">\((\mathbf{p},\mu)\)</span> is an Efficiency Equilibrium.
 </li>
 <li>
-<b>Def. Competitive Equilibrium:</b> A pair <span class="math inline">\((\mathbf{p},\mu)\)</span> is an competitive equilibrium if it is an efficiency equilibrium and the price of his assignment equals that of his endowment for each trader, i.e. <span class="math inline">\(p_{\mu(i)}=p_{w_i}\)</span>.
+<b>Def. Competitive Equilibrium:</b> A pair <span class="math inline">\((\mathbf{p},\mu)\)</span> is an competitive equilibrium if it is an efficiency equilibrium and the price of his assignment equals that of his endowment for each trader, i.e. <span class="math inline">\(p_{\mu(i)}=p_{w_i}\)</span> .
+</li>
+<li>
+<b>Def. Competitive Allocation:</b> An allocation <span class="math inline">\(\mu\)</span> is said to be competitive if there exists a price vector <span class="math inline">\(\mathbf{p}\)</span> such that <span class="math inline">\((\mathbf{p},\mu)\)</span> is an Competitive Equilibrium.
 </li>
 </ul>
 <h4>
 The relationship between concepts
 </h4>
+<p>
+<b>Claim 1</b> Strong Core of a market is a subset of Weak Core of that market.
+</p>
+<p>
+This can bee seen from the definition, and here is an example.<br> <b>Example 1</b> (from Sec 2 of Roth and Postlewaite (1977)):<br>
+<table>
+<tr>
+<td>
+<span class="math inline">\(\succsim_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(w_3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1\)</span>
+</td>
+</tr>
+</table>
+Using <span class="math inline">\((o_1,o_2,o_3)\)</span> to denote <span class="math inline">\((\mu(1)=o_1,\mu(2)=o_2,\mu(3)=o_3)\)</span>,<br> <span class="math inline">\((w_3,w_1,w_2)\)</span> strongly dominates every other allocations except <span class="math inline">\((w_2,w_1,w_3)\)</span>, and <span class="math inline">\(\text{Weak Core}=\{(w_2,w_1,w_3),(w_3,w_1,w_2)\}\)</span>,<br> However, <span class="math inline">\((w_2,w_1,w_3)\)</span> is weakly dominated by <span class="math inline">\((w_3,w_1,w_2)\)</span>, hence, <span class="math inline">\(\text{Strong Core}=\{(w_3,w_1,w_2)\}\)</span>.
+</p>
+<p>
+<b>Lemma 1</b> The Competitive Equilibrium always exists.
+</p>
+<p>
+The existence of Competitive Equilibrium can be proven by Gale's constructive approach of Top-Trading Cycle, which is stated in Sec 6 of Shapley and Scarf (1974).<br> Basically, a <i>Trading Cycle</i> is a group of traders <span class="math inline">\((i_1,i_2,\dots,i_n=i_0)\)</span> where <span class="math inline">\(i_k\)</span> gets the object of <span class="math inline">\(i_{k+1}\)</span>'s among <span class="math inline">\(k=0,1,\dots,n-1\)</span>.
+</p>
+<p>
+<b>Claim 2</b> Every competitive allocation is in the Weak Core
+</p>
+<p>
+Suppose a competitive equilibrium <span class="math inline">\((\mathbf{p},\mu)\)</span> is strongly dominated by another allocation, then there exists a trading cycle <span class="math inline">\(S=(i_1,i_2,\dots,i_n=i_0)\)</span> whose member can each reallocate his endowment for a better assignment than the current one. Since <span class="math inline">\(\mathbf{p}\)</span> is efficient, we have <span class="math inline">\(p_{w_{i_{k+1}}}&gt;p_{\mu(i_k)}\)</span>, since it is competitive, we also have <span class="math inline">\(p_{\mu(i_k)}=p_{w_{i_k}}\)</span>, hence we get <span class="math inline">\(p_{\mu(i_n)}=p_{w_{i_n}}&gt;p_{\mu(i_1)}=p_{w_{i_1}}&gt;p_{\mu(i_2)}=p_{w_{i_2}}&gt;\dots&gt;p_{\mu(i_n)}\)</span>, a contradiction!
+</p>
+<p>
+<b>Claim 3</b> The Weak Core always exists. While with indifference, the Strong Core may not exists.
+</p>
+<p>
+By Lemma 1 and Claim 2 we establish the non-emptiness of Weak Core.<br> The non-existence of Strong Core when indifference is allowed can be demonstrated by the following, <br> <b>Example 2</b> (from Sec 5 of Shapley and Scarf (1974)):<br>
+</p>
+<table>
+<tr>
+<td>
+<span class="math inline">\(\succsim_1\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_2\)</span>
+</td>
+<td>
+<span class="math inline">\(\succsim_3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1 \sim w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(w_1 \sim w_3\)</span>
+</td>
+<td>
+<span class="math inline">\(w_2\)</span>
+</td>
+<td>
+<span class="math inline">\(w_1 \sim w_3\)</span>
+</td>
+</tr>
+</table>
+<p>
+<span class="math inline">\(\text{Weak Core}=\{(w_2,w_1,w_3),(w_1,w_3,w_2)\}\)</span>,<br> However, <span class="math inline">\((w_2,w_1,w_3)\)</span> weakly dominates <span class="math inline">\((w_1,w_3,w_2)\)</span> with coalition <span class="math inline">\(\{i_2,i_3\}\)</span> and <span class="math inline">\((w_1,w_3,w_2)\)</span> weakly dominates <span class="math inline">\((w_2,w_1,w_3)\)</span> with coalition <span class="math inline">\(\{i_1,i_2\}\)</span>.<br> Hence, Strong Core = <span class="math inline">\(\emptyset\)</span>.
+</p>
+<p>
+<b>Claim 4</b> There may exists an competitive allocation that is not in the Strong Core.
+</p>
+<p>
+For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 2 can form a competitive equilibrium together with <span class="math inline">\(\mathbf{p}\)</span> where <span class="math inline">\(p_1=p2&gt;p_3\)</span>, however, it is weakly dominated by coalition <span class="math inline">\((w_1,w_3,w_2)\)</span>.
+</p>
+<p>
+<b>Claim 5</b> There may exists an allocation in the Weak Core that is not stable.
+</p>
+<p>
+For instance, <span class="math inline">\((w_2,w_1,w_3)\)</span> in Example 1 is blocked by coalition <span class="math inline">\(\{1,3\}\)</span>.
+</p>
+<p>
+<b>Claim 6</b> Every allocation in the Strong Core is stable.
+</p>
+<p>
+If a coalition <span class="math inline">\(S\)</span> could block <span class="math inline">\(\mu\)</span>, with a more preferable re-allocation <span class="math inline">\(\nu\)</span> on S, then we could construct a allocation <span class="math inline">\(\mu&#39;\)</span> such that <span class="math inline">\(\mu&#39;=\nu \text{ on } S\)</span> and <span class="math inline">\(\mu&#39;=\mu \text{ on } N \setminus S\)</span>. <span class="math inline">\(\mu&#39;\)</span> weakly dominates <span class="math inline">\(\mu\)</span> with <span class="math inline">\(N\)</span> being the coalition.
+</p>
+<p>
+<b>Claim 7</b> A allocation is stable if and only if it is efficient.
+</p>
+<h4>
+More counter-intuitive examples with indifference
+</h4>
+<h4>
+Reference
+</h4>
+<p>-Roth, A. E., &amp; Postlewaite, A. (1977). Weak versus strong domination in a market with indivisible goods. Journal of Mathematical Economics, 4(2), 131-137. <br> -Shapley, L., &amp; Scarf, H. (1974). On cores and indivisibility. Journal of Mathematical Economics, 1(1), 23-37.</p>
+</ul>
 
       
     </div>
