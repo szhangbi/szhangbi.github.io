@@ -9,12 +9,13 @@ project:
     - index.qmd
   resources:
     - .nojekyll
+    - CNAME
     - cv/Jake_CV.pdf
     - images/CIT_HSS_ShiyuJak.13d8ec3b.fill-620x824-c100.format-avif.avif
 
 website:
   title: "Shiyu (Jake) Zhang"
-  site-url: "https://szhangbi.github.io"
+  site-url: "https://jake-zhang.com"
   search: false
   navbar:
     background: light
