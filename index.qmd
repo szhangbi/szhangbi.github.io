@@ -1,0 +1,136 @@
+---
+pagetitle: "Shiyu (Jake) Zhang | Economics"
+description: "Academic website of Shiyu Zhang, a PhD student in Economics at the California Institute of Technology."
+---
+
+::: {#about .about-section}
+::: {.about-grid}
+::: {.about-photo}
+![](images/CIT_HSS_ShiyuJak.13d8ec3b.fill-620x824-c100.format-avif.avif){.profile-photo fig-alt="Profile photo of Shiyu Zhang"}
+:::
+
+::: {.about-copy}
+<!--<p class="eyebrow">Economics</p>-->
+
+# Shiyu (Jake) Zhang
+
+<p class="position">PhD Candidate in Economics</p>
+<!-- <p class="institution">California Institute of Technology</p> -->
+
+I am a fifth-year PhD candidate in Economics at the California Institute of Technology. I will be on the 2026-27 job market.
+
+<span>I work in microeconomic theory, with a focus on how constrains on acquiring and transmitting information shape individual decisions, beliefs and collective outcomes. </span>
+
+<p class="about-links">
+  <a href="mailto:szhang8@caltech.edu">Email</a>
+  <span aria-hidden="true">·</span>
+  <a href="cv/Jake_CV.pdf">Curriculum vitae</a>
+  <!-- <span aria-hidden="true">·</span>
+  <a href="https://github.com/szhangbi">GitHub</a> -->
+</p>
+:::
+:::
+:::
+
+## Research {#research}
+
+<p class="field-list"><strong>Research fields:</strong> <span>Information Economics · Rational Inattention · Learning in Networkds</span></p>
+<!-- <p class="field-list"><strong>Research fields:</strong> <span class="placeholder">[Add a few keywords describing your research fields, or remove this line if you prefer not to list them.]</span></p> -->
+
+### Working Papers
+
+::: {.research-entry}
+#### A Costly-information Foundation for Psychometric Curves
+<!--
+<p class="entry-meta"><strong>Coauthors:</strong> <span class="placeholder">[Name(s), or remove this line for a solo-authored paper]</span></p>
+-->
+
+<p class="entry-links"><strong>Links:</strong> <span>[PDF](papers/fisher.pdf)</span> · <span>[Slides(25mins)](slides/fisher_slides.pdf)</span></p>
+
+<details class="abstract-toggle">
+<summary>Abstract</summary>
+<p><span> We study a binary choice problem in which an agent chooses between two actions
+whose payoff depends on a continuous state. The agent chooses how much effort to invest
+in learning about the state. Equivalently, we can think of the state as the strength of
+a stimulus, with the agent exerting costly effort to be more responsive to it. Taking as
+given the Fisher information cost introduced by H&eacute;bert and Woodford (2021), we analyze
+the optimal state-dependent choice rule using a variational approach. The main result is
+that agents’ optimal response is an S-shaped function of the state under mild conditions.
+This prediction is aligned with the widely documented psychometric curve response profile
+observed in the experimental literature in psychology and economics.</span></p>
+</details>
+:::
+
+::: {.research-entry}
+#### Local global games and network common learning
+
+<p class="entry-meta"><strong>with</strong> <span>[Omer Tamuz]() and Olga Rospuskova</span></p>
+
+<p class="entry-links"><strong>Links:</strong> <span>[PDF](https://tamuz.caltech.edu/papers/glocal.pdf)</span></p>
+
+<details class="abstract-toggle">
+<summary>Abstract</summary>
+<p><span>We study global games in which agents coordinate locally, with their social
+network neighbors, contingent on a favorable state. Before acting, agents learn
+the private signals of all agents within network distance r. As r grows, every
+agent learns the state, but efficient coordination depends on higher-order beliefs,
+which are shaped by the geometry of the network. We introduce network
+common learning, a network analogue of common learning, and show that it is
+attained when neighboring agents’ observations differ by many signals, as on
+the two-dimensional grid, but fails on networks with informational bottlenecks,
+such as the line, where only the safe action survives in equilibrium.</span></p>
+</details>
+:::
+
+### Work in progress
+
+::: {.research-entry}
+#### Common Learning in Email Games (draft coming soon!)
+<!--
+<p class="entry-meta"><strong>Coauthors:</strong> <span class="placeholder">[Name(s), if any]</span></p>
+
+<p><span class="placeholder">[Add a brief description, or omit it until the project is ready to describe publicly.]</span></p>
+
+<p class="entry-links"><strong>Links:</strong> <span class="placeholder">[PDF, slides, or abstract if available]</span></p>
+:::
+-->
+:::
+
+<!--
+::: {.research-entry .last-entry}
+#### [Work-in-progress title 2]
+
+<p class="entry-meta"><strong>Coauthors:</strong> <span class="placeholder">[Name(s), if any]</span></p>
+
+<p><span class="placeholder">[Add a brief description, or omit it until the project is ready to describe publicly.]</span></p>
+
+<p class="entry-links"><strong>Links:</strong> <span class="placeholder">[PDF, slides, or abstract if available]</span></p>
+:::
+-->
+
+## Teaching {#teaching}
+
+<p class="teaching-overview"><strong>California Institute of Technology</strong><br>
+Teaching Assistant</p>
+
+| Course | Instructor | Term |
+|:--|:--|:--|
+| Environmental Economics | Hannah Druckenmiller | Spring 2025-26 |
+| Matching Markets | Peter P. Caradonna | Fall 2024-25 |
+| Hedge Funds | Andrew J. Sinclair | Spring 2023-24 |
+| Introduction to Finance | Jean-Laurent Rosenthal | Winter 2023-24 |
+| Econometrics | Robert Sherman | Fall 2023-24 |
+
+<!--
+## CV and Contact {#cv}
+
+<p class="cv-download"><a href="cv/Jake_CV.pdf">Download curriculum vitae (PDF)</a></p>
+
+- **Email:** [szhang8@caltech.edu](mailto:szhang8@caltech.edu)
+- **GitHub:** [github.com/szhangbi](https://github.com/szhangbi)
+- **Google Scholar:** <span class="placeholder">[Add profile link later, if desired]</span>
+
+California Institute of Technology  
+Division of the Humanities and Social Sciences  
+<span class="placeholder">[Add office address or mailing address, if desired.]</span>
+-->

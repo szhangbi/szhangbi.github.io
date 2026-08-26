@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: docs
+  pre-render:
+    - scripts/preserve-legacy-index.sh
+  post-render:
+    - scripts/restore-legacy-index.sh
+  render:
+    - index.qmd
+  resources:
+    - .nojekyll
+    - cv/Jake_CV.pdf
+    - images/CIT_HSS_ShiyuJak.13d8ec3b.fill-620x824-c100.format-avif.avif
+
+website:
+  title: "Shiyu (Jake) Zhang"
+  site-url: "https://szhangbi.github.io"
+  search: false
+  navbar:
+    background: light
+    foreground: dark
+    left:
+      - text: "About"
+        href: "#about"
+      - text: "Research"
+        href: "#research"
+      - text: "Teaching"
+        href: "#teaching"
+      - text: "CV"
+        href: "cv/Jake_CV.pdf"
+  page-footer:
+    left: "Shiyu Zhang · California Institute of Technology"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    smooth-scroll: true
+    anchor-sections: false
+    link-external-newwindow: true

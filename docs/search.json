@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Shiyu (Jake) Zhang",
+    "section": "",
+    "text": "PhD Candidate in Economics\n\n\nI am a fifth-year PhD candidate in Economics at the California Institute of Technology. I will be on the 2026-27 job market.\nI work in microeconomic theory, with a focus on how constrains on acquiring and transmitting information shape individual decisions, beliefs and collective outcomes. \n\nEmail · Curriculum vitae"
+  },
+  {
+    "objectID": "index.html#research",
+    "href": "index.html#research",
+    "title": "Shiyu (Jake) Zhang",
+    "section": "Research",
+    "text": "Research\n\nResearch fields: Information Economics · Rational Inattention · Learning in Networkds\n\n\n\nWorking Papers\n\nA Costly-information Foundation for Psychometric Curves\n\n\nLinks: PDF · Slides(25mins)\n\n\n\nAbstract\n\n\n We study a binary choice problem in which an agent chooses between two actions whose payoff depends on a continuous state. The agent chooses how much effort to invest in learning about the state. Equivalently, we can think of the state as the strength of a stimulus, with the agent exerting costly effort to be more responsive to it. Taking as given the Fisher information cost introduced by Hébert and Woodford (2021), we analyze the optimal state-dependent choice rule using a variational approach. The main result is that agents’ optimal response is an S-shaped function of the state under mild conditions. This prediction is aligned with the widely documented psychometric curve response profile observed in the experimental literature in psychology and economics.\n\n\n\n\nLocal global games and network common learning\n\nwith Omer Tamuz and Olga Rospuskova\n\n\nLinks: PDF\n\n\n\nAbstract\n\n\nWe study global games in which agents coordinate locally, with their social network neighbors, contingent on a favorable state. Before acting, agents learn the private signals of all agents within network distance r. As r grows, every agent learns the state, but efficient coordination depends on higher-order beliefs, which are shaped by the geometry of the network. We introduce network common learning, a network analogue of common learning, and show that it is attained when neighboring agents’ observations differ by many signals, as on the two-dimensional grid, but fails on networks with informational bottlenecks, such as the line, where only the safe action survives in equilibrium.\n\n\n\n\n\nWork in progress\n\nCommon Learning in Email Games (draft coming soon!)"
+  },
+  {
+    "objectID": "index.html#teaching",
+    "href": "index.html#teaching",
+    "title": "Shiyu (Jake) Zhang",
+    "section": "Teaching",
+    "text": "Teaching\n\nCalifornia Institute of Technology Teaching Assistant\n\n\n\n\nCourse\nInstructor\nTerm\n\n\n\n\nEnvironmental Economics\nHannah Druckenmiller\nSpring 2025-26\n\n\nMatching Markets\nPeter P. Caradonna\nFall 2024-25\n\n\nHedge Funds\nAndrew J. Sinclair\nSpring 2023-24\n\n\nIntroduction to Finance\nJean-Laurent Rosenthal\nWinter 2023-24\n\n\nEconometrics\nRobert Sherman\nFall 2023-24"
+  }
+]
