@@ -34,7 +34,7 @@ I am a fifth-year PhD candidate in Economics at the California Institute of Tech
 
 ## Research {#research}
 
-<p class="field-list"><strong>Research fields:</strong> <span>Information Economics · Rational Inattention · Learning in Networkds</span></p>
+<p class="field-list"><strong>Research fields:</strong> <span>Information Economics · Rational Inattention · Learning in Networks</span></p>
 <!-- <p class="field-list"><strong>Research fields:</strong> <span class="placeholder">[Add a few keywords describing your research fields, or remove this line if you prefer not to list them.]</span></p> -->
 
 ### Working Papers
