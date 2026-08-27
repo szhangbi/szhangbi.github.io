@@ -66,7 +66,7 @@ observed in the experimental literature in psychology and economics.</span></p>
 
 <p class="entry-meta"><strong>with</strong> <span>[Omer Tamuz]() and Olga Rospuskova</span></p>
 
-<p class="entry-links"><strong>Links:</strong> <span>[PDF](https://tamuz.caltech.edu/papers/glocal.pdf)</span></p>
+<p class="entry-links"><strong>Links:</strong> <span>[PDF](papers/glocal.pdf)</span></p>
 
 <details class="abstract-toggle">
 <summary>Abstract</summary>
