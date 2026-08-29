@@ -64,7 +64,7 @@ observed in the experimental literature in psychology and economics.</span></p>
 ::: {.research-entry}
 #### Local global games and network common learning
 
-<p class="entry-meta"><strong>with</strong> <span>[Omer Tamuz]() and Olga Rospuskova</span></p>
+<p class="entry-meta"><strong>with</strong> <span>[Omer Tamuz](https://tamuz.caltech.edu/) and Olga Rospuskova</span></p>
 
 <p class="entry-links"><strong>Links:</strong> <span>[PDF](papers/glocal.pdf)</span></p>
 
