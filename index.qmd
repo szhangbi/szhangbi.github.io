@@ -19,7 +19,7 @@ description: "Academic website of Shiyu Zhang, a PhD student in Economics at the
 
 I am a fifth-year PhD candidate in Economics at the California Institute of Technology. I will be on the 2026-27 job market.
 
-<span>I work in microeconomic theory, with a focus on how constrains on acquiring and transmitting information shape individual decisions, beliefs and collective outcomes. </span>
+<span>I work in microeconomic theory, with a focus on how constraints on acquiring and transmitting information shape individual decisions, beliefs, and collective outcomes. </span>
 
 <p class="about-links">
   <a href="mailto:szhang8@caltech.edu">Email</a>
@@ -45,7 +45,7 @@ I am a fifth-year PhD candidate in Economics at the California Institute of Tech
 <p class="entry-meta"><strong>Coauthors:</strong> <span class="placeholder">[Name(s), or remove this line for a solo-authored paper]</span></p>
 -->
 
-<p class="entry-links"><strong>Links:</strong> <span>[PDF](papers/fisher.pdf)</span> · <span>[Slides(25mins)](slides/fisher_slides.pdf)</span></p>
+<p class="entry-links"><strong>Links:</strong> <span>[PDF](papers/fisher.pdf)</span> · <span>[Slides (25mins)](slides/fisher_slides.pdf)</span></p>
 
 <details class="abstract-toggle">
 <summary>Abstract</summary>
