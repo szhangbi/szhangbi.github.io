@@ -1,6 +1,6 @@
 ---
-pagetitle: "Shiyu (Jake) Zhang | Economics"
-description: "Academic website of Shiyu Zhang, a PhD student in Economics at the California Institute of Technology."
+pagetitle: "Shiyu (Jake) Zhang | PhD Candidate in Economics, Caltech"
+description: "Academic website of Shiyu (Jake) Zhang, a PhD candidate in economics at the California Institute of Technology."
 ---
 
 ::: {#about .about-section}
