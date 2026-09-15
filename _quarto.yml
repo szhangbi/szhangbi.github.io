@@ -14,10 +14,11 @@ project:
     - images/CIT_HSS_ShiyuJak.13d8ec3b.fill-620x824-c100.format-avif.avif
 
 website:
-  title: "Shiyu (Jake) Zhang | PhD Candidate in Economics, Caltech"
+  title: "Shiyu Zhang"
   site-url: "https://jake-zhang.com"
   search: false
   navbar:
+    title: "Shiyu (Jake) Zhang"
     background: light
     foreground: dark
     left:
@@ -30,7 +31,7 @@ website:
       - text: "CV"
         href: "cv/Jake_CV.pdf"
   page-footer:
-    left: "Shiyu Zhang · California Institute of Technology"
+    left: "Shiyu (Jake) Zhang · California Institute of Technology"
 
 format:
   html:
