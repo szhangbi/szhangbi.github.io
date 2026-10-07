@@ -40,7 +40,7 @@ I am a fifth-year PhD candidate in Economics at the California Institute of Tech
 ### Working Papers
 
 ::: {.research-entry}
-#### A Costly-information Foundation for Psychometric Curves
+#### A Costly-information Foundation for Psychometric Curves (New draft coming soon!)
 <!--
 <p class="entry-meta"><strong>Coauthors:</strong> <span class="placeholder">[Name(s), or remove this line for a solo-authored paper]</span></p>
 -->
