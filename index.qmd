@@ -61,7 +61,7 @@ I am a fifth-year PhD candidate in Economics at the California Institute of Tech
 ::: {.research-entry}
 #### Local global games and network common learning
 
-<p class="entry-meta"><strong>with</strong> <span>[Omer Tamuz](https://tamuz.caltech.edu/) and Olga Rospuskova</span></p>
+<p class="entry-meta"><strong>with</strong> <span>[Omer Tamuz](https://tamuz.caltech.edu/) and [Olga Rospuskova](https://www.its.caltech.edu/~orospusk/)</span></p>
 
 <p class="entry-links"><strong>Links:</strong> <span>[PDF](papers/glocal.pdf)</span></p>
 
