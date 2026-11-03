@@ -40,7 +40,7 @@ I am a fifth-year PhD candidate in Economics at the California Institute of Tech
 ### Working Papers
 
 ::: {.research-entry}
-#### A Costly-information Foundation for Psychometric Curves (New draft coming soon!)
+#### A Costly-information Foundation for Psychometric Curves (Job Market Paper)
 <!--
 <p class="entry-meta"><strong>Coauthors:</strong> <span class="placeholder">[Name(s), or remove this line for a solo-authored paper]</span></p>
 -->
@@ -69,13 +69,12 @@ I am a fifth-year PhD candidate in Economics at the California Institute of Tech
 <summary>Abstract</summary>
 <p><span>We study global games in which agents coordinate locally, with their social
 network neighbors, contingent on a favorable state. Before acting, agents learn
-the private signals of all agents within network distance r. As r grows, every
+the private signals of all agents within network distance <var>r</var>. As <var>r</var> grows, every
 agent learns the state, but efficient coordination depends on higher-order beliefs,
 which are shaped by the geometry of the network. We introduce network
-common learning, a network analogue of common learning, and show that it is
-attained when neighboring agents’ observations differ by many signals, as on
-the two-dimensional grid, but fails on networks with informational bottlenecks,
-such as the line, where only the safe action survives in equilibrium.</span></p>
+common learning, a network analogue of common learning (Cripps et al., 2008), and show that it is attained when neighboring agents’ observations differ by many signals, as on the two-dimensional grid, but fails on networks with informational bottlenecks,
+such as the line, where only the safe action survives in equilibrium.
+</span></p>
 </details>
 :::
 
@@ -106,6 +105,8 @@ such as the line, where only the safe action survives in equilibrium.</span></p>
 -->
 
 ## Teaching {#teaching}
+
+**[Teaching Statement](statement/Jake_Teaching_Statement.pdf)** · **[Teaching Evidence](statement/Jake_Evidence_of_Teaching.pdf)**
 
 <p class="teaching-overview"><strong>California Institute of Technology</strong><br>
 Teaching Assistant</p>

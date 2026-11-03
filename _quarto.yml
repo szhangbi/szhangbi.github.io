@@ -11,6 +11,7 @@ project:
     - .nojekyll
     - CNAME
     - cv/Jake_CV.pdf
+    - statement/
     - images/CIT_HSS_ShiyuJak.13d8ec3b.fill-620x824-c100.format-avif.avif
 
 website:
