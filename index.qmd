@@ -104,9 +104,7 @@ such as the line, where only the safe action survives in equilibrium.
 :::
 -->
 
-## Teaching {#teaching}
-
-**[Teaching Statement](statement/Jake_Teaching_Statement.pdf)** · **[Teaching Evidence](statement/Jake_Evidence_of_Teaching.pdf)**
+## Teaching <span class="teaching-links">[Teaching Statement](statement/Jake_Teaching_Statement.pdf) <span aria-hidden="true">·</span> [Teaching Evidence](statement/Jake_Evidence_of_Teaching.pdf)</span> {#teaching .teaching-heading}
 
 <p class="teaching-overview"><strong>California Institute of Technology</strong><br>
 Teaching Assistant</p>
