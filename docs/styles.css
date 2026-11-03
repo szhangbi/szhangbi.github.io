@@ -222,12 +222,10 @@ h2.teaching-heading {
 }
 
 .teaching-links {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
+  display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 0.94rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 400;
   letter-spacing: normal;
 }
 
