@@ -214,6 +214,7 @@ a:focus {
   margin-bottom: 0.65rem;
 }
 
+h2.research-heading,
 h2.teaching-heading {
   display: flex;
   flex-wrap: wrap;
@@ -221,14 +222,16 @@ h2.teaching-heading {
   gap: 0.5rem 1.25rem;
 }
 
+.research-links,
 .teaching-links {
   display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 0.85rem;
-  font-weight: 400;
+  font-size: 1.25rem;
+  font-weight: 600;
   letter-spacing: normal;
 }
 
+.research-links a,
 .teaching-links a {
   white-space: nowrap;
 }
