@@ -42,3 +42,8 @@ format:
     smooth-scroll: true
     anchor-sections: false
     link-external-newwindow: true
+    include-after-body:
+      - text: |
+          <!-- Cloudflare Web Analytics -->
+          <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9f7764fbe98b41eba7808d99f2774650"}'></script>
+          <!-- End Cloudflare Web Analytics -->
